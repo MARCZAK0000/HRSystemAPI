@@ -1,0 +1,15 @@
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\bin\Debug\net7.0\HumanResources.Application.deps.json
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\bin\Debug\net7.0\HumanResources.Application.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\bin\Debug\net7.0\HumanResources.Application.pdb
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\bin\Debug\net7.0\HumanResources.Domain.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\bin\Debug\net7.0\HumanResources.Domain.pdb
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\HumanResources.Application.csproj.AssemblyReference.cache
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\HumanResources.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\HumanResources.Application.AssemblyInfoInputs.cache
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\HumanResources.Application.AssemblyInfo.cs
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\HumanResources.Application.csproj.CoreCompileInputs.cache
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\HumanResources.Application.csproj.CopyComplete
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\HumanResources.Application.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\refint\HumanResources.Application.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\HumanResources.Application.pdb
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Application\obj\Debug\net7.0\ref\HumanResources.Application.dll
