@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Domain.Response
 {
-    internal class UserInfoResponse
+    public class UserInfoResponse
     {
     }
 }

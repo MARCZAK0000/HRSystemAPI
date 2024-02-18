@@ -27,6 +27,6 @@ namespace HumanResources.Domain.Repository
 
         Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber);
 
-        Task<UserInfo> GetInfomrationsAboutUserAsync(string email, string phonenumber);
+        
     }
 }

@@ -98,6 +98,23 @@ namespace HumanResources.API.Middleware
                 var response = JsonSerializer.Serialize(problemDetails);
                 await context.Response.WriteAsync(response);
             }
+
+            catch (ServerErrorException ex)
+            {
+                _logger.LogError(ex.ToString());
+                context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                context.Response.ContentType = "application/json";
+                var problemDetails = new ProblemDetails()
+                {
+                    Title = "Internal Server Error - Server Error",
+                    Type = "Server Error",
+                    Status = (int)HttpStatusCode.InternalServerError,
+                    Detail = ex.Message
+                };
+                var response = JsonSerializer.Serialize(problemDetails);
+                await context.Response.WriteAsync(response);
+            }
+
             catch (Exception ex)//Error 500
             {
                 _logger.LogError(ex.ToString());

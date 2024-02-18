@@ -94,3 +94,4 @@ C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSyst
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\NLog.dll
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\NLog.Extensions.Logging.dll
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\AutoMapper.dll

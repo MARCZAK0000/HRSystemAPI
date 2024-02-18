@@ -28,11 +28,13 @@ namespace HumanResources.Application.Authentication
                 throw new UnauthorizedExceptions("Unauthorized");
             }
 
-            var id = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value;
+            var id = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier)!.Value;
 
             var roles = user.Claims.Where(c=>c.Type==ClaimTypes.Role).Select(c=>c.Value).ToList();
 
-            return new CurrentUser(id, roles);
+            var userCode = user.FindFirst(c=>c.Type == ClaimTypes.SerialNumber)!.Value;
+
+            return new CurrentUser(id, roles, userCode);
             
         }         
     }

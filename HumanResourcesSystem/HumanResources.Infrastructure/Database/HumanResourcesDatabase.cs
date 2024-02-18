@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Infrastructure.Database
 {
-    public class HumanResourcesDatabase : IdentityDbContext<User>
+    public class HumanResourcesDatabase : IdentityDbContext<User, Roles, string>
     {
         public HumanResourcesDatabase(DbContextOptions options) : base(options)
         {
@@ -25,7 +25,7 @@ namespace HumanResources.Infrastructure.Database
 
         public DbSet<UserInfo> UserInfo { get; set; }
 
-        public DbSet<Roles> Roles { get; set; }
+        public new DbSet<Roles> Roles { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -42,7 +42,6 @@ namespace HumanResources.Infrastructure.Database
                 .WithOne(e => e.User)
                 .HasForeignKey(e=>e.UserId)
                 .IsRequired();
-
 
             base.OnModelCreating(builder);
 

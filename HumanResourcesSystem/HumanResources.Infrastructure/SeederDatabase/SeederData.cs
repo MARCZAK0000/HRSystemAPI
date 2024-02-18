@@ -10,7 +10,7 @@ namespace HumanResources.Infrastructure.SeederDatabase
     {
         protected List<string> DeparmentsList = new List<string>()
         {
-            "HR", "Marketing", "Production", "Fiance", "Purchasing", "Sales", "Administration", "IT"
+            "HR", "Marketing", "Production", "Fiance", "Purchasing", "Sales", "Administration", "IT", "None"
         };
     }
 }

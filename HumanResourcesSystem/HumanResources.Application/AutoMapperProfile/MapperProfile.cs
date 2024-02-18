@@ -10,9 +10,6 @@ namespace HumanResources.Application.AutoMapperProfile
 {
     public class MapperProfile:Profile
     {
-        public MapperProfile(IUserContext userContext)
-        {
-            
-        }
+        
     }
 }

@@ -15,18 +15,19 @@ namespace HumanResources.Application.CQRS.UserHandler
 
         private readonly IUserRepository _userRepository;
 
+        private readonly IAccountRepository _accountRepository;
+
         private readonly IMapper _mapper;
 
-        public UserHandlerService(IUserRepository userRepository, IMapper mapper)
+        public UserHandlerService(IUserRepository userRepository, IMapper mapper, IAccountRepository accountRepository)
         {
             _userRepository = userRepository;
             _mapper = mapper;
+            _accountRepository = accountRepository;
         }
 
-
         public async Task<UserInfoResponse> GetInforamtionsAboutUserAsync(string email, string phonenumer) => 
-            _mapper.Map<UserInfoResponse>(await _userRepository.GetInfomrationsAboutUserAsync(email, phonenumer));
-
+            _mapper.Map<UserInfoResponse>(await _accountRepository.GetInfomrationsAboutUserAsync(email, phonenumer));
 
         public async Task<UserResponse> GenerateConfirmEmailTokenAsync(string email) =>
             await _userRepository.GenerateConfirmEmailTokenAsync(email);

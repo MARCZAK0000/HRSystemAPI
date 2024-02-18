@@ -1,16 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "YzwkkmQY7+vFHlGa2ld4gP2wDC4qig7RcOc2cU0YouE+cT7doLSwKt9fBA4Dt+06HDeHhjetMwzQRJqLziu0+g==",
+  "dgSpecHash": "4UAH3SDgZlJULyF8QE6YoQ1r1RvGv8Oo1hQ2bP4SNU5nOkANWUt16/VanwDahCcuIUxEkOHlh+oBDIMBX0n4dg==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Application\\HumanResources.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jjmar\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.14\\microsoft.aspnetcore.cryptography.internal.7.0.14.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.14\\microsoft.aspnetcore.cryptography.keyderivation.7.0.14.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.14\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.14.nupkg.sha512",
-    "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.14\\microsoft.entityframeworkcore.7.0.14.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.14\\microsoft.entityframeworkcore.abstractions.7.0.14.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.14\\microsoft.entityframeworkcore.analyzers.7.0.14.nupkg.sha512",

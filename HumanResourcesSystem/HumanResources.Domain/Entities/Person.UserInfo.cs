@@ -18,6 +18,8 @@ namespace HumanResources.Domain.Entities
 
         public string Phone { get; set; }
 
+        public string UserCode { get; set; }
+
         public int? DaysOfAbsencesToUse { get; set; }
 
         public int? DaysOfAbsencesCurrentYear { get; set; } = 0;

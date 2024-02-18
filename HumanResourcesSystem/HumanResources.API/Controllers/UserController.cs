@@ -4,6 +4,7 @@ using HumanResources.Domain.ModelDtos;
 using HumanResources.Domain.Response;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.Logging.Console;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -73,13 +74,13 @@ namespace HumanResources.API.Controllers
             return Ok(result);
         }
         [HttpPost("account/confirm")]
-        public async Task<IActionResult> ConfirmEmail([FromQuery] string email , [FromBody] string token)
+        public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailAsyncDto confirm)
         {
-            if(email == null || token == null) 
+            if(confirm.Email== null || confirm.Token== null) 
             {
                 return BadRequest();
             }
-            var result = await _userCommandService.ConfirmEmailAsync(email, token);
+            var result = await _userCommandService.ConfirmEmailAsync(confirm.Email, confirm.Token);
             if (!result.Result)
             {
                 return BadRequest(result);

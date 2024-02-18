@@ -5,6 +5,6 @@ namespace HumanResources.Domain.Entities
 {
     public class User : IdentityUser
     {
-
+        public string UserCode { get; set; }
     }
 }

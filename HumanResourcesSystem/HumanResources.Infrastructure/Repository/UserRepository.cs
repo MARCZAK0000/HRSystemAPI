@@ -3,11 +3,13 @@ using HumanResources.Domain.Entities;
 using HumanResources.Domain.Events;
 using HumanResources.Domain.Exceptions;
 using HumanResources.Domain.ModelDtos;
+using HumanResources.Domain.Repository;
 using HumanResources.Domain.Response;
 using HumanResources.Infrastructure.Authentication;
 using HumanResources.Infrastructure.Database;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics.Internal;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -23,8 +25,10 @@ namespace HumanResources.Infrastructure.Repository
         private readonly AuthenticationSettings _authenticationSettings;
         private readonly IUserContext _userContext;
         private readonly HumanResourcesDatabase _database; 
+        private readonly IHelperRepository _helperRepository;
         public UserRepository(SignInManager<User> signInManager, UserManager<User> userManager,
-            IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings, IUserContext userContext, HumanResourcesDatabase database)
+            IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings, 
+            IUserContext userContext, HumanResourcesDatabase database, IHelperRepository helperRepository)
         {
             _signInManager = signInManager;
             _userManager = userManager;
@@ -32,13 +36,14 @@ namespace HumanResources.Infrastructure.Repository
             _authenticationSettings = authenticationSettings;
             _userContext = userContext;
             _database = database;
+            _helperRepository = helperRepository;
         }
 
         public async Task<UserResponse> RegisterAsync(RegisterUserAsyncDto registerUser)
         {
             if (registerUser is null)
             {
-                throw new NotFoundException("Registration: Empty Request"); //TODO!!!!!!!!!!!!!
+                throw new NotFoundException("Registration: Empty Request"); 
             }
 
             var checkEmail = await _userManager.FindByEmailAsync(registerUser.Email);
@@ -46,24 +51,19 @@ namespace HumanResources.Infrastructure.Repository
 
             if (checkEmail is not null || !confirmPassword)
             {
-                throw new BadRequestException("Registration: Email is in use or passwords are not the same"); //TODO!!
+                throw new BadRequestException("Registration: Email is in use or passwords are not the same"); 
             }
 
             var createUser = new User()
             {
                 Email = registerUser.Email,
                 UserName = registerUser.Email,
+                UserCode = await _helperRepository.GenerateRandomUserCode(),
+                PhoneNumber = registerUser.PhoneNumber,
             };
 
             createUser.PasswordHash = _passwordHasher.HashPassword(createUser, registerUser.Password);
-            var result = await _userManager.CreateAsync(createUser);
-            await _userManager.AddToRoleAsync(createUser, "User");
-
-
-            if (!result.Succeeded)
-            {
-                throw new BadRequestException("Registration: Registration went wrong");//!!!!!!!
-            }
+            
 
             var userInfo = new UserInfo()
             {
@@ -71,12 +71,20 @@ namespace HumanResources.Infrastructure.Repository
                 LastName = registerUser.LastName,
                 UserId = createUser.Id,
                 Email = registerUser.Email,
-                Phone = registerUser.PhoneNumber
+                Phone = registerUser.PhoneNumber,
+                UserCode = createUser.UserCode,
             };
 
 
+            var result = await _userManager.CreateAsync(createUser);
+            if (!result.Succeeded)
+            {
+                throw new BadRequestException("Registration: Registration went wrong");
+            }
+            await _userManager.AddToRoleAsync(createUser, "User");
             await _database.UserInfo.AddAsync(userInfo);
             await _database.SaveChangesAsync();
+
 
             _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
 
@@ -95,6 +103,7 @@ namespace HumanResources.Infrastructure.Repository
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name,user.UserName!),
                 new Claim(ClaimTypes.Email,user.Email!),
+                new Claim(ClaimTypes.SerialNumber,user.UserCode!),
             };
 
             var getrole = await _userManager.GetRolesAsync(user);
@@ -180,20 +189,14 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await _userManager.ConfirmEmailAsync(user, token);
 
-            if (!result.Succeeded)
-            {
-                return new UserResponse()
-                {
-                    Result = false,
-                    Message = "Confirm Email: Invalid Email"
-                };
-            }
-
             return new UserResponse()
             {
-                Result = true,
-                Message = "Well done"
+                Result = result.Succeeded,
+                Message = result.Succeeded? "Well done": $"Confirm Email: {string.Join(",", result.Errors.Select(s=>s.Description))}"
             };
+
+
+           
         }
        
         public async Task<UserResponse> ChangePasswordAsync(ChangePasswordAsyncDto login)
@@ -211,26 +214,21 @@ namespace HumanResources.Infrastructure.Repository
 
             if (!checkPassword.Succeeded)
             {
-                throw new InvalidEmailOrPasswordExcepiton("ChangePassword: We cannot find user with that Email and Password");
+                throw new InvalidEmailOrPasswordExcepiton("ChangePassword: We can not find user with that Email and Password");
             }
 
 
             var changePassword = await _userManager.ChangePasswordAsync(user, login.Password, login.NewPassword);
-            
-            if(!changePassword.Succeeded) 
-            {
-                return new UserResponse()
-                {
-                    Result = false,
-                    Message = $"ChangePassword: : we cannot change password"
-                };
-            }
+
 
             return new UserResponse()
             {
-                Result = true,
-                Message = "Well Done"
+                Result = changePassword.Succeeded,
+               
+                Message = changePassword.Succeeded ? "Well Done" : $"ChangePassword - We can not change your password: {string.Join(",", changePassword.Errors.Select(s=>s.Description))}"
             };
+
+           
         } //Try to add option for Admin to change Password!
 
         public async Task<UserResponse> ForgetPasswordAsync(ForgetPasswordNewPasswordAsyncDto forgetPassword)
@@ -282,9 +280,6 @@ namespace HumanResources.Infrastructure.Repository
             };
         }
 
-        public Task<UserResponse> GetInfomrationsAboutUserAsync(string email, string phonenumber)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

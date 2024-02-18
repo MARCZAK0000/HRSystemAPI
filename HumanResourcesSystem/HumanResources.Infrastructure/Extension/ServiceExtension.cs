@@ -33,6 +33,8 @@ namespace HumanResources.Infrastructure.Extension
 
             service.AddScoped<Seeder>();
             service.AddScoped<Domain.Repository.IUserRepository, UserRepository>();
+            service.AddScoped<Domain.Repository.IAccountRepository, AccountRepository>();
+            service.AddScoped<Domain.Repository.IHelperRepository,  HelperRepository>();
 
             var authenticationSettings = new AuthenticationSettings();
             configuration.GetSection("Authentication").Bind(authenticationSettings);

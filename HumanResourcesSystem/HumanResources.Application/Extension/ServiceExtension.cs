@@ -14,18 +14,20 @@ namespace HumanResources.Application.Extension
         public static void AddApplication(this IServiceCollection service)
         {
 
-
-            service.AddScoped(provider => new MapperConfiguration(cfg =>
-            {
-                var scoped = provider.CreateScope();
-                var userContext = scoped.ServiceProvider.GetService<IUserContext>();
-                cfg.AddProfile(new MapperProfile(userContext!));
-            }));
-
-
             service.AddScoped<IUserContext, UserContex>();
             service.AddScoped<IUserCommandService, UserCommandService>();
             service.AddScoped<IUserHandlerService, UserHandlerService>();
+
+
+            service.AddAutoMapper(typeof(MapperProfile));
+
+            //service.AddScoped(provider => new MapperConfiguration(cfg =>
+            //{
+            //    var scoped = provider.CreateScope();
+            //    var userContext = scoped.ServiceProvider.GetService<IUserContext>();
+            //    cfg.AddProfile(new MapperProfile(userContext!));
+            //}));
+
         }
     }
 }
