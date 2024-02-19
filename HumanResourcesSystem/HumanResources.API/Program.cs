@@ -1,5 +1,6 @@
 using HumanResources.API.Middleware;
 using HumanResources.Application.Extension;
+using HumanResources.Domain.ServiceExtension;
 using HumanResources.Infrastructure.Extension;
 using HumanResources.Infrastructure.SeederDatabase;
 using NLog.Web;
@@ -12,6 +13,7 @@ builder.Host.UseNLog();
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
+builder.Services.AddValidation();
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("CorsPolicy", cfg =>

@@ -26,10 +26,7 @@ namespace HumanResources.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserAsyncDto register)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
+
             var result = await _userCommandService.RegisterUserAsync(register);
 
 
@@ -105,13 +102,13 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpGet("account/forget")]
-        public async Task<IActionResult> GenerateForgetPasswordTokenAsync([FromQuery] string email, [FromQuery] string phonenumer)
+        public async Task<IActionResult> GenerateForgetPasswordTokenAsync([FromQuery] string email, [FromQuery] string phone)
         {
-            if (email == null || phonenumer == null)
+            if (email == null || phone == null)
             {
                 return BadRequest();
             }
-            var result = await _userHandlerService.GenerateForgetPasswordTokenAsync(email, phonenumer);
+            var result = await _userHandlerService.GenerateForgetPasswordTokenAsync(email, phone);
             if (!result.Result)
             {
                 return BadRequest(result);

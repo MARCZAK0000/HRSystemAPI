@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "4UAH3SDgZlJULyF8QE6YoQ1r1RvGv8Oo1hQ2bP4SNU5nOkANWUt16/VanwDahCcuIUxEkOHlh+oBDIMBX0n4dg==",
+  "dgSpecHash": "4Vbrh83UuLF5fMZVbqzHneqg9iDoaARE7EKYKbdhyvVNMQRZdaElqYo98Pi3HghQ8miQ/RKooj/nyUtqrM7F9Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Application\\HumanResources.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jjmar\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.14\\microsoft.aspnetcore.cryptography.internal.7.0.14.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.14\\microsoft.aspnetcore.cryptography.keyderivation.7.0.14.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

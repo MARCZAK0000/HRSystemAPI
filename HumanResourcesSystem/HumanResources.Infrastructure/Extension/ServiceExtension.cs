@@ -21,10 +21,11 @@ namespace HumanResources.Infrastructure.Extension
                 opt.UseSqlServer(configuration.GetConnectionString("MyConnectionString"));
             });
 
-            service.AddIdentityCore<User>();
+            
             service.AddIdentity<User, Roles>(opt =>
             {
                 opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireUppercase = false;
                 opt.User.RequireUniqueEmail = true;
             })
             .AddEntityFrameworkStores<HumanResourcesDatabase>()

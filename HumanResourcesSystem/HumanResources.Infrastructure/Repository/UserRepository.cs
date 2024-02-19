@@ -240,21 +240,13 @@ namespace HumanResources.Infrastructure.Repository
                 throw new InvalidEmailOrPasswordExcepiton("Forget Password: Invalid Email");
             }
 
-            var decision = await _userManager.ResetPasswordAsync(user, forgetPassword.Token, forgetPassword.Password); 
+            var decision = await _userManager.ResetPasswordAsync(user, forgetPassword.Token, forgetPassword.Password);
 
-            if(!decision.Succeeded) 
-            {
-                return new UserResponse()
-                {
-                    Result = false,
-                    Message = "Forget Password: Something went wrong"
-                };
-            }
 
             return new UserResponse()
             {
-                Result = true,
-                Message = "Forget Password: Well done"
+                Result = decision.Succeeded,
+                Message = decision.Succeeded ? "Well done" : $"Forget Password: {string.Join(", ", decision.Errors.Select(s => s.Description))}"
             };
 
         }
@@ -264,7 +256,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var user = await _userManager.FindByEmailAsync(email);
 
-            if (user == null || user.PhoneNumber!.ToLower() == phonenumber.ToLower()) 
+            if (user == null || user.PhoneNumber!.ToLower() != phonenumber.ToLower()) 
             {
                 throw new InvalidEmailOrPasswordExcepiton("GenerateForgetPasswordToken: Invalid Email or phone number");
             }
