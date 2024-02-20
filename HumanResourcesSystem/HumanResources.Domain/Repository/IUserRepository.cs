@@ -23,7 +23,7 @@ namespace HumanResources.Domain.Repository
 
         Task<UserResponse> ChangePasswordAsync(ChangePasswordAsyncDto changePassword);
 
-        Task<UserResponse> ForgetPasswordAsync(ForgetPasswordNewPasswordAsyncDto forgetPassword);
+        Task<UserResponse> ForgetPasswordAsync(ResetPasswordAsyncDto forgetPassword);
 
         Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber);
 

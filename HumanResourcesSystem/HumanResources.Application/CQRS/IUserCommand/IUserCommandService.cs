@@ -18,6 +18,6 @@ namespace HumanResources.Application.CQRS.IUserCommand
 
         Task<UserResponse> ChangePasswordAsync(ChangePasswordAsyncDto changePassword);
 
-        Task<UserResponse> ForgetPasswordAsync(ForgetPasswordNewPasswordAsyncDto forgetPassword);
+        Task<UserResponse> ForgetPasswordAsync(ResetPasswordAsyncDto forgetPassword);
     }
 }

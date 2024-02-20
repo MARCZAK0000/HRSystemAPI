@@ -231,7 +231,7 @@ namespace HumanResources.Infrastructure.Repository
            
         } //Try to add option for Admin to change Password!
 
-        public async Task<UserResponse> ForgetPasswordAsync(ForgetPasswordNewPasswordAsyncDto forgetPassword)
+        public async Task<UserResponse> ForgetPasswordAsync(ResetPasswordAsyncDto forgetPassword)
         {
             var user = await _userManager.FindByEmailAsync(forgetPassword.Email);
 

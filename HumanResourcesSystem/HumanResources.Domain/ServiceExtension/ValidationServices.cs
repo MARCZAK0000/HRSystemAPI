@@ -15,6 +15,8 @@ namespace HumanResources.Domain.ServiceExtension
 
             services.AddScoped<IValidator<RegisterUserAsyncDto>, RegisterUserValidator>();
             services.AddScoped<IValidator<LoginUserAsyncDto>, LoginUserValidator>();
+            services.AddScoped<IValidator<ChangePasswordAsyncDto>, ChangePasswordValidator>();
+            services.AddScoped<IValidator<ResetPasswordAsyncDto>, ResetPasswordValidator>();
         }
     }
 }

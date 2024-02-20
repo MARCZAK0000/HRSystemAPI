@@ -31,7 +31,7 @@ namespace HumanResources.Application.CQRS.UserCommand
         public async Task<UserResponse> ChangePasswordAsync(ChangePasswordAsyncDto changePassword) => 
             await _userRepository.ChangePasswordAsync(changePassword);
 
-        public async Task<UserResponse> ForgetPasswordAsync(ForgetPasswordNewPasswordAsyncDto forgetPassword) => 
+        public async Task<UserResponse> ForgetPasswordAsync(ResetPasswordAsyncDto forgetPassword) => 
             await _userRepository.ForgetPasswordAsync(forgetPassword);
         
     }
