@@ -13,13 +13,9 @@ namespace HumanResources.Domain.Entities
         public string Name { get; set; }
 
         public string LastName { get; set; } 
-        
-        public string Email { get; set; }
-
-        public string Phone { get; set; }
 
         public string UserCode { get; set; }
-
+        
         public int? DaysOfAbsencesToUse { get; set; }
 
         public int? DaysOfAbsencesCurrentYear { get; set; } = 0;
@@ -55,13 +51,15 @@ namespace HumanResources.Domain.Entities
             }
 
             DaysOfAbsencesToUse = CalculateYearsOfExperiences >= 10 ?
-                InitialDays - DaysOfAbsencesCurrentYear
-                : (InitialDays + InitialBonus) - DaysOfAbsencesCurrentYear;
+                (InitialDays + InitialBonus) - DaysOfAbsencesCurrentYear
+                : InitialDays - DaysOfAbsencesCurrentYear;
         }
 
-        public List<Absence>? Absences { get; set; }
+        public virtual List<Absence>? Absences { get; set; }
 
         public virtual Departments Department { get; set; }
+
+        public virtual List<Arrivals> Arrivals { get; set; }
 
         public int DepartmentID { get; set; } = 9;
 

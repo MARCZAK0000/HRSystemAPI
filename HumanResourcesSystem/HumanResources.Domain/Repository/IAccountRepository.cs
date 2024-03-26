@@ -1,14 +1,32 @@
 ﻿using HumanResources.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using HumanResources.Domain.ModelDtos;
+using HumanResources.Domain.Response;
 
 namespace HumanResources.Domain.Repository
 {
-    public interface IAccountRepository
+    public interface IAccountReposiotry
     {
-        Task<UserInfo> GetInfomrationsAboutUserAsync(string email, string phonenumber);
+        Task<UserResponse> RegisterAsync(RegisterAccountAsyncDto registerUser);
+
+        Task<bool> UpdateAccountInfromationsAsync(UpdateAccountInformationsDto updateAccountInformations);
+
+        Task<UserResponse> GenerateConfirmEmailTokenAsync(string email);
+
+        Task<UserResponse> ConfirmEmailAsync(string email, string token);
+
+        Task<string> GenerateTokenAsync(User user);
+
+        Task<UserResponse> SignInAccountAsync(LoginAccountAsyncDto loginUser);
+
+        Task<UserResponse> ChangePasswordAsync(ChangePasswordAsyncDto changePassword);
+
+        Task<UserResponse> ForgetPasswordAsync(ResetPasswordAsyncDto forgetPassword);
+
+        Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber);
+
+        Task<UserResponse> GeneratePhoneNumberChangeTokenAsync(ChangePhoneNumberDto changePhoneNumber);
+
+
+
     }
 }

@@ -13,10 +13,12 @@ namespace HumanResources.Domain.ServiceExtension
             services.AddFluentValidationAutoValidation();
 
 
-            services.AddScoped<IValidator<RegisterUserAsyncDto>, RegisterUserValidator>();
-            services.AddScoped<IValidator<LoginUserAsyncDto>, LoginUserValidator>();
+            services.AddScoped<IValidator<RegisterAccountAsyncDto>, RegisterUserValidator>();
+            services.AddScoped<IValidator<LoginAccountAsyncDto>, LoginUserValidator>();
             services.AddScoped<IValidator<ChangePasswordAsyncDto>, ChangePasswordValidator>();
             services.AddScoped<IValidator<ResetPasswordAsyncDto>, ResetPasswordValidator>();
+            services.AddScoped<IValidator<ChangePhoneNumberDto>, ChangePhoneNumberValidator>();
+            services.AddScoped<IValidator<UpdateAccountInformationsDto>, UpdateUserInformationsValidator>();
         }
     }
 }

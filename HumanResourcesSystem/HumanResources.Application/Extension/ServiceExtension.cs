@@ -4,8 +4,9 @@ using HumanResources.Application.CQRS.UserCommand;
 using HumanResources.Application.CQRS.IUserHandler;
 using HumanResources.Application.CQRS.UserHandler;
 using HumanResources.Application.Authentication;
-using AutoMapper;
 using HumanResources.Application.AutoMapperProfile;
+using HumanResources.Application.CQRS_User.Command;
+using HumanResources.Application.CQRS_User.Handler;
 
 namespace HumanResources.Application.Extension
 {
@@ -15,9 +16,11 @@ namespace HumanResources.Application.Extension
         {
 
             service.AddScoped<IUserContext, UserContex>();
+            service.AddScoped<IAccountCommandService, AccountCommandService>();
+            service.AddScoped<IAccountHandlerService, AccountHandlerService>();
+
             service.AddScoped<IUserCommandService, UserCommandService>();
             service.AddScoped<IUserHandlerService, UserHandlerService>();
-
 
             service.AddAutoMapper(typeof(MapperProfile));
 

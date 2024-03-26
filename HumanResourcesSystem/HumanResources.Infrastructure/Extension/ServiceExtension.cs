@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using HumanResources.Infrastructure.Authentication;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using HumanResources.Domain.Repository;
 
 namespace HumanResources.Infrastructure.Extension
 {
@@ -33,9 +34,9 @@ namespace HumanResources.Infrastructure.Extension
 
 
             service.AddScoped<Seeder>();
-            service.AddScoped<Domain.Repository.IUserRepository, UserRepository>();
-            service.AddScoped<Domain.Repository.IAccountRepository, AccountRepository>();
-            service.AddScoped<Domain.Repository.IHelperRepository,  HelperRepository>();
+            service.AddScoped<IAccountReposiotry, AccountRepository>();
+            service.AddScoped<IUserRepository, UserRepository>();
+            service.AddScoped<IHelperRepository, HelperRepository>();
 
             var authenticationSettings = new AuthenticationSettings();
             configuration.GetSection("Authentication").Bind(authenticationSettings);

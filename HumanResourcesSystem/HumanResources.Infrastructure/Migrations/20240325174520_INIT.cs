@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HumanResources.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Migration_1 : Migration
+    public partial class INIT : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -180,8 +180,6 @@ namespace HumanResources.Infrastructure.Migrations
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DaysOfAbsencesToUse = table.Column<int>(type: "int", nullable: true),
                     DaysOfAbsencesCurrentYear = table.Column<int>(type: "int", nullable: true),
@@ -218,7 +216,8 @@ namespace HumanResources.Infrastructure.Migrations
                     CreatedTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StartTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PeriodOfTime = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    PeriodOfTime = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    isAccepted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -231,10 +230,41 @@ namespace HumanResources.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Arrivals",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserInfoId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    Arrival = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Departure = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    PeriodOfTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsCompleted = table.Column<bool>(type: "bit", nullable: false),
+                    TimeLimit = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Arrivals", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Arrivals_UserInfo_UserInfoId",
+                        column: x => x.UserInfoId,
+                        principalTable: "UserInfo",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Absences_UserId",
                 table: "Absences",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Arrivals_UserInfoId",
+                table: "Arrivals",
+                column: "UserInfoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -291,6 +321,9 @@ namespace HumanResources.Infrastructure.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Absences");
+
+            migrationBuilder.DropTable(
+                name: "Arrivals");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");

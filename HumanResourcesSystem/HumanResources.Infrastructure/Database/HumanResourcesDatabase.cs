@@ -1,14 +1,6 @@
 ﻿using HumanResources.Domain.Entities;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanResources.Infrastructure.Database
 {
@@ -26,6 +18,8 @@ namespace HumanResources.Infrastructure.Database
         public DbSet<UserInfo> UserInfo { get; set; }
 
         public new DbSet<Roles> Roles { get; set; }
+
+        public DbSet<Arrivals> Arrivals { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -42,6 +36,8 @@ namespace HumanResources.Infrastructure.Database
                 .WithOne(e => e.User)
                 .HasForeignKey(e=>e.UserId)
                 .IsRequired();
+
+           
 
             base.OnModelCreating(builder);
 

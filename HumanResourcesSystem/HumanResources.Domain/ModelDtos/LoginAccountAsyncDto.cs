@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Domain.ModelDtos
 {
-    public class LoginUserAsyncDto
+    public class LoginAccountAsyncDto
     {
         public string Email { get; set; }
 

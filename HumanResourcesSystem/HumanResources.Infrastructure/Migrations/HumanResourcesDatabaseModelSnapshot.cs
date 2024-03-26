@@ -52,11 +52,57 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("isAccepted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
                     b.ToTable("Absences");
+                });
+
+            modelBuilder.Entity("HumanResources.Domain.Entities.Arrivals", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Arrival")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Departure")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("PeriodOfTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TimeLimit")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("UserInfoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("UserInfoId");
+
+                    b.ToTable("Arrivals");
                 });
 
             modelBuilder.Entity("HumanResources.Domain.Entities.Departments", b =>
@@ -196,19 +242,11 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Property<int?>("EducationTitle")
                         .HasColumnType("int");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -349,6 +387,21 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("HumanResources.Domain.Entities.Arrivals", b =>
+                {
+                    b.HasOne("HumanResources.Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HumanResources.Domain.Entities.UserInfo", null)
+                        .WithMany("Arrivals")
+                        .HasForeignKey("UserInfoId");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("HumanResources.Domain.Entities.UserInfo", b =>
                 {
                     b.HasOne("HumanResources.Domain.Entities.Departments", "Department")
@@ -427,6 +480,8 @@ namespace HumanResources.Infrastructure.Migrations
             modelBuilder.Entity("HumanResources.Domain.Entities.UserInfo", b =>
                 {
                     b.Navigation("Absences");
+
+                    b.Navigation("Arrivals");
                 });
 #pragma warning restore 612, 618
         }

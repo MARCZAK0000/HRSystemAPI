@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HumanResources.Infrastructure.Migrations
 {
     [DbContext(typeof(HumanResourcesDatabase))]
-    [Migration("20240216190620_Migration_1")]
-    partial class Migration_1
+    [Migration("20240325174717_INIT2")]
+    partial class INIT2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,11 +55,51 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("isAccepted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
                     b.ToTable("Absences");
+                });
+
+            modelBuilder.Entity("HumanResources.Domain.Entities.Arrivals", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Arrival")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Departure")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("PeriodOfTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TimeLimit")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserInfoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserInfoId");
+
+                    b.ToTable("Arrivals");
                 });
 
             modelBuilder.Entity("HumanResources.Domain.Entities.Departments", b =>
@@ -199,19 +239,11 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Property<int?>("EducationTitle")
                         .HasColumnType("int");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -352,6 +384,17 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("HumanResources.Domain.Entities.Arrivals", b =>
+                {
+                    b.HasOne("HumanResources.Domain.Entities.UserInfo", "UserInfo")
+                        .WithMany("Arrivals")
+                        .HasForeignKey("UserInfoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserInfo");
+                });
+
             modelBuilder.Entity("HumanResources.Domain.Entities.UserInfo", b =>
                 {
                     b.HasOne("HumanResources.Domain.Entities.Departments", "Department")
@@ -430,6 +473,8 @@ namespace HumanResources.Infrastructure.Migrations
             modelBuilder.Entity("HumanResources.Domain.Entities.UserInfo", b =>
                 {
                     b.Navigation("Absences");
+
+                    b.Navigation("Arrivals");
                 });
 #pragma warning restore 612, 618
         }

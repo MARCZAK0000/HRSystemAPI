@@ -19,7 +19,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var code = new string(Enumerable.Repeat(chars, 12).Select(s => s[Random.Shared.Next(chars.Length)]).ToArray());
 
-            var codeList = await _database.UserInfo.FirstOrDefaultAsync(pr=>pr.UserCode == code);
+            var codeList = await _database.Users.FirstOrDefaultAsync(pr=>pr.UserCode == code);
             if(codeList != null) 
             {
                 throw new ServerErrorException("Generate User Code: Problem with code generation, try again later");

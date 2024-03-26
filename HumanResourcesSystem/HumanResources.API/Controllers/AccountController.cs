@@ -1,10 +1,7 @@
 ﻿using HumanResources.Application.CQRS.IUserCommand;
 using HumanResources.Application.CQRS.IUserHandler;
 using HumanResources.Domain.ModelDtos;
-using HumanResources.Domain.Response;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.Extensions.Logging.Console;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,17 +11,17 @@ namespace HumanResources.API.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly IUserCommandService _userCommandService;
+        private readonly IAccountCommandService _userCommandService;
 
-        private readonly IUserHandlerService _userHandlerService;
+        private readonly IAccountHandlerService _userHandlerService;
 
-        public AccountController(IUserCommandService userCommandService, IUserHandlerService userHandlerService)
+        public AccountController(IAccountCommandService userCommandService, IAccountHandlerService userHandlerService)
         {
             _userCommandService = userCommandService;
             _userHandlerService = userHandlerService;
         }
         [HttpPost("register")]
-        public async Task<IActionResult> RegisterUser([FromBody] RegisterUserAsyncDto register)
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterAccountAsyncDto register)
         {
 
             var result = await _userCommandService.RegisterUserAsync(register);
@@ -39,7 +36,7 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpPost("signin")]
-        public async Task<IActionResult> SignInUser([FromBody] LoginUserAsyncDto login)
+        public async Task<IActionResult> SignInUser([FromBody] LoginAccountAsyncDto login)
         {
 
             var result = await _userCommandService.SignInUserAsync(login);
@@ -51,6 +48,18 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);
         }
+        [HttpPut("informations")]
+        public async Task<IActionResult> UpdateUserInfromations([FromBody] UpdateAccountInformationsDto updateAccountInformations)
+        {
+            var result = await _userCommandService.UpdateUserInfromationsAsync(updateAccountInformations);
+
+            if(!result)
+            {
+                return BadRequest();
+            }
+            return Created(string.Empty, new { Result = result, Message = "Well Done"});
+        }
+
         [HttpGet("confirm")]
         public async Task<IActionResult> GenerateConfirmEmailToken([FromQuery] string email)
         {
@@ -95,7 +104,7 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpGet("forget_password")]
-        public async Task<IActionResult> GenerateForgetPasswordTokenAsync([FromQuery] string email, [FromQuery] string phone)
+        public async Task<IActionResult> GenerateForgetPasswordToken([FromQuery] string email, [FromQuery] string phone)
         {
             if (email == null || phone == null)
             {
@@ -120,10 +129,17 @@ namespace HumanResources.API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("infromation")]
-        public async Task<IActionResult> GetInformationsAboutUser()
+        [HttpGet("change/phone")]
+        public async Task<IActionResult> GenerateChangePhoneNumberToken([FromBody] ChangePhoneNumberDto change)
         {
-            throw new NotImplementedException();    
+            var result = await _userHandlerService.GeneratePhoneNumberChangeTokenAsync(change);
+
+            if (!result.Result)
+            {
+                return BadRequest();
+            }
+            return Ok(result);
         }
+
     }
 }

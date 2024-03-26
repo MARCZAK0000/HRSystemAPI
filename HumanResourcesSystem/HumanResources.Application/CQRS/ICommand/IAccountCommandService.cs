@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Application.CQRS.IUserCommand
 {
-    public interface IUserCommandService
+    public interface IAccountCommandService
     {
-        Task<UserResponse> RegisterUserAsync(RegisterUserAsyncDto register);
+        Task<UserResponse> RegisterUserAsync(RegisterAccountAsyncDto register);
 
-        Task<UserResponse> SignInUserAsync(LoginUserAsyncDto loginUser);
+        Task<UserResponse> SignInUserAsync(LoginAccountAsyncDto loginUser);
+
+        Task<bool> UpdateUserInfromationsAsync(UpdateAccountInformationsDto updateAccountInformations);
 
         Task<UserResponse> ConfirmEmailAsync(string email, string token);
 

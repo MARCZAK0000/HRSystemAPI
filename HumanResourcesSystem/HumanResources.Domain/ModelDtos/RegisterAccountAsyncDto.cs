@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Domain.ModelDtos
 {
-    public class RegisterUserAsyncDto
+    public class RegisterAccountAsyncDto
     {
         public string Email {  get; set; } 
 
@@ -15,9 +15,5 @@ namespace HumanResources.Domain.ModelDtos
         public string ConfirmPassword { get; set; } 
 
         public string PhoneNumber { get; set; } 
-
-        public string FirstName {  get; set; }  
-        
-        public string LastName { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Domain.Validations
 {
-    public class RegisterUserValidator:AbstractValidator<RegisterUserAsyncDto>
+    public class RegisterUserValidator:AbstractValidator<RegisterAccountAsyncDto>
     {
         public RegisterUserValidator()
         {
@@ -28,15 +28,6 @@ namespace HumanResources.Domain.Validations
             RuleFor(pr => pr.PhoneNumber)
                 .NotNull()
                 .Length(9, 10);
-
-            RuleFor(pr => pr.FirstName)
-                .NotNull()
-                .Length(2, 50);
-            
-            RuleFor(pr => pr.FirstName)
-                .NotNull()
-                .Length(2, 50);
-
         }
     }
 }

@@ -27,6 +27,8 @@ namespace HumanResources.Domain.Entities
 
         public decimal PeriodOfTime { get;  private set; }
 
+        public bool isAccepted { get; set; } = false;
+
         public void CalculatePeriodOfTime() => PeriodOfTime = EndTime.Subtract(StartTime).Days;
     }
 }

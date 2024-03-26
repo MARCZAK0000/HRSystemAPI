@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Domain.Validations
 {
-    public class LoginUserValidator:AbstractValidator<LoginUserAsyncDto>
+    public class LoginUserValidator:AbstractValidator<LoginAccountAsyncDto>
     {
         public LoginUserValidator()
         {
