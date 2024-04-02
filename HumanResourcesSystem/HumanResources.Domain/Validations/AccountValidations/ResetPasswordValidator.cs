@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using HumanResources.Domain.ModelDtos;
 
-namespace HumanResources.Domain.Validations
+namespace HumanResources.Domain.Validations.AccountValidations
 {
     public class ResetPasswordValidator : AbstractValidator<ResetPasswordAsyncDto>
     {

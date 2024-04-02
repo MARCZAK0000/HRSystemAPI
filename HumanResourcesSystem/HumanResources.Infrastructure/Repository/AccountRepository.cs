@@ -134,47 +134,7 @@ namespace HumanResources.Infrastructure.Repository
             };
         }
 
-        public async Task<bool> UpdateAccountInfromationsAsync(UpdateAccountInformationsDto updateAccountInformations)
-        {
-            var currentUser = _userContext.GetCurrentUser();
-            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
-                throw new InvalidEmailOrPasswordExcepiton("ChangePassword: We cannot find user with that Email and Password"); ;
 
-            var isAlreadyUser = await _database.UserInfo.FirstOrDefaultAsync(pr => pr.UserId == user.Id);
-
-            if (isAlreadyUser != null) 
-            {
-                isAlreadyUser.Name = updateAccountInformations.FirstName;
-                isAlreadyUser.LastName = updateAccountInformations.LastName;
-                isAlreadyUser.EducationTitle = updateAccountInformations.EducationLevel;
-                isAlreadyUser.YearsOfExperiences = updateAccountInformations.YearsOfExperiences;
-
-                isAlreadyUser.CalculateDaysOfAbsences();
-                await _database.SaveChangesAsync();
-                _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
-                return true;
-            }
-
-            var userInfo = new UserInfo()
-            {
-                Name = updateAccountInformations.FirstName,
-                LastName = updateAccountInformations.LastName,
-                EducationTitle = updateAccountInformations.EducationLevel,
-                YearsOfExperiences = updateAccountInformations.YearsOfExperiences,
-                UserId = user.Id,
-                UserCode = user.UserCode
-                
-            };
-            userInfo.CalculateDaysOfAbsences();
-
-            await _database.UserInfo
-                .AddAsync(userInfo);
-
-            await _database.SaveChangesAsync();
-            _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
-
-            return true;
-        }
 
         public async Task<UserResponse> GenerateConfirmEmailTokenAsync(string email)
         {

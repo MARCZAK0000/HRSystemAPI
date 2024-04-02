@@ -11,20 +11,20 @@ namespace HumanResources.API.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly IAccountCommandService _userCommandService;
+        private readonly IAccountCommandService _accountCommandService;
 
-        private readonly IAccountHandlerService _userHandlerService;
+        private readonly IAccountHandlerService _accountHandlerService;
 
         public AccountController(IAccountCommandService userCommandService, IAccountHandlerService userHandlerService)
         {
-            _userCommandService = userCommandService;
-            _userHandlerService = userHandlerService;
+            _accountCommandService = userCommandService;
+            _accountHandlerService = userHandlerService;
         }
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterAccountAsyncDto register)
         {
 
-            var result = await _userCommandService.RegisterUserAsync(register);
+            var result = await _accountCommandService.RegisterUserAsync(register);
 
 
             if (!result.Result)
@@ -39,7 +39,7 @@ namespace HumanResources.API.Controllers
         public async Task<IActionResult> SignInUser([FromBody] LoginAccountAsyncDto login)
         {
 
-            var result = await _userCommandService.SignInUserAsync(login);
+            var result = await _accountCommandService.SignInUserAsync(login);
 
             if (!result.Result)
             {
@@ -48,18 +48,7 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);
         }
-        [HttpPut("informations")]
-        public async Task<IActionResult> UpdateUserInfromations([FromBody] UpdateAccountInformationsDto updateAccountInformations)
-        {
-            var result = await _userCommandService.UpdateUserInfromationsAsync(updateAccountInformations);
-
-            if(!result)
-            {
-                return BadRequest();
-            }
-            return Created(string.Empty, new { Result = result, Message = "Well Done"});
-        }
-
+       
         [HttpGet("confirm")]
         public async Task<IActionResult> GenerateConfirmEmailToken([FromQuery] string email)
         {
@@ -68,7 +57,7 @@ namespace HumanResources.API.Controllers
                 return BadRequest(); 
             }
 
-            var result = await _userHandlerService.GenerateConfirmEmailTokenAsync(email);
+            var result = await _accountHandlerService.GenerateConfirmEmailTokenAsync(email);
             if (!result.Result)
             {
                 return BadRequest(result);  
@@ -82,7 +71,7 @@ namespace HumanResources.API.Controllers
             {
                 return BadRequest();
             }
-            var result = await _userCommandService.ConfirmEmailAsync(confirm.Email, confirm.Token);
+            var result = await _accountCommandService.ConfirmEmailAsync(confirm.Email, confirm.Token);
             if (!result.Result)
             {
                 return BadRequest(result);
@@ -90,11 +79,11 @@ namespace HumanResources.API.Controllers
             return Ok(result);
         }
 
-        [HttpPatch("change/password")]
+        [HttpPut("change/password")]
         public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordAsyncDto changePassword)
         {
           
-            var result = await _userCommandService.ChangePasswordAsync(changePassword);
+            var result = await _accountCommandService.ChangePasswordAsync(changePassword);
 
             if (!result.Result)
             {
@@ -110,18 +99,18 @@ namespace HumanResources.API.Controllers
             {
                 return BadRequest();
             }
-            var result = await _userHandlerService.GenerateForgetPasswordTokenAsync(email, phone);
+            var result = await _accountHandlerService.GenerateForgetPasswordTokenAsync(email, phone);
             if (!result.Result)
             {
                 return BadRequest(result);
             }
             return Ok(result);
         }
-        [HttpPatch("forget_password")]
+        [HttpPut("forget_password")]
         public async Task<IActionResult> ForgetPassword([FromBody] ResetPasswordAsyncDto resetPassword)
         {
 
-            var result = await _userCommandService.ForgetPasswordAsync(resetPassword);
+            var result = await _accountCommandService.ForgetPasswordAsync(resetPassword);
             if (!result.Result)
             {
                 return BadRequest(result);
@@ -132,7 +121,7 @@ namespace HumanResources.API.Controllers
         [HttpGet("change/phone")]
         public async Task<IActionResult> GenerateChangePhoneNumberToken([FromBody] ChangePhoneNumberDto change)
         {
-            var result = await _userHandlerService.GeneratePhoneNumberChangeTokenAsync(change);
+            var result = await _accountHandlerService.GeneratePhoneNumberChangeTokenAsync(change);
 
             if (!result.Result)
             {

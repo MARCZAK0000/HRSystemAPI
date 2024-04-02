@@ -1,42 +1,48 @@
-﻿using HumanResources.Application.CQRS.IUserCommand;
-using HumanResources.Application.CQRS.IUserHandler;
-using HumanResources.Application.CQRS_User.Command;
+﻿using HumanResources.Application.CQRS_User.Command;
 using HumanResources.Application.CQRS_User.Handler;
+using HumanResources.Domain.ModelDtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HumanResources.API.Controllers
 {
-
-    [Route("api/account")]
+    [Route("api/user")]
     [ApiController]
-    public class UserController:ControllerBase
+    public class UserController : ControllerBase
     {
+        private readonly IUserHandlerService _userHandlerServices;
 
-        private readonly IUserHandlerService _userHandlerService;
+        private readonly IUserCommandService _userCommandServices;
 
-        private readonly IUserCommandService _userCommandService;
-
-        public UserController(IUserHandlerService userHandlerService, IUserCommandService userCommandService)
+        public UserController(IUserHandlerService userHandlerServices, IUserCommandService userCommandServices)
         {
-            _userHandlerService = userHandlerService;
-            _userCommandService = userCommandService;
+            _userHandlerServices = userHandlerServices;
+            _userCommandServices = userCommandServices;
         }
 
-        public Task<IActionResult> GetInfromationsAboutCurrentUserAsync() 
+        [HttpGet("info")]
+        public async Task<IActionResult> GetInfromationsAboutUserAsync() 
         {
-            throw new NotImplementedException();
+            var result = await _userHandlerServices.GetInfromationsAboutUserAsync();
+
+            return Ok(result);
         }
 
-        public Task<IActionResult> UpdateUserInfromationsAsync()
+        [HttpPut("info")]
+        public async Task<IActionResult> UpdateInfromationsAboutUser([FromBody] UpdateAccountInformationsDto updateAccountInformations)
         {
-            throw new NotImplementedException();
+            var result = await _userCommandServices.UpdateInfromationsAboutUserAsync(updateAccountInformations);
+
+            if (!result)
+            {
+                return BadRequest();
+            }
+
+            return Created(string.Empty, new { result = true }); 
         }
 
-        public Task<IActionResult> UserArrivalAsync()
-        {
-            throw new NotImplementedException();
-        }
+       
+         
+
         
-
     }
 }

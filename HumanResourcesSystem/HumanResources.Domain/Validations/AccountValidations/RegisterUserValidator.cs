@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HumanResources.Domain.Validations
+namespace HumanResources.Domain.Validations.AccountValidations
 {
-    public class RegisterUserValidator:AbstractValidator<RegisterAccountAsyncDto>
+    public class RegisterUserValidator : AbstractValidator<RegisterAccountAsyncDto>
     {
         public RegisterUserValidator()
         {
@@ -22,7 +22,7 @@ namespace HumanResources.Domain.Validations
 
             RuleFor(pr => pr.ConfirmPassword)
                 .NotNull()
-                .Length(8,18)
+                .Length(8, 18)
                 .Equal(pr => pr.Password).WithMessage("Password and Confrim Password must be equal");
 
             RuleFor(pr => pr.PhoneNumber)

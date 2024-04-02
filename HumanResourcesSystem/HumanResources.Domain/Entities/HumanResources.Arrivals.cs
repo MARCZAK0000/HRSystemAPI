@@ -17,16 +17,26 @@ namespace HumanResources.Domain.Entities
 
         public string UserId { get; set; }
 
-        public virtual UserInfo UserInfo { get; set; }
-
         public DateTime? Arrival {  get; set; }  
 
         public DateTime? Departure { get; set;}
 
-        public DateTime? PeriodOfTime { get; set; } 
+        public bool IsCompleted { get; private set; } = false;
 
-        public bool IsCompleted { get; set; } = false;
+        public int TimeLimit { get; } = 8;
 
-        public int TimeLimit { get; set; } = 8;
+        public void CompleteDay()
+        {
+           
+            var PeriodOfTime = Departure - Arrival;
+            if( PeriodOfTime ==null || PeriodOfTime.Value.Hours<TimeLimit) 
+            { 
+                IsCompleted = false;
+                return;
+            }
+
+            IsCompleted = true;
+               
+        }
     }
 }

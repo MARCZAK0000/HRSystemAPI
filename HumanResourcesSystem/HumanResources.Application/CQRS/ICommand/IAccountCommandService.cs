@@ -14,8 +14,6 @@ namespace HumanResources.Application.CQRS.IUserCommand
 
         Task<UserResponse> SignInUserAsync(LoginAccountAsyncDto loginUser);
 
-        Task<bool> UpdateUserInfromationsAsync(UpdateAccountInformationsDto updateAccountInformations);
-
         Task<UserResponse> ConfirmEmailAsync(string email, string token);
 
         Task<UserResponse> ChangePasswordAsync(ChangePasswordAsyncDto changePassword);

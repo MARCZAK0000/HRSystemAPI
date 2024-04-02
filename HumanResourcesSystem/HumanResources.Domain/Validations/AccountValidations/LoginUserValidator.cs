@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HumanResources.Domain.Validations
+namespace HumanResources.Domain.Validations.AccountValidations
 {
-    public class LoginUserValidator:AbstractValidator<LoginAccountAsyncDto>
+    public class LoginUserValidator : AbstractValidator<LoginAccountAsyncDto>
     {
         public LoginUserValidator()
         {

@@ -79,12 +79,6 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime?>("PeriodOfTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("TimeLimit")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

@@ -8,8 +8,6 @@ namespace HumanResources.Domain.Repository
     {
         Task<UserResponse> RegisterAsync(RegisterAccountAsyncDto registerUser);
 
-        Task<bool> UpdateAccountInfromationsAsync(UpdateAccountInformationsDto updateAccountInformations);
-
         Task<UserResponse> GenerateConfirmEmailTokenAsync(string email);
 
         Task<UserResponse> ConfirmEmailAsync(string email, string token);
