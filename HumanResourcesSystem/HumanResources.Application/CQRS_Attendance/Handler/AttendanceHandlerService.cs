@@ -29,5 +29,8 @@ namespace HumanResources.Application.CQRS_Attendance.Handler
         public async Task<GetArrivalsDto> GetUserAttendanceByDateAsync(DateTime date) =>
             _mapperProfile.Map<GetArrivalsDto>(await _attendanceRepository.GetUserAttendanceByDateAsync(date));
 
+        public async Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto montDto) =>
+            await _attendanceRepository.GetUserAttendanceStatsByMontAsync(montDto);
+        
     }
 }

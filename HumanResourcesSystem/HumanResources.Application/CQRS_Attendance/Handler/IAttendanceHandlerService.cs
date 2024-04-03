@@ -14,5 +14,7 @@ namespace HumanResources.Application.CQRS_Attendance.Handler
         public Task<List<GetArrivalsDto>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto);
 
         public Task<GetArrivalsDto> GetUserAttendanceByDateAsync(DateTime date);
+
+        public Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto montDto);
     }
 }

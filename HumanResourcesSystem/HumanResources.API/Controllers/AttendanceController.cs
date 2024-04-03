@@ -48,11 +48,21 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpGet ("info/month")]
-        public async Task<IActionResult> GetUserAttendanceByMonth([FromBody] GetAttendanceByMonthDto monthDto)
+        public async Task<IActionResult> GetUserAttendanceByMonth([FromQuery] GetAttendanceByMonthDto monthDto)
         {
             var result = await _attendanceHandlerService.GetUserAttendanceByMonthAsync(monthDto);
 
             return Ok(result);  
         }
+
+        [HttpGet ("stats")]
+        public async Task<IActionResult> GetUserAttendanceCountByMonth([FromQuery] GetAttendanceByMonthDto monthDto)
+        {
+            var result = await _attendanceHandlerService.GetUserAttendanceStatsByMontAsync(monthDto);
+
+            return Ok(result);
+        }
+
+
     }
 }

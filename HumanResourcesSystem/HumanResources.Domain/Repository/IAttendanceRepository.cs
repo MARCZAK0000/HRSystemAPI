@@ -18,5 +18,7 @@ namespace HumanResources.Domain.Repository
         Task<bool> UserDepartureAsync(UserDepartureDto userDeparture);
 
         Task<Arrivals> GetUserAttendanceByDateAsync(DateTime date);
+
+        Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto month);  
     }
 }

@@ -19,7 +19,21 @@ namespace HumanResources.API.Middleware
             {
                 await next.Invoke(context);
             }
-
+            catch(BadRequestException ex)
+            {
+                _logger.LogError(ex.Message);
+                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                context.Response.ContentType = "application/json";
+                var problemDetails = new ProblemDetails()
+                {
+                    Title = "BadRequest",
+                    Type = "Client Error",
+                    Status = (int)HttpStatusCode.BadRequest,
+                    Detail = ex.Message
+                };
+                var json = JsonSerializer.Serialize(problemDetails);
+                await context.Response.WriteAsync(json);
+            }
             catch (InvalidEmailOrPasswordExcepiton ex)
             {
                 _logger.LogError(ex.Message);
