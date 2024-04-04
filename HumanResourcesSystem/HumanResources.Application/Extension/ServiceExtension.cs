@@ -9,6 +9,8 @@ using HumanResources.Application.CQRS_User.Command;
 using HumanResources.Application.CQRS_User.Handler;
 using HumanResources.Application.CQRS_Attendance.Command;
 using HumanResources.Application.CQRS_Attendance.Handler;
+using HumanResources.Application.CQRS_Admin.Command;
+using HumanResources.Application.CQRS_Admin.Handler;
 
 namespace HumanResources.Application.Extension
 {
@@ -33,7 +35,10 @@ namespace HumanResources.Application.Extension
             service.AddScoped<IAttendanceCommandService,  AttendanceCommandService>();  
             service.AddScoped<IAttendanceHandlerService,  AttendanceHandlerService>();
 
+            //Service for Admin
 
+            service.AddScoped<IAdminCommandService, AdminCommandSerivce>();
+            service.AddScoped<IAdminHandlerService, AdminHandlerService>();
 
             service.AddAutoMapper(typeof(MapperProfile));
 

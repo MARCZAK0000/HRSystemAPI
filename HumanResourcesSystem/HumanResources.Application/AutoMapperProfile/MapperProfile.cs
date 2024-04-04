@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using HumanResources.Application.Authentication;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.UserModelDto;
+using Microsoft.AspNetCore.Identity;
 using System.Net;
 
 namespace HumanResources.Application.AutoMapperProfile

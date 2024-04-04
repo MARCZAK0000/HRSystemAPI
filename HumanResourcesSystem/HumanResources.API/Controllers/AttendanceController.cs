@@ -62,6 +62,21 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);
         }
+        [HttpGet("stats/days")]
+        public async Task<IActionResult> GetUserCompletedOrNotDaysByMonth([FromQuery] GetAttendanceByMonthDto monthDto, [FromQuery]bool IsCompleted)
+        {
+            var result = await _attendanceHandlerService.GetUserCompletedOrNotAttendenceByMonthAsync(monthDto, IsCompleted);
+
+            return Ok(result);
+        }
+
+        [HttpGet("info/user")]
+        public async Task<IActionResult> GetInformationsAboutUserAttendanceByMonth([FromQuery] GetAttendanceByMonthDto monthDto, [FromQuery] string userCode)
+        {
+            var result = await _attendanceHandlerService.GetInformationsAboutUserAttendanceByMonth(monthDto, userCode); 
+            return Ok(result);
+        }
+
 
 
     }

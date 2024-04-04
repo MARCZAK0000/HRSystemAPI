@@ -21,6 +21,8 @@ namespace HumanResources.Domain.Entities
 
         public DateTime? Departure { get; set;}
 
+        public DateTime CreateDay { get; set; } 
+
         public bool IsCompleted { get; private set; } = false;
 
         public int TimeLimit { get; } = 8;

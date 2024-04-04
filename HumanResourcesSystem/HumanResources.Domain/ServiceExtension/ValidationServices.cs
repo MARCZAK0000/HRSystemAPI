@@ -30,6 +30,7 @@ namespace HumanResources.Domain.ServiceExtension
             services.AddScoped<IValidator<GetAttendanceByMonthDto>, GetAttendanceByMonthValidator>();
             services.AddScoped<IValidator<UserArrivalDto>,  UserArrivalValidator>();
 
+            //Admin Validation
 
         }
     }

@@ -31,6 +31,14 @@ namespace HumanResources.Application.CQRS_Attendance.Handler
 
         public async Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto montDto) =>
             await _attendanceRepository.GetUserAttendanceStatsByMontAsync(montDto);
+
+        public async Task<List<GetArrivalsDto>>
+            GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted) =>
+            _mapperProfile.Map<List<GetArrivalsDto >> (await _attendanceRepository.GetUserCompletedOrNotAttendenceByMonthAsync(monthDto, isCompleted));
+
+        public async Task<GetAttendanceStatsDto> 
+            GetInformationsAboutUserAttendanceByMonth(GetAttendanceByMonthDto monthDto, string userCode) =>
+            await _attendanceRepository.GetInformationsAboutUserForLeadersAttendanceByMonth(monthDto, userCode);
         
     }
 }

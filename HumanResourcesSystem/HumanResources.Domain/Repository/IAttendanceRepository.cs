@@ -19,6 +19,11 @@ namespace HumanResources.Domain.Repository
 
         Task<Arrivals> GetUserAttendanceByDateAsync(DateTime date);
 
-        Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto month);  
+        Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto month);
+
+        Task <List<Arrivals>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted);
+
+        Task<GetAttendanceStatsDto> GetInformationsAboutUserForLeadersAttendanceByMonth(GetAttendanceByMonthDto monthDto, string UserCode);
+
     }
 }

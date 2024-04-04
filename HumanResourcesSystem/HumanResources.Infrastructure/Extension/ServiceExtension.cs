@@ -38,7 +38,7 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<IUserRepository, UserRepository>();
             service.AddScoped<IHelperRepository, HelperRepository>();
             service.AddScoped<IAttendanceRepository, AttendanceRepository>();
-
+            service.AddScoped<IAdminRepository, AdminRepository>();
 
             var authenticationSettings = new AuthenticationSettings();
             configuration.GetSection("Authentication").Bind(authenticationSettings);

@@ -25,9 +25,10 @@ namespace HumanResources.Infrastructure.Repository
         private readonly IUserContext _userContext;
         private readonly HumanResourcesDatabase _database; 
         private readonly IHelperRepository _helperRepository;
+        private readonly RoleManager<Roles> _roleManager;
         public AccountRepository(SignInManager<User> signInManager, UserManager<User> userManager,
             IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings, 
-            IUserContext userContext, HumanResourcesDatabase database, IHelperRepository helperRepository)
+            IUserContext userContext, HumanResourcesDatabase database, IHelperRepository helperRepository, RoleManager<Roles> roleManager)
         {
             _signInManager = signInManager;
             _userManager = userManager;
@@ -36,6 +37,7 @@ namespace HumanResources.Infrastructure.Repository
             _userContext = userContext;
             _database = database;
             _helperRepository = helperRepository;
+            _roleManager = roleManager;
         }
 
         public async Task<UserResponse> RegisterAsync(RegisterAccountAsyncDto registerUser)

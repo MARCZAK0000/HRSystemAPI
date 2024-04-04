@@ -19,7 +19,7 @@ namespace HumanResources.Domain.UserModelDto
 
         public DateTime? Departure { get; set; }
 
-        public DateTime? PeriodOfTime { get; set; }
+        public DateTime CreateDay { get; set; }
 
         public bool IsCompleted { get; set; }
     }

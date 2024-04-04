@@ -2,6 +2,7 @@
 using HumanResources.Application.Authentication;
 using HumanResources.Domain.AttendanceModelDto;
 using HumanResources.Domain.Entities;
+using HumanResources.Domain.Enums;
 using HumanResources.Domain.Events;
 using HumanResources.Domain.Exceptions;
 using HumanResources.Domain.Repository;
@@ -9,12 +10,6 @@ using HumanResources.Domain.UserModelDto;
 using HumanResources.Infrastructure.Database;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanResources.Infrastructure.Repository
 {
@@ -43,7 +38,8 @@ namespace HumanResources.Infrastructure.Repository
 
             var checkRequest = await _dbContext
                 .Arrivals
-                .FirstOrDefaultAsync(pr => pr.UserId == user.Id && pr.Arrival.Value.Date == userArrival.ArrivalDate.Date);
+                .FirstOrDefaultAsync(pr => pr.UserId == user.Id 
+                    && pr.CreateDay.Date == userArrival.ArrivalDate.Date);
 
             if (checkRequest is not null)
             {
@@ -54,7 +50,9 @@ namespace HumanResources.Infrastructure.Repository
             {
                 UserId = user.Id,
                 UserCode = user.UserCode,
-                Arrival = userArrival.ArrivalDate
+                Arrival = userArrival.ArrivalDate,
+                CreateDay = DateTime.Now.Date
+                
             };
 
             await _dbContext.Arrivals.AddAsync(newArrival);
@@ -98,8 +96,8 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await _dbContext.Arrivals
                 .Where(pr => pr.UserId == user.Id && 
-                    pr.Arrival.Value.Year == year && 
-                        pr.Arrival.Value.Month == month )
+                    pr.CreateDay.Year == year && 
+                        pr.CreateDay.Month == month )
                 .ToListAsync();
 
 
@@ -117,7 +115,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await _dbContext.Arrivals
                 .Where(pr => pr.UserId == user.Id)
-                .FirstOrDefaultAsync(pr => pr.Arrival!.Value.Date == date.Date)
+                .FirstOrDefaultAsync(pr => pr.CreateDay.Date == date.Date)
                 ?? throw new NotFoundException($"We cannot find arrival with that date: {date.Date}");
 
 
@@ -137,8 +135,8 @@ namespace HumanResources.Infrastructure.Repository
 
             var baseQuery = _dbContext.Arrivals
                 .Where(pr => pr.UserId == user.Id
-                    && pr.Arrival.Value.Year == year
-                        && pr.Arrival.Value.Month == month) ?? 
+                    && pr.CreateDay.Year == year
+                        && pr.CreateDay.Month == month) ?? 
                         throw new NotFoundException("There is no attendance in this month");
 
 
@@ -157,6 +155,59 @@ namespace HumanResources.Infrastructure.Repository
 
             return new GetAttendanceStatsDto(completedDays, notCompletedDays, numberOfDays, listOfCompletedDays);
 
+        }
+
+        public async Task<List<Arrivals>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
+
+            var month = Convert.ToInt32(monthDto.Month);
+            var year = monthDto.Year;
+
+            var baseQuery = _dbContext.Arrivals
+                .Where(pr => pr.UserId == user.Id && pr.CreateDay.Year == year && pr.CreateDay.Month == month);
+
+            if(!baseQuery.Any()) 
+            {
+                throw new BadRequestException("Invalid date");
+            }
+
+            var result = await baseQuery.
+                Where(pr => pr.IsCompleted == isCompleted)
+                .ToListAsync();
+
+            return result;
+        }
+
+        public async Task<GetAttendanceStatsDto> GetInformationsAboutUserForLeadersAttendanceByMonth(GetAttendanceByMonthDto monthDto, string userCode)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id)??
+                throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
+
+            var isRole = await _userManager.IsInRoleAsync(user, nameof(RolesEnum.Leader));
+            if (!isRole)
+            {
+                throw new UnauthorizedExceptions("UnAuthorize");
+            }
+
+            var year = monthDto.Year;
+            var month = Convert.ToInt32(monthDto.Month);
+
+            var baseQuery = _dbContext.Arrivals
+                .Where(pr => pr.UserCode == userCode && pr.CreateDay.Year == year && pr.CreateDay.Month == month);
+
+            var completedDays = await baseQuery.CountAsync(pr=>pr.IsCompleted == true);
+
+            var notCompletedDays = await baseQuery.CountAsync(pr => pr.IsCompleted == false);
+
+            var countDays = await baseQuery.CountAsync();
+
+            var listOfCompletedDays = _mapper.Map<List<GetArrivalsDto>>(await baseQuery.Where(pr=>pr.IsCompleted == true).ToListAsync());
+
+            return new GetAttendanceStatsDto(completedDays, notCompletedDays, countDays, listOfCompletedDays);
         }
     }
 }

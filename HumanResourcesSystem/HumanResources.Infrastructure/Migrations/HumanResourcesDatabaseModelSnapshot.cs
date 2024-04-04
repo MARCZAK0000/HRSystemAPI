@@ -73,6 +73,9 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Property<DateTime?>("Arrival")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("CreateDay")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("Departure")
                         .HasColumnType("datetime2");
 
