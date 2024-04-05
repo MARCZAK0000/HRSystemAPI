@@ -1,2 +1,4 @@
 HumanResources.API/*.json
 HumanResources.API/Properties
+HumanResources.API/bin
+HumanResources.API/obj
