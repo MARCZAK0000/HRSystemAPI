@@ -1,13 +1,8 @@
-﻿using AutoMapper;
-using HumanResources.Application.CQRS.IUserHandler;
+﻿using HumanResources.Application.CQRS.IUserHandler;
+using HumanResources.Domain.EmailModelDto;
 using HumanResources.Domain.ModelDtos;
 using HumanResources.Domain.Repository;
 using HumanResources.Domain.Response;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanResources.Application.CQRS.UserHandler
 {
@@ -21,7 +16,7 @@ namespace HumanResources.Application.CQRS.UserHandler
             _accountRepository = accountRepository;
         }
 
-        public async Task<UserResponse> GenerateConfirmEmailTokenAsync(string email) =>
+        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(string email) =>
             await _accountRepository.GenerateConfirmEmailTokenAsync(email);
 
         public async Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber) =>

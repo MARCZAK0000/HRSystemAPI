@@ -1,4 +1,6 @@
 ﻿using HumanResources.Application.Authentication;
+using HumanResources.Application.EmailService;
+using HumanResources.Domain.EmailModelDto;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.Events;
 using HumanResources.Domain.Exceptions;
@@ -26,9 +28,12 @@ namespace HumanResources.Infrastructure.Repository
         private readonly HumanResourcesDatabase _database; 
         private readonly IHelperRepository _helperRepository;
         private readonly RoleManager<Roles> _roleManager;
+        private readonly IEmailServices _emailServices;
+        private readonly EmailAuthenticationSettings _emailAuthenticationSettings;
         public AccountRepository(SignInManager<User> signInManager, UserManager<User> userManager,
             IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings, 
-            IUserContext userContext, HumanResourcesDatabase database, IHelperRepository helperRepository, RoleManager<Roles> roleManager)
+            IUserContext userContext, HumanResourcesDatabase database, IHelperRepository helperRepository, 
+            RoleManager<Roles> roleManager, IEmailServices emailServices, EmailAuthenticationSettings emailAuthenticationSettings)
         {
             _signInManager = signInManager;
             _userManager = userManager;
@@ -38,6 +43,8 @@ namespace HumanResources.Infrastructure.Repository
             _database = database;
             _helperRepository = helperRepository;
             _roleManager = roleManager;
+            _emailServices = emailServices;
+            _emailAuthenticationSettings = emailAuthenticationSettings;
         }
 
         public async Task<UserResponse> RegisterAsync(RegisterAccountAsyncDto registerUser)
@@ -138,31 +145,36 @@ namespace HumanResources.Infrastructure.Repository
 
 
 
-        public async Task<UserResponse> GenerateConfirmEmailTokenAsync(string email)
+        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(string email)
         {
-            var user = await _userManager.FindByEmailAsync(email);
-            if (user is null)
-            {
-                throw new InvalidEmailOrPasswordExcepiton("GenerateToken: Invalid Email");
-            }
+            var user = await _userManager.FindByEmailAsync(email)
+                ?? throw new InvalidEmailOrPasswordExcepiton("GenerateToken: Invalid Email");
+
             var checkAuthentication = await _userManager.IsEmailConfirmedAsync(user);
             if (checkAuthentication)
             {
-                return new UserResponse()
+                return new EmailResponseDto()
                 {
-                    Result = true,
-                    Message = "Your email is confirmed"
+                    IsConfirmed = true,
+                    Message = "Email is confirmed"
                 };
             }
 
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
-            return new UserResponse()
+            var renderMessage = _helperRepository.EmailBody(new ConfirmEmailMessageInfoDto { token = token, UserName = user.UserName!});
+
+
+            var emailInformations = new SendEmailDto()
             {
-                Result = true,
-                Token = token,
-                Message = "Your email token"
+                EmailFrom = _emailAuthenticationSettings.Email,
+                EmailTo = user.Email!,
+                EmailSubject = "Confirm Email",
+                EmailBody = renderMessage
             };
+
+            var result = await _emailServices.SendEmailAsync(emailInformations);
+            return result;
         }
 
         public async Task<UserResponse> ConfirmEmailAsync(string email, string token)

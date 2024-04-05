@@ -10,6 +10,7 @@ using HumanResources.Infrastructure.Authentication;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using HumanResources.Domain.Repository;
+using MimeKit;
 
 namespace HumanResources.Infrastructure.Extension
 {
@@ -40,8 +41,14 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<IAttendanceRepository, AttendanceRepository>();
             service.AddScoped<IAdminRepository, AdminRepository>();
 
+
+            service.AddScoped<IEmailRepostiory, EmailRepository>();
+
+            var emailAuthenticationSettings = new EmailAuthenticationSettings();
+            configuration.GetSection("EmailAuthentication").Bind(emailAuthenticationSettings);  //Register IN DI
+
             var authenticationSettings = new AuthenticationSettings();
-            configuration.GetSection("Authentication").Bind(authenticationSettings);
+            configuration.GetSection("Authentication").Bind(authenticationSettings); 
 
             service.AddAuthentication(options =>
             {
@@ -60,7 +67,8 @@ namespace HumanResources.Infrastructure.Extension
                 };
             });
 
-            service.AddSingleton(authenticationSettings);
+            service.AddSingleton(authenticationSettings); //!!!!!!!!!!!!!!!!!
+            service.AddSingleton(emailAuthenticationSettings); //!!!!!!!!!!!!!!!!!
         }
     }
 }

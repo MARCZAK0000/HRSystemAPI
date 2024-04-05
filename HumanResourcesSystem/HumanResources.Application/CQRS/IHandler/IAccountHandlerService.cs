@@ -1,4 +1,5 @@
-﻿using HumanResources.Domain.ModelDtos;
+﻿using HumanResources.Domain.EmailModelDto;
+using HumanResources.Domain.ModelDtos;
 using HumanResources.Domain.Response;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace HumanResources.Application.CQRS.IUserHandler
     public interface IAccountHandlerService
     {
       
-        Task<UserResponse> GenerateConfirmEmailTokenAsync(string email);
+        Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(string email);
 
         Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber);
 

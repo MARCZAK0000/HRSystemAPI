@@ -11,6 +11,7 @@ using HumanResources.Application.CQRS_Attendance.Command;
 using HumanResources.Application.CQRS_Attendance.Handler;
 using HumanResources.Application.CQRS_Admin.Command;
 using HumanResources.Application.CQRS_Admin.Handler;
+using HumanResources.Application.EmailService;
 
 namespace HumanResources.Application.Extension
 {
@@ -39,6 +40,9 @@ namespace HumanResources.Application.Extension
 
             service.AddScoped<IAdminCommandService, AdminCommandSerivce>();
             service.AddScoped<IAdminHandlerService, AdminHandlerService>();
+
+            //Service for Email
+            service.AddScoped<IEmailServices, EmailServices>();
 
             service.AddAutoMapper(typeof(MapperProfile));
 

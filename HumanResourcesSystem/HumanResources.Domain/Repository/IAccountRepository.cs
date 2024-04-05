@@ -1,4 +1,5 @@
-﻿using HumanResources.Domain.Entities;
+﻿using HumanResources.Domain.EmailModelDto;
+using HumanResources.Domain.Entities;
 using HumanResources.Domain.ModelDtos;
 using HumanResources.Domain.Response;
 
@@ -8,7 +9,7 @@ namespace HumanResources.Domain.Repository
     {
         Task<UserResponse> RegisterAsync(RegisterAccountAsyncDto registerUser);
 
-        Task<UserResponse> GenerateConfirmEmailTokenAsync(string email);
+        Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(string email);
 
         Task<UserResponse> ConfirmEmailAsync(string email, string token);
 

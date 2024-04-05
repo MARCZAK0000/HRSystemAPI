@@ -1,6 +1,8 @@
 ﻿using HumanResources.Application.CQRS_Admin.Command;
 using HumanResources.Application.CQRS_Admin.Handler;
+using HumanResources.Application.EmailService;
 using HumanResources.Domain.AdminModelDto;
+using HumanResources.Domain.EmailModelDto;
 using HumanResources.Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,10 +15,13 @@ namespace HumanResources.API.Controllers
         private readonly IAdminHandlerService _adminHandlerService;
         private readonly IAdminCommandService _adminCommandService;
 
-        public AdminController(IAdminHandlerService adminHandlerService, IAdminCommandService adminCommandService)
+        private readonly IEmailServices _emailServices;
+
+        public AdminController(IAdminHandlerService adminHandlerService, IAdminCommandService adminCommandService, IEmailServices emailServices)
         {
             _adminHandlerService = adminHandlerService;
             _adminCommandService = adminCommandService;
+            _emailServices = emailServices;
         }
 
         [HttpPost("role/manager")]
@@ -72,5 +77,12 @@ namespace HumanResources.API.Controllers
             return Ok(result);
         }
 
+        [HttpPost("email")]
+        public async Task<IActionResult> SendEmailTestAsync([FromBody] SendEmailDto emailResponse)
+        {
+            var result = await _emailServices.SendEmailAsync(emailResponse);
+
+            return Ok(result);
+        }
     }
 }

@@ -58,10 +58,7 @@ namespace HumanResources.API.Controllers
             }
 
             var result = await _accountHandlerService.GenerateConfirmEmailTokenAsync(email);
-            if (!result.Result)
-            {
-                return BadRequest(result);  
-            }
+            
             return Ok(result);
         }
         [HttpPost("confirm")]
