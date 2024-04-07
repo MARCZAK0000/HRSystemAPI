@@ -12,7 +12,7 @@ namespace HumanResources.Application.CQRS.IUserHandler
     public interface IAccountHandlerService
     {
       
-        Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(string email);
+        Task<EmailResponseDto> GenerateConfirmEmailTokenAsync();
 
         Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber);
 

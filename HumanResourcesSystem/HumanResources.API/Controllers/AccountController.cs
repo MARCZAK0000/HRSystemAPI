@@ -49,20 +49,16 @@ namespace HumanResources.API.Controllers
             return Ok(result);
         }
        
-        [HttpGet("confirm")]
-        public async Task<IActionResult> GenerateConfirmEmailToken([FromQuery] string email)
+        [HttpGet("token")]
+        public async Task<IActionResult> GenerateConfirmEmailToken()
         {
-            if(email == null)
-            {
-                return BadRequest(); 
-            }
 
-            var result = await _accountHandlerService.GenerateConfirmEmailTokenAsync(email);
+            var result = await _accountHandlerService.GenerateConfirmEmailTokenAsync();
             
             return Ok(result);
         }
-        [HttpPost("confirm")]
-        public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailAsyncDto confirm)
+        [HttpGet("confirm")]
+        public async Task<IActionResult> ConfirmEmail([FromQuery] ConfirmEmailAsyncDto confirm)
         {
             if(confirm.Email == null || confirm.Token == null) 
             {

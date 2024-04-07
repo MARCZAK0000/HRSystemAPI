@@ -13,8 +13,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
+using System.Web;
 
 namespace HumanResources.Infrastructure.Repository
 {
@@ -145,9 +147,11 @@ namespace HumanResources.Infrastructure.Repository
 
 
 
-        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(string email)
+        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync()
         {
-            var user = await _userManager.FindByEmailAsync(email)
+
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id)
                 ?? throw new InvalidEmailOrPasswordExcepiton("GenerateToken: Invalid Email");
 
             var checkAuthentication = await _userManager.IsEmailConfirmedAsync(user);
@@ -162,7 +166,9 @@ namespace HumanResources.Infrastructure.Repository
 
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
-            var renderMessage = _helperRepository.EmailBody(new ConfirmEmailMessageInfoDto { token = token, UserName = user.UserName!});
+            var tokenEncoded = WebUtility.UrlEncode(token);
+
+            var renderMessage = _helperRepository.EmailBody(new ConfirmEmailMessageInfoDto { token = tokenEncoded, UserName = user.UserName!});
 
 
             var emailInformations = new SendEmailDto()
@@ -180,12 +186,7 @@ namespace HumanResources.Infrastructure.Repository
         public async Task<UserResponse> ConfirmEmailAsync(string email, string token)
         {
 
-            var user = await _userManager.FindByEmailAsync(email);
-
-            if (user is null)
-            {
-                throw new InvalidEmailOrPasswordExcepiton("Confirm Email: Invalid Email");
-            }
+            var user = await _userManager.FindByEmailAsync(email) ?? throw new InvalidEmailOrPasswordExcepiton("Confirm Email: Invalid Email");
 
             var result = await _userManager.ConfirmEmailAsync(user, token);
 
@@ -194,9 +195,6 @@ namespace HumanResources.Infrastructure.Repository
                 Result = result.Succeeded,
                 Message = result.Succeeded? "Well done": $"Confirm Email: {string.Join(",", result.Errors.Select(s=>s.Description))}"
             };
-
-
-           
         }
        
         public async Task<UserResponse> ChangePasswordAsync(ChangePasswordAsyncDto login)

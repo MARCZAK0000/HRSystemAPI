@@ -29,9 +29,25 @@ namespace HumanResources.Infrastructure.Repository
         }
         public string EmailBody(ConfirmEmailMessageInfoDto confirmEmail)
         {
-            return @$"<h1>Welcome {confirmEmail.UserName}</h1>" +
-                $"<p>It's your email confirmation token</p>" +
-                $"<a href='https://localhost:7068/api/account/confirm?token={confirmEmail.token}'>link</a>";
+
+            return $@"
+                    <div>
+                      <h2>Welcome to HR System</h2>
+                      <h2>Confirm Your Email Address</h2>
+                      <p>
+                        Tap the button below to confirm your email address. If you didn't create
+                        an account, you can safely delete this email.
+                      </p>
+                      <div>
+                        <a href='https://localhost:7068/api/account/confirm?email={confirmEmail.UserName}&token={confirmEmail.token}'>
+                          <button style=""height: 50px"">Confirm Email</button>
+                        </a>
+                      </div>
+                      <p>
+                        If that doesn't work, copy and paste the following link in your browser:
+                      </p>
+                      <a href='https://localhost:7068/api/account/confirm?email={confirmEmail.UserName}&token={confirmEmail.token}'>link</a>
+                    </div>";
         }
     }
 }

@@ -16,8 +16,8 @@ namespace HumanResources.Application.CQRS.UserHandler
             _accountRepository = accountRepository;
         }
 
-        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(string email) =>
-            await _accountRepository.GenerateConfirmEmailTokenAsync(email);
+        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync() =>
+            await _accountRepository.GenerateConfirmEmailTokenAsync();
 
         public async Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber) =>
             await _accountRepository.GenerateForgetPasswordTokenAsync(email, phonenumber);

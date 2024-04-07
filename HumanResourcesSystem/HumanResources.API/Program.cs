@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Host.UseNLog();
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
+builder.Services.AddScoped<LoggerMiddleware>();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddValidation();
@@ -76,7 +77,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseMiddleware<ErrorHandlingMiddleware>();
-
+app.UseMiddleware<LoggerMiddleware>();
 
 app.UseAuthorization(); //Add to Avoid problem with Identity  
 app.UseAuthentication();

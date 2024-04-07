@@ -9,7 +9,7 @@ namespace HumanResources.Domain.Repository
     {
         Task<UserResponse> RegisterAsync(RegisterAccountAsyncDto registerUser);
 
-        Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(string email);
+        Task<EmailResponseDto> GenerateConfirmEmailTokenAsync();
 
         Task<UserResponse> ConfirmEmailAsync(string email, string token);
 

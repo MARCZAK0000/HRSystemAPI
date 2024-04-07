@@ -1,6 +1,8 @@
-﻿using HumanResources.Domain.Exceptions;
+﻿using HumanResources.Application.ServiceLogger;
+using HumanResources.Domain.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using System.Text;
 using System.Text.Json;
 
 namespace HumanResources.API.Middleware
@@ -9,9 +11,12 @@ namespace HumanResources.API.Middleware
     {
         private readonly ILogger<ErrorHandlingMiddleware> _logger;
 
-        public ErrorHandlingMiddleware(ILogger<ErrorHandlingMiddleware> logger)
+        private readonly ILoggerService _loggerService;
+
+        public ErrorHandlingMiddleware(ILogger<ErrorHandlingMiddleware> logger, ILoggerService loggerService)
         {
             _logger = logger;
+            _loggerService = loggerService;
         }
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
@@ -21,7 +26,7 @@ namespace HumanResources.API.Middleware
             }
             catch(BadRequestException ex)
             {
-                _logger.LogError(ex.Message);
+                LogInformations(context);
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 context.Response.ContentType = "application/json";
                 var problemDetails = new ProblemDetails()
@@ -36,7 +41,7 @@ namespace HumanResources.API.Middleware
             }
             catch (InvalidEmailOrPasswordExcepiton ex)
             {
-                _logger.LogError(ex.Message);
+                LogInformations(context);
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;
                 context.Response.ContentType = "application/json";
                 var problemDetails = new ProblemDetails()
@@ -52,7 +57,7 @@ namespace HumanResources.API.Middleware
 
             catch (NotFoundException ex)
             {
-                _logger.LogError(ex.Message);
+                LogInformations(context);
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;
                 context.Response.ContentType = "application/json";
                 var problemDetails = new ProblemDetails()
@@ -68,7 +73,7 @@ namespace HumanResources.API.Middleware
 
             catch (ForbidenException ex)
             {
-                _logger.LogError(ex.Message);
+                LogInformations(context);
                 context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
                 context.Response.ContentType = "application/json";
                 var problemDetails = new ProblemDetails()
@@ -84,7 +89,7 @@ namespace HumanResources.API.Middleware
 
             catch (UnauthorizedExceptions ex)
             {
-                _logger.LogError(ex.Message);
+                LogInformations(context);
                 context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
                 context.Response.ContentType = "application/json";
                 var problemDetails = new ProblemDetails()
@@ -99,7 +104,7 @@ namespace HumanResources.API.Middleware
             }
             catch (SavingChangesToDatabaseException ex)
             {
-                _logger.LogError(ex.ToString());
+                LogInformations(context);
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 context.Response.ContentType = "application/json";
                 var problemDetails = new ProblemDetails()
@@ -115,7 +120,7 @@ namespace HumanResources.API.Middleware
 
             catch (ServerErrorException ex)
             {
-                _logger.LogError(ex.ToString());
+                LogInformations(context);
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 context.Response.ContentType = "application/json";
                 var problemDetails = new ProblemDetails()
@@ -131,7 +136,7 @@ namespace HumanResources.API.Middleware
 
             catch (Exception ex)//Error 500
             {
-                _logger.LogError(ex.ToString());
+                LogInformations(context);
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 context.Response.ContentType = "application/json";
                 var problemDetails = new ProblemDetails()
@@ -144,6 +149,13 @@ namespace HumanResources.API.Middleware
                 var response = JsonSerializer.Serialize(problemDetails);
                 await context.Response.WriteAsync(response);
             }
+        }
+
+        private void LogInformations(HttpContext context)
+        {
+            _logger.LogError(_loggerService.LogRequest(context));
+            _logger.LogError(_loggerService.LogResponse(context));
+ 
         }
     }
 }
