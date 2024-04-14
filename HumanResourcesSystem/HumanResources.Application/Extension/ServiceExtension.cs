@@ -13,6 +13,8 @@ using HumanResources.Application.CQRS_Admin.Command;
 using HumanResources.Application.CQRS_Admin.Handler;
 using HumanResources.Application.EmailService;
 using HumanResources.Application.ServiceLogger;
+using HumanResources.Application.CQRS_Absence.Handler;
+using HumanResources.Application.CQRS_Absence.Command;
 
 namespace HumanResources.Application.Extension
 {
@@ -45,8 +47,16 @@ namespace HumanResources.Application.Extension
             //Service for Email
             service.AddScoped<IEmailServices, EmailServices>();
 
+
+            //Service for logger
             service.AddScoped<ILoggerService, LoggerService>();
 
+
+            //Service for Absences
+            service.AddScoped<IAbsenceCommandService, AbsenceCommandService>();
+            service.AddScoped<IAbsenceHandlerService, AbsenceHandlerService>();
+
+            //AutoMapper
             service.AddAutoMapper(typeof(MapperProfile));
 
             //service.AddScoped(provider => new MapperConfiguration(cfg =>

@@ -20,6 +20,8 @@ namespace HumanResources.Infrastructure.Database
         public new DbSet<Roles> Roles { get; set; }
 
         public DbSet<Arrivals> Arrivals { get; set; }
+
+        public DbSet<AbsencesType> AbsencesTypes { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -32,14 +34,15 @@ namespace HumanResources.Infrastructure.Database
                 .IsRequired();
 
             builder.Entity<UserInfo>()
-                .HasMany(e=>e.Absences)
-                .WithOne(e => e.User)
-                .HasForeignKey(e=>e.UserId)
-                .IsRequired();
+                .HasKey(e => e.UserId);
 
-           
+            builder.Entity<Absence>()
+                .HasOne(e => e.AbsencesType)
+                .WithMany(e => e.Absence)
+                .HasForeignKey(e=>e.AbsenceId);
 
             base.OnModelCreating(builder);
+
 
         }
     }

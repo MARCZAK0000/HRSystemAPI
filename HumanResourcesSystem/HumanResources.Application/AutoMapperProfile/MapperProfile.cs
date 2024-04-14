@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HumanResources.Application.Authentication;
+using HumanResources.Domain.AbsenceModelDto;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.UserModelDto;
 using Microsoft.AspNetCore.Identity;
@@ -21,6 +22,9 @@ namespace HumanResources.Application.AutoMapperProfile
 
 
             CreateMap<Arrivals, GetArrivalsDto>();
+
+            CreateMap<Absence, AbsenceInfoDto>()
+                .ForMember(pr=>pr.AbsenceTypeName, opt=>opt.MapFrom(src=>src.AbsencesType.Name));
 
         }
     }

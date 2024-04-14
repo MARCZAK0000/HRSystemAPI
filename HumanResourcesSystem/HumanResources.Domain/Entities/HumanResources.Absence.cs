@@ -13,9 +13,11 @@ namespace HumanResources.Domain.Entities
 
         public string Name { get; set; }
 
-        public AbsenceType AbsenceType { get; set; }
+        public int AbsenceId { get; set; }  
 
-        public int UserId { get; set; }
+        public AbsencesType AbsencesType { get; set; }
+
+        public string UserId { get; set; }
 
         public UserInfo User { get; set; }
 
@@ -25,10 +27,10 @@ namespace HumanResources.Domain.Entities
 
         public DateTime EndTime { get; set; }
 
-        public decimal PeriodOfTime { get;  private set; }
+        public int PeriodOfTime { get;  private set; }
 
         public bool isAccepted { get; set; } = false;
 
-        public void CalculatePeriodOfTime() => PeriodOfTime = EndTime.Subtract(StartTime).Days;
+        public void CalculatePeriodOfTime() => PeriodOfTime = EndTime.Subtract(StartTime).Days + 1;
     }
 }

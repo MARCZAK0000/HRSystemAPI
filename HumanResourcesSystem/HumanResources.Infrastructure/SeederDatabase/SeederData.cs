@@ -12,5 +12,10 @@ namespace HumanResources.Infrastructure.SeederDatabase
         {
             "HR", "Marketing", "Production", "Fiance", "Purchasing", "Sales", "Administration", "IT", "None"
         };
+
+        protected List<string> AbsencesList = new List<string>()
+        {
+            "Holidays", "Unauthorised absence", "Medical leave","Bereavement leave", "Parental leave", "Caregiver leave"
+        };
     }
 }

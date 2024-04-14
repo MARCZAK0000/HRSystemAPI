@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Domain.Enums
 {
-    public enum AbsenceType{
+    public enum AbsenceType
+    {
 
     }
 }

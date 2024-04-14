@@ -1,16 +1,15 @@
-﻿using HumanResources.Infrastructure.Database;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using HumanResources.Domain.Entities;
+﻿using HumanResources.Domain.Entities;
+using HumanResources.Domain.Repository;
+using HumanResources.Infrastructure.Authentication;
+using HumanResources.Infrastructure.Database;
 using HumanResources.Infrastructure.Repository;
 using HumanResources.Infrastructure.SeederDatabase;
 using Microsoft.AspNetCore.Identity;
-using HumanResources.Infrastructure.Authentication;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using HumanResources.Domain.Repository;
-using MimeKit;
 
 namespace HumanResources.Infrastructure.Extension
 {
@@ -23,7 +22,7 @@ namespace HumanResources.Infrastructure.Extension
                 opt.UseSqlServer(configuration.GetConnectionString("MyConnectionString"));
             });
 
-            
+
             service.AddIdentity<User, Roles>(opt =>
             {
                 opt.Password.RequireNonAlphanumeric = false;
@@ -40,15 +39,19 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<IHelperRepository, HelperRepository>();
             service.AddScoped<IAttendanceRepository, AttendanceRepository>();
             service.AddScoped<IAdminRepository, AdminRepository>();
-
-
             service.AddScoped<IEmailRepostiory, EmailRepository>();
+            service.AddScoped<IAbsenceRepository, AbsenceRepository>();
+
 
             var emailAuthenticationSettings = new EmailAuthenticationSettings();
             configuration.GetSection("EmailAuthentication").Bind(emailAuthenticationSettings);  //Register IN DI
 
+            service.AddSingleton(emailAuthenticationSettings); //!!!!!!!!!!!!!!!!!
+
             var authenticationSettings = new AuthenticationSettings();
-            configuration.GetSection("Authentication").Bind(authenticationSettings); 
+            configuration.GetSection("Authentication").Bind(authenticationSettings);
+
+            service.AddSingleton(authenticationSettings); //!!!!!!!!!!!!!!!!!
 
             service.AddAuthentication(options =>
             {
@@ -67,8 +70,6 @@ namespace HumanResources.Infrastructure.Extension
                 };
             });
 
-            service.AddSingleton(authenticationSettings); //!!!!!!!!!!!!!!!!!
-            service.AddSingleton(emailAuthenticationSettings); //!!!!!!!!!!!!!!!!!
         }
     }
 }

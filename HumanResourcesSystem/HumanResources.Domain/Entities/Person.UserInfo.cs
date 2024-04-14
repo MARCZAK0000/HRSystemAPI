@@ -4,11 +4,9 @@ namespace HumanResources.Domain.Entities
 {
     public class UserInfo
     {
-        public int Id { get; set; }
-
+        public string UserId {  get; set; }  
+        
         public User User { get; set; }
-
-        public string UserId {  get; set; }    
 
         public string Name { get; set; }
 

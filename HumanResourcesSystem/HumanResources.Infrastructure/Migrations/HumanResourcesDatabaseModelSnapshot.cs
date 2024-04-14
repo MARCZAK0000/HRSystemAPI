@@ -30,7 +30,7 @@ namespace HumanResources.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AbsenceType")
+                    b.Property<int>("AbsenceId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedTime")
@@ -43,23 +43,43 @@ namespace HumanResources.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("PeriodOfTime")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("PeriodOfTime")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("isAccepted")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AbsenceId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Absences");
+                });
+
+            modelBuilder.Entity("HumanResources.Domain.Entities.AbsencesType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AbsencesTypes");
                 });
 
             modelBuilder.Entity("HumanResources.Domain.Entities.Arrivals", b =>
@@ -90,14 +110,14 @@ namespace HumanResources.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("UserInfoId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserInfoUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.HasIndex("UserInfoId");
+                    b.HasIndex("UserInfoUserId");
 
                     b.ToTable("Arrivals");
                 });
@@ -221,11 +241,8 @@ namespace HumanResources.Infrastructure.Migrations
 
             modelBuilder.Entity("HumanResources.Domain.Entities.UserInfo", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("DaysOfAbsencesCurrentYear")
                         .HasColumnType("int");
@@ -251,18 +268,12 @@ namespace HumanResources.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int?>("YearsOfExperiences")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserId");
 
                     b.HasIndex("DepartmentID");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("UserInfo");
                 });
@@ -375,11 +386,19 @@ namespace HumanResources.Infrastructure.Migrations
 
             modelBuilder.Entity("HumanResources.Domain.Entities.Absence", b =>
                 {
+                    b.HasOne("HumanResources.Domain.Entities.AbsencesType", "AbsencesType")
+                        .WithMany("Absence")
+                        .HasForeignKey("AbsenceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("HumanResources.Domain.Entities.UserInfo", "User")
                         .WithMany("Absences")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AbsencesType");
 
                     b.Navigation("User");
                 });
@@ -394,7 +413,7 @@ namespace HumanResources.Infrastructure.Migrations
 
                     b.HasOne("HumanResources.Domain.Entities.UserInfo", null)
                         .WithMany("Arrivals")
-                        .HasForeignKey("UserInfoId");
+                        .HasForeignKey("UserInfoUserId");
 
                     b.Navigation("User");
                 });
@@ -408,8 +427,8 @@ namespace HumanResources.Infrastructure.Migrations
                         .IsRequired();
 
                     b.HasOne("HumanResources.Domain.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
+                        .WithOne("UserInfo")
+                        .HasForeignKey("HumanResources.Domain.Entities.UserInfo", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -469,9 +488,20 @@ namespace HumanResources.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("HumanResources.Domain.Entities.AbsencesType", b =>
+                {
+                    b.Navigation("Absence");
+                });
+
             modelBuilder.Entity("HumanResources.Domain.Entities.Departments", b =>
                 {
                     b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("HumanResources.Domain.Entities.User", b =>
+                {
+                    b.Navigation("UserInfo")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("HumanResources.Domain.Entities.UserInfo", b =>

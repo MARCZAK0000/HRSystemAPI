@@ -54,6 +54,18 @@ namespace HumanResources.Infrastructure.SeederDatabase
                     await _database.SaveChangesAsync();
                 }
 
+                if (!_database.AbsencesTypes.Any())
+                {
+                    foreach (var item in AbsencesList)
+                    {
+                        await _database.AbsencesTypes.AddAsync(new AbsencesType()
+                        {
+                            Name = item.ToString()
+                        });
+                    }
+                    await _database.SaveChangesAsync();
+                }
+
             }
 
 
