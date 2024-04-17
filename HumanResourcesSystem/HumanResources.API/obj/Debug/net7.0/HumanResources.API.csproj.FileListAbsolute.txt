@@ -68,7 +68,6 @@ C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSyst
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\HumanResources.API.AssemblyInfoInputs.cache
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\HumanResources.API.AssemblyInfo.cs
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\HumanResources.API.csproj.CoreCompileInputs.cache
-C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\HumanResources.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\HumanResources.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\staticwebassets\msbuild.HumanResources.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\staticwebassets\msbuild.build.HumanResources.API.props
@@ -109,3 +108,4 @@ C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSyst
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\System.Text.Encoding.CodePages.dll
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Text.Encoding.CodePages.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\HumanResources.API.MvcApplicationPartsAssemblyInfo.cs

@@ -14,6 +14,8 @@ namespace HumanResources.Domain.AbsenceModelDto
 
         public decimal PeriodOfTime { get; set; }
 
-        public bool isAccepted { get; set; }
+        public bool IsAccepted { get; set; }
+
+        public bool Declined { get; set; }
     }
 }

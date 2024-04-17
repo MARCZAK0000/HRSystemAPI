@@ -18,5 +18,9 @@ namespace HumanResources.Application.CQRS_Absence.Command
 
         public async Task<AbsenceInfoDto> CreateAbsenceAsync(CreateAbsenceDto createAbsence) => 
             _mapper.Map<AbsenceInfoDto>(await _absenceRepository.CreateAbsenceAsync(createAbsence));
+
+        public async Task<AbsenceDecisionDto> AbsenceDecisionAsync(AbsenceDecisionInfoDto absenceDecision)=>
+            _mapper.Map<AbsenceDecisionDto>(await _absenceRepository.AbsenceDecisionAsync(absenceDecision));
+
     }
 }

@@ -1,25 +1,25 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using HumanResources.Application.CQRS.IUserCommand;
-using HumanResources.Application.CQRS.UserCommand;
-using HumanResources.Application.CQRS.IUserHandler;
-using HumanResources.Application.CQRS.UserHandler;
-using HumanResources.Application.Authentication;
+﻿using HumanResources.Application.Authentication;
 using HumanResources.Application.AutoMapperProfile;
-using HumanResources.Application.CQRS_User.Command;
-using HumanResources.Application.CQRS_User.Handler;
-using HumanResources.Application.CQRS_Attendance.Command;
-using HumanResources.Application.CQRS_Attendance.Handler;
+using HumanResources.Application.CQRS.IUserCommand;
+using HumanResources.Application.CQRS.IUserHandler;
+using HumanResources.Application.CQRS.UserCommand;
+using HumanResources.Application.CQRS.UserHandler;
+using HumanResources.Application.CQRS_Absence.Command;
+using HumanResources.Application.CQRS_Absence.Handler;
 using HumanResources.Application.CQRS_Admin.Command;
 using HumanResources.Application.CQRS_Admin.Handler;
+using HumanResources.Application.CQRS_Attendance.Command;
+using HumanResources.Application.CQRS_Attendance.Handler;
+using HumanResources.Application.CQRS_User.Command;
+using HumanResources.Application.CQRS_User.Handler;
 using HumanResources.Application.EmailService;
 using HumanResources.Application.ServiceLogger;
-using HumanResources.Application.CQRS_Absence.Handler;
-using HumanResources.Application.CQRS_Absence.Command;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HumanResources.Application.Extension
 {
     public static class ServiceExtension
-    {   
+    {
         public static void AddApplication(this IServiceCollection service)
         {
 
@@ -36,8 +36,8 @@ namespace HumanResources.Application.Extension
 
 
             //Service for Arrivals and Departure
-            service.AddScoped<IAttendanceCommandService,  AttendanceCommandService>();  
-            service.AddScoped<IAttendanceHandlerService,  AttendanceHandlerService>();
+            service.AddScoped<IAttendanceCommandService, AttendanceCommandService>();
+            service.AddScoped<IAttendanceHandlerService, AttendanceHandlerService>();
 
             //Service for Admin
 

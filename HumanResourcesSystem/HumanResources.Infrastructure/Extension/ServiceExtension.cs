@@ -20,6 +20,7 @@ namespace HumanResources.Infrastructure.Extension
             service.AddDbContext<HumanResourcesDatabase>(opt =>
             {
                 opt.UseSqlServer(configuration.GetConnectionString("MyConnectionString"));
+
             });
 
 

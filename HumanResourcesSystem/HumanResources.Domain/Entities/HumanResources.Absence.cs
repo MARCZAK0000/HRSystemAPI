@@ -1,11 +1,4 @@
-﻿using HumanResources.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HumanResources.Domain.Entities
+﻿namespace HumanResources.Domain.Entities
 {
     public class Absence
     {
@@ -29,8 +22,19 @@ namespace HumanResources.Domain.Entities
 
         public int PeriodOfTime { get;  private set; }
 
-        public bool isAccepted { get; set; } = false;
+        public bool IsAccepted { get; set; } = false;
 
-        public void CalculatePeriodOfTime() => PeriodOfTime = EndTime.Subtract(StartTime).Days + 1;
+        public bool Declined { get; set; } = false;
+
+        public void CalculatePeriodOfTime()
+        {
+            PeriodOfTime = EndTime.Subtract(StartTime).Days + 1;
+        }
+
+        public int CalculateDayToUse(Func<int> calculate) 
+        {
+            return calculate();
+        }
+
     }
 }

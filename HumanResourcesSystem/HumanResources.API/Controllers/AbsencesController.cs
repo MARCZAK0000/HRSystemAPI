@@ -26,5 +26,21 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> ShowAbsencesByYear([FromQuery] int year)
+        {
+            var result = await _absenceHandlerService.ShowAbsencesByYearAsync(year);
+
+            return Ok(result);  
+        }
+
+        [HttpPut("manager")]
+        public async Task<IActionResult> AbsenceDecision([FromBody] AbsenceDecisionInfoDto infoDto)
+        {
+            var result = await _absenceCommandService.AbsenceDecisionAsync(infoDto);
+
+            return Ok(result);
+        }
     }
 }

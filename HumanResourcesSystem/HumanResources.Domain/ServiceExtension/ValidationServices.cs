@@ -6,6 +6,8 @@ using HumanResources.Domain.AttendanceModelDto;
 using HumanResources.Domain.Validations.AccountValidations;
 using HumanResources.Domain.Validations.AttendanceValidation;
 using HumanResources.Domain.UserModelDto;
+using HumanResources.Domain.AbsenceModelDto;
+using HumanResources.Domain.Validations.AttendanceValidatons;
 
 namespace HumanResources.Domain.ServiceExtension
 {
@@ -30,8 +32,8 @@ namespace HumanResources.Domain.ServiceExtension
             services.AddScoped<IValidator<GetAttendanceByMonthDto>, GetAttendanceByMonthValidator>();
             services.AddScoped<IValidator<UserArrivalDto>,  UserArrivalValidator>();
 
-            //Admin Validation
-
+            //Absence Validation
+            services.AddScoped<IValidator<CreateAbsenceDto>, CreateAbsenceValidator>();
         }
     }
 }
