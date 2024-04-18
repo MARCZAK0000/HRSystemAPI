@@ -35,7 +35,7 @@ namespace HumanResources.API.Controllers
             return Ok(result);  
         }
 
-        [HttpPut("manager")]
+        [HttpPut("leader")]
         public async Task<IActionResult> AbsenceDecision([FromBody] AbsenceDecisionInfoDto infoDto)
         {
             var result = await _absenceCommandService.AbsenceDecisionAsync(infoDto);

@@ -10,6 +10,8 @@ using HumanResources.Application.CQRS_Admin.Command;
 using HumanResources.Application.CQRS_Admin.Handler;
 using HumanResources.Application.CQRS_Attendance.Command;
 using HumanResources.Application.CQRS_Attendance.Handler;
+using HumanResources.Application.CQRS_Departmens.Command;
+using HumanResources.Application.CQRS_Departmens.Handler;
 using HumanResources.Application.CQRS_User.Command;
 using HumanResources.Application.CQRS_User.Handler;
 using HumanResources.Application.EmailService;
@@ -55,6 +57,10 @@ namespace HumanResources.Application.Extension
             //Service for Absences
             service.AddScoped<IAbsenceCommandService, AbsenceCommandService>();
             service.AddScoped<IAbsenceHandlerService, AbsenceHandlerService>();
+
+            //Serive for Departmen
+            service.AddScoped<IDepartmentCommandService,  DepartmentCommandService>();
+            service.AddScoped<IDepartmentHandlerService, DepartmentHandlerService>();
 
             //AutoMapper
             service.AddAutoMapper(typeof(MapperProfile));

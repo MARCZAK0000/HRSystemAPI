@@ -42,7 +42,7 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<IAdminRepository, AdminRepository>();
             service.AddScoped<IEmailRepostiory, EmailRepository>();
             service.AddScoped<IAbsenceRepository, AbsenceRepository>();
-
+            service.AddScoped<IDepartmentReposiotry, DepartmentRepository>();
 
             var emailAuthenticationSettings = new EmailAuthenticationSettings();
             configuration.GetSection("EmailAuthentication").Bind(emailAuthenticationSettings);  //Register IN DI

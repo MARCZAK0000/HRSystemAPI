@@ -8,7 +8,7 @@ namespace HumanResources.Domain.AbsenceModelDto
 {
     public class AbsenceDecisionInfoDto
     {
-        public string UserId { get; set; }
+        public string UserCode { get; set; }
 
         public int AbsenceId { get; set; }
 

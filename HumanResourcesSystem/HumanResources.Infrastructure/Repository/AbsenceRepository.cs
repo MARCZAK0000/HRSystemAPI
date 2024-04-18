@@ -107,7 +107,7 @@ namespace HumanResources.Infrastructure.Repository
                 .Absences
                 .Include(pr => pr.AbsencesType)
                 .Include(pr => pr.User)
-                .FirstOrDefaultAsync(pr => pr.Id == infoDto.AbsenceId && pr.UserId == infoDto.UserId) ??
+                .FirstOrDefaultAsync(pr => pr.Id == infoDto.AbsenceId && pr.User.UserCode == infoDto.UserCode) ??
                 throw new NotFoundException("Not Found");
 
             if (subordinateAbsence.IsAccepted)
@@ -123,7 +123,8 @@ namespace HumanResources.Infrastructure.Repository
             }
 
             subordinateAbsence.IsAccepted = infoDto.Decision;
-            subordinateAbsence.User.DaysOfAbsencesCurrentYear = subordinateAbsence.CalculateDayToUse(() =>
+            subordinateAbsence.User.DaysOfAbsencesCurrentYear += subordinateAbsence.PeriodOfTime;
+            var daysToUse = subordinateAbsence.CalculateDayToUse(() =>
             {
                 int daysToUse = 0;
 
@@ -140,6 +141,16 @@ namespace HumanResources.Infrastructure.Repository
                 return daysToUse;
             });
 
+            if(subordinateAbsence.User.DaysOfAbsencesToUse -  daysToUse < 0 && daysToUse > 0) 
+            {
+                subordinateAbsence.Declined = true;
+
+                await _database.SaveChangesAsync();
+                throw new BadRequestException($"User: {subordinateAbsence.User.UserCode} used all of his absence days");
+            }
+
+
+            subordinateAbsence.User.DaysOfAbsencesToUse-= daysToUse;
             await _database.SaveChangesAsync();
             return subordinateAbsence;
 
