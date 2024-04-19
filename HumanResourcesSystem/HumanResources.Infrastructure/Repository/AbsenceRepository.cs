@@ -103,12 +103,24 @@ namespace HumanResources.Infrastructure.Repository
                 throw new UnauthorizedExceptions("UnAuthorized");
             }
 
-            var subordinateAbsence = await _database
+            var getLeaderDepartmentID = await _database.UserInfo
+                .FirstOrDefaultAsync(pr=>pr.UserId == user.Id)??
+                throw new NotFoundException("NotFound leader");
+
+            var baseQuery = _database
                 .Absences
                 .Include(pr => pr.AbsencesType)
                 .Include(pr => pr.User)
+                .Where(pr => pr.User.DepartmentID == getLeaderDepartmentID.DepartmentID);
+
+            if(!baseQuery.Any()) 
+            {
+                throw new NotFoundException("User is not in your Department");
+            }
+
+            var subordinateAbsence = await baseQuery 
                 .FirstOrDefaultAsync(pr => pr.Id == infoDto.AbsenceId && pr.User.UserCode == infoDto.UserCode) ??
-                throw new NotFoundException("Not Found");
+                throw new NotFoundException("Not Found Absences");
 
             if (subordinateAbsence.IsAccepted)
             {

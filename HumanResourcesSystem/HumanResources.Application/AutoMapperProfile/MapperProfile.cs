@@ -3,7 +3,6 @@ using HumanResources.Domain.AbsenceModelDto;
 using HumanResources.Domain.DepartmentModelDto;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.UserModelDto;
-using Org.BouncyCastle.Crypto.Modes;
 
 namespace HumanResources.Application.AutoMapperProfile
 {
@@ -31,16 +30,16 @@ namespace HumanResources.Application.AutoMapperProfile
                 .ForMember(pr => pr.UserCode, opt => opt.MapFrom(src => src.User.UserCode))
                 .ForMember(pr => pr.AbsenseTitle, opt => opt.MapFrom(src => src.Name))
                 .ForMember(pr => pr.AbsenceName, opt => opt.MapFrom(src => src.AbsencesType.Name))
-                .ForMember(pr=>pr.StartTime, opt=>opt.MapFrom(src=>src.StartTime.Date))
-                .ForMember(pr=>pr.EndTime, opt=>opt.MapFrom(src=>src.EndTime.Date));
+                .ForMember(pr => pr.StartTime, opt => opt.MapFrom(src => src.StartTime.Date))
+                .ForMember(pr => pr.EndTime, opt => opt.MapFrom(src => src.EndTime.Date));
 
 
             CreateMap<Departments, DepartmentInfoDto>();
 
             CreateMap<UserInfo, DepartmentUserInfoDto>()
-                .ForMember(pr=>pr.Email, opt=>opt.MapFrom(src=>src.User.Email))
-                .ForMember(pr=>pr.Phone, opt=>opt.MapFrom(src=>src.User.PhoneNumber));
-                
+                .ForMember(pr => pr.Email, opt => opt.MapFrom(src => src.User.Email))
+                .ForMember(pr => pr.Phone, opt => opt.MapFrom(src => src.User.PhoneNumber));
+
         }
     }
 }
