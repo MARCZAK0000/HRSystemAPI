@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using HumanResources.Domain.DepartmentModelDto;
 using HumanResources.Domain.Repository;
+using HumanResources.Domain.Response;
 
 namespace HumanResources.Application.CQRS_Departmens.Command
 {
@@ -14,5 +16,8 @@ namespace HumanResources.Application.CQRS_Departmens.Command
             _mapper = mapper;
             _departmentRepository = departmentRepository;
         }
+
+        public async Task<DepartmentResponse> ChangeUserDepartmentAscyn(ChangeDepartmentDto changeDepartment) =>
+            await _departmentRepository.ChangeUserDepartmentAsync(changeDepartment);
     }
 }
