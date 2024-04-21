@@ -10,7 +10,7 @@ namespace HumanResources.Domain.Validations.AbsenceValidatons
             RuleFor(pr => pr.AbsenceId)
                 .GreaterThanOrEqualTo(1)
                 .LessThanOrEqualTo(6);
-                
+  
         }
     }
 }

@@ -19,7 +19,7 @@ namespace HumanResources.API.Controllers
             _absenceCommandService = absenceCommandService;
         }
 
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<IActionResult> CreateAbsence([FromBody] CreateAbsenceDto createAbsence)
         {
             var result = await _absenceCommandService.CreateAbsenceAsync(createAbsence);
@@ -27,8 +27,8 @@ namespace HumanResources.API.Controllers
             return Ok(result);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> ShowAbsencesByYear([FromQuery] int year)
+        [HttpGet("info/{year}")]
+        public async Task<IActionResult> ShowAbsencesAllByYear([FromRoute] int year)
         {
             var result = await _absenceHandlerService.ShowAbsencesByYearAsync(year);
 

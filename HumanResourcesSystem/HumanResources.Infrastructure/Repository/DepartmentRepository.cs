@@ -2,6 +2,7 @@
 using HumanResources.Domain.DepartmentModelDto;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.Enums;
+using HumanResources.Domain.Events;
 using HumanResources.Domain.Exceptions;
 using HumanResources.Domain.Repository;
 using HumanResources.Domain.Response;
@@ -45,7 +46,7 @@ namespace HumanResources.Infrastructure.Repository
             getUser.DepartmentID = changeDepartment.DepartmentId;
 
             await _database.SaveChangesAsync();
-
+            _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
             return new DepartmentResponse()
             {
                 DepartmentId = changeDepartment.DepartmentId,
@@ -74,6 +75,74 @@ namespace HumanResources.Infrastructure.Repository
 
             return result;
 
+        }
+
+        public async Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto departmentInfo)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
+
+            if (!await _userManager.IsInRoleAsync(user, nameof(RolesEnum.Admin)))
+            {
+                throw new ForbidenException("Forbiden Request");
+            }
+
+            var newDepartment = new Departments()
+            {
+                Name = departmentInfo.Name,
+                Description = departmentInfo.Description,
+            };
+
+            await _database.Departments
+                .AddAsync(newDepartment);
+
+            await _database.SaveChangesAsync();
+            _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
+
+
+            return new DepartmentResponse()
+            {
+                Result = true,
+                Message = "Well Done"
+            };
+        }
+
+     
+        public async Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto changeDepartment, int depratmentID)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
+
+            if (!await _userManager.IsInRoleAsync(user, nameof(RolesEnum.Admin)))
+            {
+                throw new ForbidenException("Forbiden Request");
+            }
+
+            var getDeparmentsCount = await _database.Departments
+                .CountAsync();
+
+            if(depratmentID < 1 || depratmentID > getDeparmentsCount) 
+            {
+                throw new BadRequestException($"Invalid index of department: 1 - {getDeparmentsCount}");
+            }
+
+            var getDepartment = await _database.
+                Departments.
+                FirstOrDefaultAsync(pr => pr.Id == depratmentID);
+
+            getDepartment!.Name = changeDepartment.Name;
+            getDepartment!.Description = changeDepartment.Description;
+
+            await _database.SaveChangesAsync();
+            _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
+
+            return new DepartmentResponse()
+            {
+                Result = true,
+                Message = "Well done"
+            };
         }
     }
 }

@@ -14,5 +14,9 @@ namespace HumanResources.Domain.Repository
         Task<DepartmentResponse> ChangeUserDepartmentAsync (ChangeDepartmentDto changeDepartment);
 
         Task<Departments> DepartmentInfoAsync(int departmentId);    
+
+        Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto departmentInfo);
+
+        Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto changeDepartment, int depratmentID);
     }
 }

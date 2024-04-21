@@ -33,5 +33,22 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);
         }
+        [HttpPost("add")]
+        public async Task<IActionResult> AddDeparment([FromBody] DepartmentUpdateDto departmentAdd)
+        {
+            var result = await _departmentCommandSerivce.AddDepartmentAsync(departmentAdd);
+
+            return Ok(result);
+        }
+
+        [HttpPut("update/{deparmentId}")]
+        public async Task<IActionResult> UpdateDeparment([FromBody] DepartmentUpdateDto update, [FromRoute] int deparmentId)
+        {
+            var result = await _departmentCommandSerivce.UpdateDepartmentAsync(update, deparmentId);
+
+            return Ok(result);
+        }
+
+        
     }
 }
