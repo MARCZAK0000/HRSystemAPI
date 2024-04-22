@@ -34,7 +34,8 @@ namespace HumanResources.Application.AutoMapperProfile
                 .ForMember(pr => pr.EndTime, opt => opt.MapFrom(src => src.EndTime.Date));
 
 
-            CreateMap<Departments, DepartmentInfoDto>();
+            CreateMap<Departments, DepartmentInfoDto>()
+                .ForMember(pr=>pr.DeparmentID, opt=>opt.MapFrom(src=>src.Id));
 
             CreateMap<UserInfo, DepartmentUserInfoDto>()
                 .ForMember(pr => pr.Email, opt => opt.MapFrom(src => src.User.Email))

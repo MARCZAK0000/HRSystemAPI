@@ -8,6 +8,8 @@ namespace HumanResources.Domain.DepartmentModelDto
 {
     public class DepartmentInfoDto
     {
+        public int DeparmentID { get; set; }
+
         public string Name { get; set; }
 
         public string Description { get; set; }

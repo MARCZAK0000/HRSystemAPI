@@ -3,21 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.API", "HumanResources.Api\HumanResources.API.csproj", "{DF68D963-B0F6-4353-AFAA-857ABB78EFAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumanResources.API", "HumanResources.Api\HumanResources.API.csproj", "{DF68D963-B0F6-4353-AFAA-857ABB78EFAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.Domain", "HumanResources.Domain\HumanResources.Domain.csproj", "{6DF3AAE6-DD24-4B27-85E7-10EA27B52118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumanResources.Domain", "HumanResources.Domain\HumanResources.Domain.csproj", "{6DF3AAE6-DD24-4B27-85E7-10EA27B52118}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.Infrastructure", "HumanResources.Infrastructure\HumanResources.Infrastructure.csproj", "{F6C00A11-A6DE-4BF5-A7C6-98E4E162E9E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumanResources.Infrastructure", "HumanResources.Infrastructure\HumanResources.Infrastructure.csproj", "{F6C00A11-A6DE-4BF5-A7C6-98E4E162E9E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.Application", "HumanResources.Application\HumanResources.Application.csproj", "{83018338-9F8F-4980-A795-792FCE5EA084}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumanResources.Application", "HumanResources.Application\HumanResources.Application.csproj", "{83018338-9F8F-4980-A795-792FCE5EA084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.ApplicationTests", "HumanResources.ApplicationTests\HumanResources.ApplicationTests.csproj", "{37D30F0D-BDD6-44CD-8CBB-6976595E2F9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{097B42D8-9EAC-46A2-8DE7-0F68A3932F0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.DomainTests", "HumanResources.DomainTests\HumanResources.DomainTests.csproj", "{B7387CBB-9513-4B85-8D21-9ED96654B38A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DF68D963-B0F6-4353-AFAA-857ABB78EFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +39,23 @@ Global
 		{83018338-9F8F-4980-A795-792FCE5EA084}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83018338-9F8F-4980-A795-792FCE5EA084}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83018338-9F8F-4980-A795-792FCE5EA084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37D30F0D-BDD6-44CD-8CBB-6976595E2F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D30F0D-BDD6-44CD-8CBB-6976595E2F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D30F0D-BDD6-44CD-8CBB-6976595E2F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37D30F0D-BDD6-44CD-8CBB-6976595E2F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7387CBB-9513-4B85-8D21-9ED96654B38A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7387CBB-9513-4B85-8D21-9ED96654B38A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7387CBB-9513-4B85-8D21-9ED96654B38A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7387CBB-9513-4B85-8D21-9ED96654B38A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{37D30F0D-BDD6-44CD-8CBB-6976595E2F9F} = {097B42D8-9EAC-46A2-8DE7-0F68A3932F0E}
+		{B7387CBB-9513-4B85-8D21-9ED96654B38A} = {097B42D8-9EAC-46A2-8DE7-0F68A3932F0E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C3671C2-60F1-4BDA-B044-E053802DA6AD}
 	EndGlobalSection
 EndGlobal

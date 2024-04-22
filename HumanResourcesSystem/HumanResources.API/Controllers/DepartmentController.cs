@@ -19,17 +19,24 @@ namespace HumanResources.API.Controllers
             _departmentHandlerService = departmentHandlerService;
         }
 
-        [HttpPost("update")]
-        public async Task<IActionResult> ChangeDepartment([FromBody] ChangeDepartmentDto changeDepartment)
+        [HttpPost("user/update")]
+        public async Task<IActionResult> ChangeUserDepartment([FromBody] ChangeDepartmentDto changeDepartment)
         {
             var result = await _departmentCommandSerivce.ChangeUserDepartmentAscyn(changeDepartment);
 
             return Ok(result);
         }
-        [HttpGet("info")]
-        public async Task<IActionResult> InfoAboutDepartmenst([FromQuery] int departmentID)
+        [HttpGet("info/{departmentID}")]
+        public async Task<IActionResult> InfoAboutDepartmenst([FromRoute] int departmentID)
         {
             var result = await _departmentHandlerService.DepartmentInfoAsync(departmentID);
+
+            return Ok(result);
+        }
+        [HttpGet("info")]
+        public async Task<IActionResult> GetAllDepartmenst()
+        {
+            var result = await _departmentHandlerService.GetAllDepartmenst();
 
             return Ok(result);
         }

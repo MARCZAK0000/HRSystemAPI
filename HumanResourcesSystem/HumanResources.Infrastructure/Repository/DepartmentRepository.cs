@@ -144,5 +144,17 @@ namespace HumanResources.Infrastructure.Repository
                 Message = "Well done"
             };
         }
+
+        public async Task<List<Departments>> GetAllDeparments()
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
+
+            var deparments = await _database.Departments
+                .ToListAsync();
+
+            return deparments;
+        }
     }
 }

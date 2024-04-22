@@ -1,14 +1,9 @@
 ﻿using FluentValidation;
 using HumanResources.Domain.UserModelDto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanResources.Domain.Validations.AttendanceValidation
 {
-    public class UserDepartureValidator:AbstractValidator<UserDepartureDto>
+    public class UserDepartureValidator : AbstractValidator<UserDepartureDto>
     {
         public UserDepartureValidator()
         {

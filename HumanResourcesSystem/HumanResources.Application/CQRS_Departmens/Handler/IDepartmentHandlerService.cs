@@ -6,6 +6,7 @@ namespace HumanResources.Application.CQRS_Departmens.Handler
     {
         Task<DepartmentInfoDto> DepartmentInfoAsync(int  departmentId);
 
+        Task<List<DepartmentInfoDto>> GetAllDepartmenst();
 
     }
 }
