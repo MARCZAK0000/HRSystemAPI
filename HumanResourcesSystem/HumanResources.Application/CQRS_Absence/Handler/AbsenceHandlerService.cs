@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using HumanResources.Domain.AbsenceModelDto;
+using HumanResources.Domain.Cache;
+using HumanResources.Domain.Entities;
 using HumanResources.Domain.Repository;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace HumanResources.Application.CQRS_Absence.Handler
 {
@@ -17,7 +20,8 @@ namespace HumanResources.Application.CQRS_Absence.Handler
             _mapper = mapper;
         }
 
-        public async Task<List<AbsenceInfoDto>> ShowAbsencesByYearAsync(int year) =>
+        public async Task<List<AbsenceInfoDto>> ShowAbsencesByYearAsync(int year)=> 
             _mapper.Map<List<AbsenceInfoDto>>(await _absenceRepository.ShowAbsencesByYearAsync(year));
+            
     }
 }

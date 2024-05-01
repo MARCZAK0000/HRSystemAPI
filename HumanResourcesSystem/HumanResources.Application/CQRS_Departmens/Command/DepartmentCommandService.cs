@@ -18,7 +18,7 @@ namespace HumanResources.Application.CQRS_Departmens.Command
         }
 
 
-        public async Task<DepartmentResponse> ChangeUserDepartmentAscyn(ChangeDepartmentDto changeDepartment) =>
+        public async Task<DepartmentResponse> ChangeUserDeparmentAsync(ChangeDepartmentDto changeDepartment) =>
             await _departmentRepository.ChangeUserDepartmentAsync(changeDepartment);
 
 

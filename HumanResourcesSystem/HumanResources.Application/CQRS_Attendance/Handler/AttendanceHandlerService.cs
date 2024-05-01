@@ -1,13 +1,7 @@
 ﻿using AutoMapper;
-using HumanResources.Application.AutoMapperProfile;
 using HumanResources.Domain.AttendanceModelDto;
 using HumanResources.Domain.Repository;
 using HumanResources.Domain.UserModelDto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanResources.Application.CQRS_Attendance.Handler
 {
@@ -34,11 +28,11 @@ namespace HumanResources.Application.CQRS_Attendance.Handler
 
         public async Task<List<GetArrivalsDto>>
             GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted) =>
-            _mapperProfile.Map<List<GetArrivalsDto >> (await _attendanceRepository.GetUserCompletedOrNotAttendenceByMonthAsync(monthDto, isCompleted));
+            _mapperProfile.Map<List<GetArrivalsDto>>(await _attendanceRepository.GetUserCompletedOrNotAttendenceByMonthAsync(monthDto, isCompleted));
 
-        public async Task<GetAttendanceStatsDto> 
+        public async Task<GetAttendanceStatsDto>
             GetInformationsAboutUserAttendanceByMonth(GetAttendanceByMonthDto monthDto, string userCode) =>
             await _attendanceRepository.GetInformationsAboutUserForLeadersAttendanceByMonth(monthDto, userCode);
-        
+
     }
 }

@@ -5,7 +5,7 @@ namespace HumanResources.Application.CQRS_Departmens.Command
 {
     public interface IDepartmentCommandService
     {
-        Task<DepartmentResponse> ChangeUserDepartmentAscyn(ChangeDepartmentDto changeDepartment);
+        Task<DepartmentResponse> ChangeUserDeparmentAsync(ChangeDepartmentDto changeDepartment);
 
         Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto addDepartment);
 

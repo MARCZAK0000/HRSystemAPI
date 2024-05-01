@@ -24,8 +24,5 @@ namespace HumanResources.Application.CQRS_User.Handler
 
         public async Task<GetInfromationsDto> GetInfromationsAboutUserAsync() 
             => _mapperProfile.Map<GetInfromationsDto>(await _userRepository.GetInfromationsAboutUserAsync());
-
-
-        
     }
 }

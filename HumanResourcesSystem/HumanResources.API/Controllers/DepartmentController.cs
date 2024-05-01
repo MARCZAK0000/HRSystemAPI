@@ -22,7 +22,7 @@ namespace HumanResources.API.Controllers
         [HttpPost("user/update")]
         public async Task<IActionResult> ChangeUserDepartment([FromBody] ChangeDepartmentDto changeDepartment)
         {
-            var result = await _departmentCommandSerivce.ChangeUserDepartmentAscyn(changeDepartment);
+            var result = await _departmentCommandSerivce.ChangeUserDeparmentAsync(changeDepartment);
 
             return Ok(result);
         }

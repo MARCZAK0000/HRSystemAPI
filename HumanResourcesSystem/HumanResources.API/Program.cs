@@ -17,6 +17,7 @@ builder.Services.AddScoped<LoggerMiddleware>();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddValidation();
+builder.Services.AddMemoryCache();
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("CorsPolicy", cfg =>

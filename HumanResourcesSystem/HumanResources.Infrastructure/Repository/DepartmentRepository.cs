@@ -145,7 +145,7 @@ namespace HumanResources.Infrastructure.Repository
             };
         }
 
-        public async Task<List<Departments>> GetAllDeparments()
+        public async Task<List<Departments>> GetAllDeparmentsAsync()
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
