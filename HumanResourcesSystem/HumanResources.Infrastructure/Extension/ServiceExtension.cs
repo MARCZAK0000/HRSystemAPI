@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Org.BouncyCastle.Asn1.X509.Qualified;
 using System.Text;
 
 namespace HumanResources.Infrastructure.Extension
@@ -43,7 +44,7 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<IEmailRepostiory, EmailRepository>();
             service.AddScoped<IAbsenceRepository, AbsenceRepository>();
             service.AddScoped<IDepartmentReposiotry, DepartmentRepository>();
-
+            service.AddScoped(typeof(IPDFReportRepository<>), typeof(PDFReportRepository<>));
             var emailAuthenticationSettings = new EmailAuthenticationSettings();
             configuration.GetSection("EmailAuthentication").Bind(emailAuthenticationSettings);  //Register IN DI
 

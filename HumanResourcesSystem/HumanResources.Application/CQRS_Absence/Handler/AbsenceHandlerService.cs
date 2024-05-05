@@ -13,15 +13,26 @@ namespace HumanResources.Application.CQRS_Absence.Handler
 
         private readonly IMapper _mapper;
 
+       
+
         public AbsenceHandlerService(IAbsenceRepository absenceRepository,
             IMapper mapper)
-        {
+        { 
             _absenceRepository = absenceRepository;
             _mapper = mapper;
+           
         }
 
-        public async Task<List<AbsenceInfoDto>> ShowAbsencesByYearAsync(int year)=> 
-            _mapper.Map<List<AbsenceInfoDto>>(await _absenceRepository.ShowAbsencesByYearAsync(year));
+        public async Task<MemoryStream> GeneratePdfReportAsync(string userID, int year)
+        {
+            var list = _mapper.Map<List<AbsenceInfoDto>>(await _absenceRepository.ShowAbsencesByYearAsync(userID, year));
+            var result = await _absenceRepository.GenerateAbsenceReportPDF(list, (userID, year));
+            return result;
+        }
+           
+
+        public async Task<List<AbsenceInfoDto>> ShowAbsencesByYearAsync(string userID, int year) => 
+            _mapper.Map<List<AbsenceInfoDto>>(await _absenceRepository.ShowAbsencesByYearAsync(userID, year));
             
     }
 }

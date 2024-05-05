@@ -28,9 +28,9 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpGet("info/{year}")]
-        public async Task<IActionResult> ShowAbsencesAllByYear([FromRoute] int year)
+        public async Task<IActionResult> ShowAbsencesAllByYear([FromRoute] int year, [FromQuery] string userID)
         {
-            var result = await _absenceHandlerService.ShowAbsencesByYearAsync(year);
+            var result = await _absenceHandlerService.ShowAbsencesByYearAsync(userID, year);
 
             return Ok(result);  
         }
@@ -41,6 +41,14 @@ namespace HumanResources.API.Controllers
             var result = await _absenceCommandService.AbsenceDecisionAsync(infoDto);
 
             return Ok(result);
+        }
+
+        [HttpGet("info/report")]
+        public async Task<IActionResult> GenerateAbsenceReport([FromQuery]string userId, [FromQuery] int year)
+        {
+            var result = await _absenceHandlerService.GeneratePdfReportAsync(userId, year);
+
+            return new FileStreamResult(result, "application/pdf");
         }
     }
 }

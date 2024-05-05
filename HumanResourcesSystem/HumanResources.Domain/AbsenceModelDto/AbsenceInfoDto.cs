@@ -17,5 +17,6 @@ namespace HumanResources.Domain.AbsenceModelDto
         public bool IsAccepted { get; set; }
 
         public bool Declined { get; set; }
+
     }
 }

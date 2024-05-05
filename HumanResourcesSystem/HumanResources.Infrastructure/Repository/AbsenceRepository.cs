@@ -8,6 +8,8 @@ using HumanResources.Infrastructure.Database;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MimeKit.Tnef;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
 
 namespace HumanResources.Infrastructure.Repository
 {
@@ -66,12 +68,17 @@ namespace HumanResources.Infrastructure.Repository
 
         }
 
-        public async Task<List<Absence>> ShowAbsencesByYearAsync(int year)
+        public async Task<List<Absence>> ShowAbsencesByYearAsync(string userID, int year)
         {
             var currentUser = _userContext.GetCurrentUser();
 
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
                 throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
+
+            if(!await _userManager.IsInRoleAsync(user, nameof(RolesEnum.Leader)))
+            {
+                userID = user.Id;
+            }
 
             if (year < 2020 || year > 2050)
             {
@@ -80,7 +87,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await _database.Absences
                 .Include(pr => pr.AbsencesType)
-                .Where(pr => pr.StartTime.Year == year && pr.UserId == user.Id)
+                .Where(pr => pr.StartTime.Year == year && pr.UserId == userID)
                 .ToListAsync();
 
             if (!result.Any())
@@ -167,6 +174,88 @@ namespace HumanResources.Infrastructure.Repository
             return subordinateAbsence;
 
 
+        }
+
+        public Task<MemoryStream> GenerateAbsenceReportPDF(List<AbsenceInfoDto> list, (string userID, int year) info)
+        {
+            var count = Math.Ceiling((decimal)(list.Count/ 20));
+            var iteration = 0;
+            QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
+            var document = Document.Create(container =>
+            {
+                while (iteration <= count)
+                {
+                    container.Page(page =>
+                    {
+                        page.PageColor(Colors.Brown.Lighten4);
+                        page.MarginTop(10);
+                        page.Header()
+                            .Text($"HRSystem\r\n") 
+                            .AlignCenter()
+                            .SemiBold().FontSize(30);
+
+
+                        page.Content()
+                            .AlignCenter()
+                            .Column(x =>
+                            {
+                                x.Item().AlignCenter().Text($"Absence report for user: {info.userID} in {info.year}").FontSize(16);
+                                x.Spacing(10);
+                                x.Item().AlignCenter().Table(table =>
+                                {   
+                                    table.ColumnsDefinition(colums =>
+                                    {
+                                        colums.ConstantColumn(90);
+                                        colums.ConstantColumn(60);
+                                        colums.ConstantColumn(90);
+                                        colums.ConstantColumn(90);
+                                        colums.ConstantColumn(60);
+                                        colums.ConstantColumn(60);
+                                    });
+                                    table.Header(header =>
+                                    {
+                                        header.Cell().Text("Name");
+                                        header.Cell().Text("Type");
+                                        header.Cell().Text("Start Time");
+                                        header.Cell().Text("End Time");
+                                        header.Cell().Text("Accepted");
+                                        header.Cell().Text("Declined");
+                                    });
+
+                                    while (iteration <= count)
+                                    {
+                                        var content = list.Skip(iteration * 20)
+                                            .Take(20);
+
+                                        foreach (var item in content)
+                                        {
+                                            table.Cell().Text(item.Name);
+                                            table.Cell().Text(item.AbsenceTypeName);
+                                            table.Cell().Text(item.StartTime.Date.ToShortDateString().ToString());
+                                            table.Cell().Text(item.EndTime.Date.ToShortDateString().ToString());
+                                            table.Cell().Text(item.IsAccepted ? "TRUE" : "FALSE");
+                                            table.Cell().Text(item.Declined ? "TRUE" : "FALSE");
+                                        }
+                                        iteration++;
+                                    }
+
+
+                                });
+                            });
+
+
+                        page.MarginBottom(10);
+                        page.Footer()
+                            .Text($"HRSystem {DateTime.Now.Year}")
+                            .AlignCenter()
+                            .FontSize(10);
+                    });
+                }
+
+            }).GeneratePdf();
+
+            var stream = new MemoryStream(document);
+            return Task.FromResult(stream);
         }
     }
 }

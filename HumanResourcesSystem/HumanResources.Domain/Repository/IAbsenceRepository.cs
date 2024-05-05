@@ -7,8 +7,10 @@ namespace HumanResources.Domain.Repository
     {
         Task<Absence> CreateAbsenceAsync(CreateAbsenceDto createAbsence);
 
-        Task<List<Absence>> ShowAbsencesByYearAsync(int year);
+        Task<List<Absence>> ShowAbsencesByYearAsync(string userID, int year);
 
         Task<Absence> AbsenceDecisionAsync(AbsenceDecisionInfoDto infoDto);
+
+        Task<MemoryStream> GenerateAbsenceReportPDF(List<AbsenceInfoDto> list, (string userID, int year) info); 
     }
 }

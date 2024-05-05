@@ -319,6 +319,10 @@
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[5.3.5, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.3.3, )"
             }
           },
           "imports": [

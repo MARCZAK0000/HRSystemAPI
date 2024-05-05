@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GCx65VF9HJ7M3Z+eEmWj4QW5BY0+zGwTsrbAFe4QnyKW0tWbpIi6ek/94jofw9RGECG53KOhekqxZlTPTQbK7w==",
+  "dgSpecHash": "kRWaQbjVKTNnCqPYvds9mGEjVNpY96sohEMzjqJKzLb9Vs+BLGkBBuz804RLL7IO+0LtPP5k4pXbP/+JDFhpDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Api\\HumanResources.API.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog\\5.2.5\\nlog.5.2.5.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog.extensions.logging\\5.3.5\\nlog.extensions.logging.5.3.5.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog.web.aspnetcore\\5.3.5\\nlog.web.aspnetcore.5.3.5.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\questpdf\\2024.3.3\\questpdf.2024.3.3.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\scrutor\\3.3.0\\scrutor.3.3.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\swashbuckle.aspnetcore.filters\\8.0.1\\swashbuckle.aspnetcore.filters.8.0.1.nupkg.sha512",

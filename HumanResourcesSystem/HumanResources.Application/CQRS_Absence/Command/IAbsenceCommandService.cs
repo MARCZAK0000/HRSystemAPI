@@ -7,5 +7,6 @@ namespace HumanResources.Application.CQRS_Absence.Command
         Task<AbsenceInfoDto> CreateAbsenceAsync(CreateAbsenceDto createAbsence);
 
         Task<AbsenceDecisionDto> AbsenceDecisionAsync (AbsenceDecisionInfoDto absenceDecision);
+
     }
 }

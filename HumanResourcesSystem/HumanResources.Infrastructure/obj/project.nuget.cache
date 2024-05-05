@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dO1aCDak6V4p4fWTJ6gTAxJMGS/s2sJOw6nfaQSUtq50osiCDuTDpsfGXcnY7UKPqp5OWS0tRl5upFQUbAE2eg==",
+  "dgSpecHash": "HF4FqJ2eS/W8pS5VDjc3ZkwODbcVc0hgoA/WJI9E+EPly1K7Si337Mo96Sv1NzLsC1nppRHGWUrPFuVgbNp6QA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Infrastructure\\HumanResources.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -59,6 +59,7 @@
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog\\5.2.5\\nlog.5.2.5.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog.extensions.logging\\5.3.5\\nlog.extensions.logging.5.3.5.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog.web.aspnetcore\\5.3.5\\nlog.web.aspnetcore.5.3.5.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\questpdf\\2024.3.3\\questpdf.2024.3.3.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

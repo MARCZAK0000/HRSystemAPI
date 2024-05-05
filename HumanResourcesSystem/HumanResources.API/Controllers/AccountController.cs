@@ -44,7 +44,6 @@ namespace HumanResources.API.Controllers
             {
                 return BadRequest(result);
             }
-
             return Ok(result);
         }
        

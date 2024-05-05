@@ -3,9 +3,7 @@ using HumanResources.Domain.Exceptions;
 using HumanResources.Domain.Repository;
 using HumanResources.Infrastructure.Authentication;
 using MailKit.Net.Smtp;
-using Microsoft.AspNetCore.Http.HttpResults;
 using MimeKit;
-using Org.BouncyCastle.Crypto.Fpe;
 using System.Net;
 
 namespace HumanResources.Infrastructure.Repository

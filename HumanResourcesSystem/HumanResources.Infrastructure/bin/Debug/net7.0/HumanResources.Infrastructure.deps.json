@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.14",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
-          "NLog.Web.AspNetCore": "5.3.5"
+          "NLog.Web.AspNetCore": "5.3.5",
+          "QuestPDF": "2024.3.3"
         },
         "runtime": {
           "HumanResources.Infrastructure.dll": {}
@@ -590,6 +591,46 @@
           "lib/net6.0/NLog.Web.AspNetCore.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.3.5.967"
+          }
+        }
+      },
+      "QuestPDF/2024.3.3": {
+        "runtime": {
+          "lib/net6.0/QuestPDF.dll": {
+            "assemblyVersion": "2024.3.3.0",
+            "fileVersion": "2024.3.3.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libQuestPdfSkia.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libQuestPdfSkia.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libQuestPdfSkia.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libQuestPdfSkia.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libQuestPdfSkia.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/QuestPdfSkia.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1221,6 +1262,13 @@
       "sha512": "sha512-7RX+/0N1cFcO+N8GcLD93UcAwAQDyBx654Z/ka6qHY4tlrmg1iSgKZB/YJQCOxbfYof4ExCtizrm2vqABYe+Lg==",
       "path": "nlog.web.aspnetcore/5.3.5",
       "hashPath": "nlog.web.aspnetcore.5.3.5.nupkg.sha512"
+    },
+    "QuestPDF/2024.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S2T+iE8RGw3OCBZ6bZmPhw6oIbXa92MuewcvwzJgeNKGIoc6t1lHnCWwH+UTGVFV9eGUCEjkxQCC6xooDYOUGw==",
+      "path": "questpdf/2024.3.3",
+      "hashPath": "questpdf.2024.3.3.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",
