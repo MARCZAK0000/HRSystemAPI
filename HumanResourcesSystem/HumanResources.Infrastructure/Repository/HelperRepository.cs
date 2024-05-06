@@ -27,7 +27,7 @@ namespace HumanResources.Infrastructure.Repository
             }
             return code;
         }
-        public string EmailBody(ConfirmEmailMessageInfoDto confirmEmail)
+        public string ConfirmEmailBody(ConfirmEmailMessageInfoDto confirmEmail)
         {
 
             return $@"
@@ -47,6 +47,30 @@ namespace HumanResources.Infrastructure.Repository
                         If that doesn't work, copy and paste the following link in your browser:
                       </p>
                       <a href='https://localhost:7068/api/account/confirm?email={confirmEmail.UserName}&token={confirmEmail.token}'>link</a>
+                    </div>";
+        }
+
+        public string GenerateForgetPasswordToken (ConfirmEmailMessageInfoDto confirmEmail)
+        {
+
+            return $@"
+                    <div>
+                      <h2>Welcome</h2>
+                      <h5>HRSystem here!!</h5>
+                      <h2>Did you forget your password?</h2>
+                      <p>
+                        Tap the button below to start procces of recovery of your password. If you didn't want to
+                        recovery your password, you can easly delete this email.
+                      </p>
+                      <div>
+                        <a href='https://localhost:5173/forget/token?token=${confirmEmail.token}'>
+                          <button style=""height: 50px"">Recovery Password</button>
+                        </a>
+                      </div>
+                      <p>
+                        If that doesn't work, copy and paste the following link in your browser:
+                      </p>
+                      <a href='https://localhost:5173/forget/token?token=${confirmEmail.token}'>link</a>
                     </div>";
         }
     }

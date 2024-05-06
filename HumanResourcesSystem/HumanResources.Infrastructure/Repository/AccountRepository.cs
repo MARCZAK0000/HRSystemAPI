@@ -32,10 +32,12 @@ namespace HumanResources.Infrastructure.Repository
         private readonly RoleManager<Roles> _roleManager;
         private readonly IEmailServices _emailServices;
         private readonly EmailAuthenticationSettings _emailAuthenticationSettings;
+        private readonly IEmailRepostiory _emailRepository;
         public AccountRepository(SignInManager<User> signInManager, UserManager<User> userManager,
             IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings, 
             IUserContext userContext, HumanResourcesDatabase database, IHelperRepository helperRepository, 
-            RoleManager<Roles> roleManager, IEmailServices emailServices, EmailAuthenticationSettings emailAuthenticationSettings)
+            RoleManager<Roles> roleManager, IEmailServices emailServices, EmailAuthenticationSettings emailAuthenticationSettings,
+            IEmailRepostiory emailRepostiory)
         {
             _signInManager = signInManager;
             _userManager = userManager;
@@ -47,6 +49,7 @@ namespace HumanResources.Infrastructure.Repository
             _roleManager = roleManager;
             _emailServices = emailServices;
             _emailAuthenticationSettings = emailAuthenticationSettings;
+            _emailRepository = emailRepostiory;
         }
 
         public async Task<UserResponse> RegisterAsync(RegisterAccountAsyncDto registerUser)
@@ -168,7 +171,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var tokenEncoded = WebUtility.UrlEncode(token);
 
-            var renderMessage = _helperRepository.EmailBody(new ConfirmEmailMessageInfoDto { token = tokenEncoded, UserName = user.UserName!});
+            var renderMessage = _helperRepository.ConfirmEmailBody(new ConfirmEmailMessageInfoDto { token = tokenEncoded, UserName = user.UserName!});
 
 
             var emailInformations = new SendEmailDto()
@@ -261,12 +264,23 @@ namespace HumanResources.Infrastructure.Repository
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
+            var emailMessageBody = _helperRepository.GenerateForgetPasswordToken(new ConfirmEmailMessageInfoDto
+            {
+                token = token,
+                UserName = email
+            });
+            await _emailServices.SendEmailAsync(new SendEmailDto()
+            {
+                EmailFrom = _emailAuthenticationSettings.Email,
+                EmailTo = email,
+                EmailSubject = "Forget Password",
+                EmailBody = emailMessageBody
+            });
 
             return new UserResponse()
             {
                 Result = token!=null,
                 Message = token != null ? "Well Done" : "Something went wrong",
-                Token = token
             };
         }
 

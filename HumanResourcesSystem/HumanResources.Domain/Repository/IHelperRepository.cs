@@ -11,6 +11,8 @@ namespace HumanResources.Domain.Repository
     {
         Task<string> GenerateRandomUserCode();
 
-        string EmailBody(ConfirmEmailMessageInfoDto confirmEmail);
+        string ConfirmEmailBody(ConfirmEmailMessageInfoDto confirmEmail);
+
+        string GenerateForgetPasswordToken(ConfirmEmailMessageInfoDto generateToken);
     }
 }

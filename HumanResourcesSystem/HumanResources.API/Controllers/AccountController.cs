@@ -84,13 +84,9 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpGet("forget_password")]
-        public async Task<IActionResult> GenerateForgetPasswordToken([FromQuery] string email, [FromQuery] string phone)
+        public async Task<IActionResult> GenerateForgetPasswordToken([FromQuery] GenerateForgetPasswordDto forgetPasswordDto)
         {
-            if (email == null || phone == null)
-            {
-                return BadRequest();
-            }
-            var result = await _accountHandlerService.GenerateForgetPasswordTokenAsync(email, phone);
+            var result = await _accountHandlerService.GenerateForgetPasswordTokenAsync(forgetPasswordDto.Email, forgetPasswordDto.PhoneNumber);
             if (!result.Result)
             {
                 return BadRequest(result);
