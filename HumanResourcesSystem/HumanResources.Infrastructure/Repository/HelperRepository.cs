@@ -70,7 +70,7 @@ namespace HumanResources.Infrastructure.Repository
                       <p>
                         If that doesn't work, copy and paste the following link in your browser:
                       </p>
-                      <a href='https://localhost:5173/forget/token?token=${confirmEmail.token}'>link</a>
+                      <a href='https://localhost:5173/forget/token?token=${confirmEmail.token}&email=${confirmEmail.UserName}'>link</a>
                     </div>";
         }
     }

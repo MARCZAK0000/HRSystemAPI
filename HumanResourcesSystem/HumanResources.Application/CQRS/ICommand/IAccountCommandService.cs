@@ -1,4 +1,5 @@
 ﻿using HumanResources.Domain.ModelDtos;
+using HumanResources.Domain.Repository;
 using HumanResources.Domain.Response;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace HumanResources.Application.CQRS.IUserCommand
         Task<UserResponse> RegisterUserAsync(RegisterAccountAsyncDto register);
 
         Task<UserResponse> SignInUserAsync(LoginAccountAsyncDto loginUser);
+
+        Task<UserResponse> RefreshTokenAsync(string refreshToken);
 
         Task<UserResponse> ConfirmEmailAsync(string email, string token);
 

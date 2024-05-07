@@ -15,6 +15,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
@@ -113,12 +114,20 @@ namespace HumanResources.Infrastructure.Repository
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authenticationSettings.JwtKey));
             var credentails = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expireDays = DateTime.Now.AddDays(_authenticationSettings.JwtExpireDay);
+            var expireDays = DateTime.Now.AddMinutes(_authenticationSettings.JwtExpireDay);
 
             var token = new JwtSecurityToken(_authenticationSettings.JwtIssuer, _authenticationSettings.JwtIssuer, claims, null, expireDays, credentails);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
 
+        }
+
+        public Task<string> GenerateRefreshTokenAsync()
+        {
+            var randomNumber = new byte[32];
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Task.FromResult(Convert.ToBase64String(randomNumber));
         }
 
         public async Task<UserResponse> SignInAccountAsync(LoginAccountAsyncDto loginUser)
@@ -138,6 +147,13 @@ namespace HumanResources.Infrastructure.Repository
 
             var token = await GenerateTokenAsync(user);
 
+            var refresh = await GenerateRefreshTokenAsync();
+            user.RefreshToken = refresh;
+
+            await _database.SaveChangesAsync();
+
+            _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
+
             return new UserResponse()
             {
                 Result = true,
@@ -145,10 +161,48 @@ namespace HumanResources.Infrastructure.Repository
                 Username = user.UserName,
                 Message = $"Well done {user.Email}, You have logged successfully ",
                 Token = token,
+                RefreshToken = refresh
             };
         }
 
+        public async Task<UserResponse> RefreshTokenAsync(string refreshToken)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id)
+                ?? throw new InvalidEmailOrPasswordExcepiton("RefreshToken: Invalid jwtToken");
 
+            if(user.RefreshToken != refreshToken)
+            {
+                throw new BadRequestException("Invalid refresh Token");
+            }
+            var newRefreshToken = await GenerateRefreshTokenAsync();
+            user.RefreshToken = newRefreshToken;
+            var accessToken = await GenerateTokenAsync(user);
+
+            await _database.SaveChangesAsync();
+            return new UserResponse()
+            {
+                Result = true,
+                Username = user.UserName,
+                Email = user.Email,
+                Token = accessToken,
+                RefreshToken = newRefreshToken,
+                Message = "Well done"
+            };
+        }
+
+        public async Task<bool> LogOutAsync()
+        {
+            var currentUser = _userContext.GetCurrentUser();
+
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("Something went wrong");
+
+            user.RefreshToken = null;
+            await _database.SaveChangesAsync();
+            _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
+            return true;
+        }
 
         public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync()
         {
@@ -325,5 +379,7 @@ namespace HumanResources.Infrastructure.Repository
                 Message = result.Succeeded ? "Well Done" : "Something went wrong"
             };
         }
+
+
     }
 }

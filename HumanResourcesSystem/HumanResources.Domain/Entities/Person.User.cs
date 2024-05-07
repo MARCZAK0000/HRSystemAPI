@@ -8,5 +8,7 @@ namespace HumanResources.Domain.Entities
         public string UserCode { get; set; }
 
         public UserInfo UserInfo { get; set; }
+
+        public string? RefreshToken { get; set; }
     }
 }

@@ -46,7 +46,18 @@ namespace HumanResources.API.Controllers
             }
             return Ok(result);
         }
-       
+        [HttpPost("refresh")]
+        public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenDto refresh)
+        {
+            var result = await _accountCommandService.RefreshTokenAsync(refresh.RefreshToken);
+
+            if (!result.Result)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
         [HttpGet("token")]
         public async Task<IActionResult> GenerateConfirmEmailToken()
         {

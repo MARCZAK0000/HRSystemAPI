@@ -25,6 +25,9 @@ namespace HumanResources.Application.CQRS.UserCommand
         public async Task<UserResponse> SignInUserAsync(LoginAccountAsyncDto loginUser) => 
             await _accountRepository.SignInAccountAsync(loginUser);
 
+        public async Task<UserResponse> RefreshTokenAsync(string refreshToken)=>
+            await _accountRepository.RefreshTokenAsync(refreshToken);
+
         public async Task<UserResponse> ConfirmEmailAsync(string email, string token) => 
             await _accountRepository.ConfirmEmailAsync(email, token);
       

@@ -11,11 +11,17 @@ namespace HumanResources.Domain.Repository
 
         Task<EmailResponseDto> GenerateConfirmEmailTokenAsync();
 
+        Task<string> GenerateRefreshTokenAsync();
+
+        Task<UserResponse> SignInAccountAsync(LoginAccountAsyncDto loginUser);
+
+        Task<UserResponse> RefreshTokenAsync(string refreshToken);
+
+        Task<bool> LogOutAsync();
+
         Task<UserResponse> ConfirmEmailAsync(string email, string token);
 
         Task<string> GenerateTokenAsync(User user);
-
-        Task<UserResponse> SignInAccountAsync(LoginAccountAsyncDto loginUser);
 
         Task<UserResponse> ChangePasswordAsync(ChangePasswordAsyncDto changePassword);
 
