@@ -63,14 +63,14 @@ namespace HumanResources.Infrastructure.Repository
                         recovery your password, you can easly delete this email.
                       </p>
                       <div>
-                        <a href='https://localhost:5173/forget/token?token=${confirmEmail.token}'>
+                        <a href='http://localhost:5173/forget/token?token=${confirmEmail.token}'>
                           <button style=""height: 50px"">Recovery Password</button>
                         </a>
                       </div>
                       <p>
                         If that doesn't work, copy and paste the following link in your browser:
                       </p>
-                      <a href='https://localhost:5173/forget/token?token=${confirmEmail.token}&email=${confirmEmail.UserName}'>link</a>
+                      <a href='http://localhost:5173/forget/token?token={confirmEmail.token}&email={confirmEmail.UserName}'>link</a>
                     </div>";
         }
     }

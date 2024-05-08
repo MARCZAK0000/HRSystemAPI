@@ -24,7 +24,8 @@ namespace HumanResources.Domain.ServiceExtension
             services.AddScoped<IValidator<ChangePasswordAsyncDto>, ChangePasswordValidator>();
             services.AddScoped<IValidator<ResetPasswordAsyncDto>, ResetPasswordValidator>();
             services.AddScoped<IValidator<ChangePhoneNumberDto>, ChangePhoneNumberValidator>();
-
+            services.AddScoped<IValidator<GenerateForgetPasswordDto>, GenerateForgetPasswordValidator>();
+            services.AddScoped<IValidator<RefreshTokenDto>, RefreshTokenValidator>();
             //User Validation
             services.AddScoped<IValidator<UpdateAccountInformationsDto>, UpdateUserInformationsValidator>();
 

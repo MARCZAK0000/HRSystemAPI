@@ -318,9 +318,11 @@ namespace HumanResources.Infrastructure.Repository
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
+            var encodedToken = WebUtility.UrlEncode(token);
+
             var emailMessageBody = _helperRepository.GenerateForgetPasswordToken(new ConfirmEmailMessageInfoDto
             {
-                token = token,
+                token = encodedToken,
                 UserName = email
             });
             await _emailServices.SendEmailAsync(new SendEmailDto()

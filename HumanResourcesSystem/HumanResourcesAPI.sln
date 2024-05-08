@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumanResources.DomainTests"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration_Tests", "Integration_Tests", "{99BEE59B-FFCD-4A2D-A693-84A900A7152F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumarnResource.IntegrationTest", "HumarnResource.IntegrationTest\HumarnResource.IntegrationTest.csproj", "{64EEC649-DFA6-49F5-BEF2-AC623FE7F8AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumarnResource.IntegrationTest", "HumarnResource.IntegrationTest\HumarnResource.IntegrationTest.csproj", "{64EEC649-DFA6-49F5-BEF2-AC623FE7F8AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
