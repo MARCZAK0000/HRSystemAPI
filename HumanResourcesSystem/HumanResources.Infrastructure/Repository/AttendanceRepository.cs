@@ -63,13 +63,18 @@ namespace HumanResources.Infrastructure.Repository
         public async Task<bool> UserDepartureAsync(UserDepartureDto userDeparture)
         {
             var currentUser = _userContext.GetCurrentUser();
-            var user = await _userManager.FindByIdAsync(currentUser.Id)??
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
                 throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
 
             var findResult = await _dbContext
                 .Arrivals
-                .FirstOrDefaultAsync(pr => pr.Id == userDeparture.Id && pr.UserCode == user.UserCode)??
+                .FirstOrDefaultAsync(pr => pr.Id == userDeparture.Id && pr.UserId == user.Id) ??
                 throw new BadRequestException("We cannot find Request with that ID and this UserCode");
+
+            if (findResult.IsCompleted)
+            {
+                return true;
+            }
 
             findResult.Departure = userDeparture.DepartureDate;
             findResult.CompleteDay();
