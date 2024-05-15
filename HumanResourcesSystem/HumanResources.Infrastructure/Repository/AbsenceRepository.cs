@@ -152,7 +152,9 @@ namespace HumanResources.Infrastructure.Repository
                     case 1:
                         daysToUse = subordinateAbsence.PeriodOfTime;
                         break;
-
+                    case 2:
+                        daysToUse = subordinateAbsence.PeriodOfTime;
+                        break;
                     default:
                         break;
                 }

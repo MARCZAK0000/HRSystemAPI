@@ -12,6 +12,10 @@ using HumanResources.Application.CQRS_Attendance.Command;
 using HumanResources.Application.CQRS_Attendance.Handler;
 using HumanResources.Application.CQRS_Departmens.Command;
 using HumanResources.Application.CQRS_Departmens.Handler;
+using HumanResources.Application.CQRS_Financial.CQRS_ExchangeRate.Command;
+using HumanResources.Application.CQRS_Financial.CQRS_ExchangeRate.Handler;
+using HumanResources.Application.CQRS_Financial.CQRS_Pays.Command;
+using HumanResources.Application.CQRS_Financial.CQRS_Pays.Handler;
 using HumanResources.Application.CQRS_User.Command;
 using HumanResources.Application.CQRS_User.Handler;
 using HumanResources.Application.EmailService;
@@ -58,10 +62,18 @@ namespace HumanResources.Application.Extension
             service.AddScoped<IAbsenceCommandService, AbsenceCommandService>();
             service.AddScoped<IAbsenceHandlerService, AbsenceHandlerService>();
 
-            //Serive for Departmen
-            service.AddScoped<IDepartmentCommandService,  DepartmentCommandService>();
+            //Serive for Department
+            service.AddScoped<IDepartmentCommandService, DepartmentCommandService>();
             service.AddScoped<IDepartmentHandlerService, DepartmentHandlerService>();
 
+
+            //Service for ExchangeRate
+            service.AddScoped<IExchangeRateCommandServices, ExchangeRateCommandServices>();
+            service.AddScoped<IExchangeRateHandlerServices, ExchangeRateHandlerServices>();
+
+            //Service for EmployeePay
+            service.AddScoped<IEmployeePaysCommandServices, EmployeePaysCommandServices>();
+            service.AddScoped<IEmployeePaysHandlerServices, EmployeePaysHandlerServices>();
             //AutoMapper
             service.AddAutoMapper(typeof(MapperProfile));
 

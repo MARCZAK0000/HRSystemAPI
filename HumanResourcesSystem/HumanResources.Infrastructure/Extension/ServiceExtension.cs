@@ -45,6 +45,14 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<IAbsenceRepository, AbsenceRepository>();
             service.AddScoped<IDepartmentReposiotry, DepartmentRepository>();
             service.AddScoped(typeof(IPDFReportRepository<>), typeof(PDFReportRepository<>));
+            service.AddScoped<IExchangeRateRepository, ExchangeRateRepository>();
+            service.AddScoped<IEmployeePayRepository, EmployeePayRepository>();
+
+            var exchangeRateAPI = new ExchangeRateAPIAuthenticationSettings();
+            configuration.GetSection("ExchangeRate_API").Bind(exchangeRateAPI);
+
+            service.AddSingleton(exchangeRateAPI)
+
             var emailAuthenticationSettings = new EmailAuthenticationSettings();
             configuration.GetSection("EmailAuthentication").Bind(emailAuthenticationSettings);  //Register IN DI
 
