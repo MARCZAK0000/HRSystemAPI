@@ -320,6 +320,10 @@
               "target": "Package",
               "version": "[5.3.5, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "QuestPDF": {
               "target": "Package",
               "version": "[2024.3.3, )"

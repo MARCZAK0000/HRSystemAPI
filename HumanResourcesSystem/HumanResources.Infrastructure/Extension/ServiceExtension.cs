@@ -51,11 +51,8 @@ namespace HumanResources.Infrastructure.Extension
             var exchangeRateAPI = new ExchangeRateAPIAuthenticationSettings();
             configuration.GetSection("ExchangeRate_API").Bind(exchangeRateAPI);
 
-<<<<<<< HEAD
+
             service.AddSingleton(exchangeRateAPI);
-=======
-            service.AddSingleton(exchangeRateAPI)
->>>>>>> master
 
             var emailAuthenticationSettings = new EmailAuthenticationSettings();
             configuration.GetSection("EmailAuthentication").Bind(emailAuthenticationSettings);  //Register IN DI

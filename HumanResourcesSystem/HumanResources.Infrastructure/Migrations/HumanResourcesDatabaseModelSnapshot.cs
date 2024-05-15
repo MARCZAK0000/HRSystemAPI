@@ -225,6 +225,9 @@ namespace HumanResources.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<DateTime>("ModifiededDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("NameFrom")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

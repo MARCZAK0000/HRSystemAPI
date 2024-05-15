@@ -10,5 +10,7 @@
 
         public decimal Rate { get; set; }
 
+        public DateTime ModifiededDate { get; set; }
+
     }
 }

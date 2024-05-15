@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HF4FqJ2eS/W8pS5VDjc3ZkwODbcVc0hgoA/WJI9E+EPly1K7Si337Mo96Sv1NzLsC1nppRHGWUrPFuVgbNp6QA==",
+  "dgSpecHash": "TaEQeUJ+RSoE+1U8GErrh8fDsCMvitLqrBX3LtIRZG4tx9Li9h1Pwn0Y6df0HJ3wpa8ZXVk+Dnmp526qM4Y6zQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Infrastructure\\HumanResources.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\mimekit\\4.4.0\\mimekit.4.4.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog\\5.2.5\\nlog.5.2.5.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog.extensions.logging\\5.3.5\\nlog.extensions.logging.5.3.5.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\nlog.web.aspnetcore\\5.3.5\\nlog.web.aspnetcore.5.3.5.nupkg.sha512",

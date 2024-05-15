@@ -1,6 +1,9 @@
-﻿namespace HumanResources.Infrastructure.Repository
+﻿using HumanResources.Domain.Repository;
+
+namespace HumanResources.Infrastructure.Repository
 {
-    public class EmployeePayRepository : IEmpl
+    public class EmployeePayRepository : IEmployeePayRepository
     {
+
     }
 }
