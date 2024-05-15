@@ -1,4 +1,5 @@
-﻿using HumanResources.Domain.Entities;
+﻿using HumanResources.API.Controllers;
+using HumanResources.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +24,11 @@ namespace HumanResources.Infrastructure.Database
 
         public DbSet<AbsencesType> AbsencesTypes { get; set; }
         
+        public DbSet<EmployeePay> EmployeePays { get; set; }
+
+        public DbSet<EmployeePayHistory> EmployeePayHistory {  get; set; }
+
+        public DbSet<ExchangeRate> ExchangeRates { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -40,6 +46,28 @@ namespace HumanResources.Infrastructure.Database
                 .HasOne(e => e.AbsencesType)
                 .WithMany(e => e.Absence)
                 .HasForeignKey(e=>e.AbsenceId);
+
+            builder.Entity<EmployeePay>() 
+                .HasOne(e => e.User)
+                .WithOne(e => e.EmployeePay)
+                .HasForeignKey<EmployeePay>(e => e.UserID);
+
+            builder.Entity<EmployeePay>()
+                .HasKey(e => e.EmployeePayID);
+
+            builder.Entity<EmployeePayHistory>()
+                .HasKey(e => e.EmployeePayHistoryID);
+
+            builder.Entity<EmployeePayHistory>()
+                .HasOne(e => e.EmployeePay)
+                .WithMany(e => e.EmployeePayHistory)
+                .HasForeignKey(e => e.EmpolyeePayID);
+
+            builder.Entity<EmployeePayHistory>()
+                .HasOne(e=>e.User)
+                .WithMany(e=>e.EmployeePayHistory)
+                .HasForeignKey(e=>e.UserID)
+                .OnDelete(DeleteBehavior.Restrict);
 
             base.OnModelCreating(builder);
 

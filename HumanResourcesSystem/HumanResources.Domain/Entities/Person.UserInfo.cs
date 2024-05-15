@@ -1,4 +1,5 @@
-﻿using HumanResources.Domain.Enums;
+﻿using HumanResources.API.Controllers;
+using HumanResources.Domain.Enums;
 
 namespace HumanResources.Domain.Entities
 {
@@ -61,5 +62,8 @@ namespace HumanResources.Domain.Entities
 
         public int DepartmentID { get; set; } = 9;
 
+        public virtual EmployeePay? EmployeePay { get; set; }
+
+        public virtual List<EmployeePayHistory>? EmployeePayHistory { get; set; }
     }
 }

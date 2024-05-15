@@ -22,6 +22,45 @@ namespace HumanResources.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("HumanResources.API.Controllers.EmployeePayHistory", b =>
+                {
+                    b.Property<int>("EmployeePayHistoryID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmployeePayHistoryID"));
+
+                    b.Property<DateTime>("CreateDays")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EmpolyeePayID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ModifiededDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("MonthPayment")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("MonthPaymentEuro")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("MonthPaymentUSD")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("EmployeePayHistoryID");
+
+                    b.HasIndex("EmpolyeePayID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("EmployeePayHistory");
+                });
+
             modelBuilder.Entity("HumanResources.Domain.Entities.Absence", b =>
                 {
                     b.Property<int>("Id")
@@ -144,6 +183,62 @@ namespace HumanResources.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
+                });
+
+            modelBuilder.Entity("HumanResources.Domain.Entities.EmployeePay", b =>
+                {
+                    b.Property<int>("EmployeePayID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmployeePayID"));
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("RateEURO")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("RatePLN")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("RateUSD")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("EmployeePayID");
+
+                    b.HasIndex("UserID")
+                        .IsUnique();
+
+                    b.ToTable("EmployeePays");
+                });
+
+            modelBuilder.Entity("HumanResources.Domain.Entities.ExchangeRate", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("NameFrom")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameTo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("ExchangeRates");
                 });
 
             modelBuilder.Entity("HumanResources.Domain.Entities.Roles", b =>
@@ -390,6 +485,25 @@ namespace HumanResources.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("HumanResources.API.Controllers.EmployeePayHistory", b =>
+                {
+                    b.HasOne("HumanResources.Domain.Entities.EmployeePay", "EmployeePay")
+                        .WithMany("EmployeePayHistory")
+                        .HasForeignKey("EmpolyeePayID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HumanResources.Domain.Entities.UserInfo", "User")
+                        .WithMany("EmployeePayHistory")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("EmployeePay");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("HumanResources.Domain.Entities.Absence", b =>
                 {
                     b.HasOne("HumanResources.Domain.Entities.AbsencesType", "AbsencesType")
@@ -420,6 +534,17 @@ namespace HumanResources.Infrastructure.Migrations
                     b.HasOne("HumanResources.Domain.Entities.UserInfo", null)
                         .WithMany("Arrivals")
                         .HasForeignKey("UserInfoUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("HumanResources.Domain.Entities.EmployeePay", b =>
+                {
+                    b.HasOne("HumanResources.Domain.Entities.UserInfo", "User")
+                        .WithOne("EmployeePay")
+                        .HasForeignKey("HumanResources.Domain.Entities.EmployeePay", "UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -504,6 +629,11 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Navigation("Users");
                 });
 
+            modelBuilder.Entity("HumanResources.Domain.Entities.EmployeePay", b =>
+                {
+                    b.Navigation("EmployeePayHistory");
+                });
+
             modelBuilder.Entity("HumanResources.Domain.Entities.User", b =>
                 {
                     b.Navigation("UserInfo")
@@ -515,6 +645,10 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Navigation("Absences");
 
                     b.Navigation("Arrivals");
+
+                    b.Navigation("EmployeePay");
+
+                    b.Navigation("EmployeePayHistory");
                 });
 #pragma warning restore 612, 618
         }
