@@ -19,5 +19,10 @@ namespace HumanResources.Domain.Entities
         public DateTime ModifiedDate { get; set; }
 
         public List<EmployeePayHistory>? EmployeePayHistory { get; set; }
+
+        public decimal CalculateRate(Func<decimal,decimal, decimal> calculate, decimal amount, decimal exchagneRate)
+        {
+            return calculate(amount, exchagneRate);
+        }
     }
 }
