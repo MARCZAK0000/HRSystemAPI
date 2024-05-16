@@ -12,15 +12,15 @@ namespace HumanResources.Application.CQRS_Attendance.Handler
 {
     public interface IAttendanceHandlerService
     {
-        public Task<List<GetArrivalsDto>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto);
+        public Task<List<GetArrivalsDto>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto, CancellationToken token);
 
-        public Task<GetArrivalsDto> GetUserAttendanceByDateAsync(DateTime date);
+        public Task<GetArrivalsDto> GetUserAttendanceByDateAsync(DateTime date, CancellationToken token);
 
-        public Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto montDto);
+        public Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto montDto, CancellationToken token);
 
-        public Task <List<GetArrivalsDto>> GetUserCompletedOrNotAttendenceByMonthAsync (GetAttendanceByMonthDto monthDto, bool isCompleted);
+        public Task <List<GetArrivalsDto>> GetUserCompletedOrNotAttendenceByMonthAsync (GetAttendanceByMonthDto monthDto, bool isCompleted, CancellationToken token);
 
-        public Task<GetAttendanceStatsDto> GetInformationsAboutUserAttendanceByMonth(GetAttendanceByMonthDto monthDto, string userCode);
+        public Task<GetAttendanceStatsDto> GetInformationsAboutUserAttendanceByMonth(GetAttendanceByMonthDto monthDto, string userCode, CancellationToken token);
 
 
 

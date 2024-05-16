@@ -6,6 +6,6 @@ namespace HumanResources.Domain.Repository
 {
     public interface IEmailRepostiory
     {
-        Task <EmailResponseDto> SendEmailAsync (SendEmailDto sendEmail);
+        Task <EmailResponseDto> SendEmailAsync (SendEmailDto sendEmail, CancellationToken token);
     }
 }

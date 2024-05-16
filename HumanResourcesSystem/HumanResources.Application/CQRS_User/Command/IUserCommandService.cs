@@ -11,7 +11,7 @@ namespace HumanResources.Application.CQRS_User.Command
     public interface IUserCommandService
     {
 
-        Task<bool> UpdateInfromationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations);
+        Task<bool> UpdateInfromationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations, CancellationToken token);
 
     }
 }

@@ -19,8 +19,8 @@ namespace HumanResources.Application.CQRS_User.Command
             _userRepository = accountReposiotry;
         }
 
-        public async Task<bool> UpdateInfromationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations)
-            => await _userRepository.UpdateInformationsAboutUserAsync(updateAccountInformations);
+        public async Task<bool> UpdateInfromationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations, CancellationToken token)
+            => await _userRepository.UpdateInformationsAboutUserAsync(updateAccountInformations, token);
         
         
     }

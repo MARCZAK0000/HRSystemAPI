@@ -9,7 +9,7 @@ namespace HumanResources.Domain.Repository
     {
         Task<UserResponse> RegisterAsync(RegisterAccountAsyncDto registerUser);
 
-        Task<EmailResponseDto> GenerateConfirmEmailTokenAsync();
+        Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(CancellationToken cancellationToken);
 
         Task<string> GenerateRefreshTokenAsync();
 
@@ -27,7 +27,7 @@ namespace HumanResources.Domain.Repository
 
         Task<UserResponse> ForgetPasswordAsync(ResetPasswordAsyncDto forgetPassword);
 
-        Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber);
+        Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber, CancellationToken token);
 
         Task<UserResponse> GeneratePhoneNumberChangeTokenAsync(ChangePhoneNumberDto changePhoneNumber);
 

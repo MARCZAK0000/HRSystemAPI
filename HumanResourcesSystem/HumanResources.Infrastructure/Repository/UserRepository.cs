@@ -29,7 +29,7 @@ namespace HumanResources.Infrastructure.Repository
 
         }
 
-        public async Task<UserInfo> GetInfromationsAboutUserAsync()
+        public async Task<UserInfo> GetInfromationsAboutUserAsync(CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id)??
@@ -38,20 +38,20 @@ namespace HumanResources.Infrastructure.Repository
             var result = await _dbContext
                 .UserInfo
                 .Include(pr => pr.Department)
-                .FirstOrDefaultAsync(pr => pr.UserId == user.Id)??
+                .FirstOrDefaultAsync(pr => pr.UserId == user.Id, cancellationToken: token) ??
                 throw new NotFoundException("Something went wrong with informations");
                 
 
             return result;
         }
 
-        public async Task<bool> UpdateInformationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations)
+        public async Task<bool> UpdateInformationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
                 throw new InvalidEmailOrPasswordExcepiton("ChangePassword: We cannot find user with that Email and Password"); ;
 
-            var isAlreadyUser = await _dbContext.UserInfo.FirstOrDefaultAsync(pr => pr.UserId == user.Id);
+            var isAlreadyUser = await _dbContext.UserInfo.FirstOrDefaultAsync(pr => pr.UserId == user.Id, cancellationToken: token);
 
             if (isAlreadyUser != null)
             {
@@ -61,7 +61,7 @@ namespace HumanResources.Infrastructure.Repository
                 isAlreadyUser.YearsOfExperiences = updateAccountInformations.YearsOfExperiences;
 
                 isAlreadyUser.CalculateDaysOfAbsences();
-                await _dbContext.SaveChangesAsync();
+                await _dbContext.SaveChangesAsync(token);
                 _dbContext.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
                 return true;
             }
@@ -79,9 +79,9 @@ namespace HumanResources.Infrastructure.Repository
             userInfo.CalculateDaysOfAbsences();
 
             await _dbContext.UserInfo
-                .AddAsync(userInfo);
+                .AddAsync(userInfo, token);
 
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync(token);
             _dbContext.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
 
             return true;

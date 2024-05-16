@@ -10,7 +10,7 @@ namespace HumanResources.Application.CQRS_User.Handler
 {
     public interface IUserHandlerService
     {
-        public Task<GetInfromationsDto> GetInfromationsAboutUserAsync();
+        public Task<GetInfromationsDto> GetInfromationsAboutUserAsync(CancellationToken token);
          
     }
 }

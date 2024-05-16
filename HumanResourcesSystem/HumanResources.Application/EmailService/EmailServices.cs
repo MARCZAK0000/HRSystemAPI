@@ -14,8 +14,8 @@ namespace HumanResources.Application.EmailService
             _emailRepostiory = emailRepostiory;
         }
 
-        public async Task<EmailResponseDto> SendEmailAsync(SendEmailDto sendEmail) =>
-            await _emailRepostiory.SendEmailAsync(sendEmail);
+        public async Task<EmailResponseDto> SendEmailAsync(SendEmailDto sendEmail, CancellationToken token) =>
+            await _emailRepostiory.SendEmailAsync(sendEmail, token);
         
     }
 }

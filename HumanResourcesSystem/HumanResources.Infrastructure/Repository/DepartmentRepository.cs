@@ -27,7 +27,7 @@ namespace HumanResources.Infrastructure.Repository
             _userContext = userContext;
         }
 
-        public async Task<DepartmentResponse> ChangeUserDepartmentAsync(ChangeDepartmentDto changeDepartment)
+        public async Task<DepartmentResponse> ChangeUserDepartmentAsync(ChangeDepartmentDto changeDepartment, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id)??
@@ -40,12 +40,12 @@ namespace HumanResources.Infrastructure.Repository
 
             var getUser = await _database.UserInfo
                 .Include(pr => pr.Department)
-                .FirstOrDefaultAsync(pr => pr.UserCode == changeDepartment.UserCode)??
+                .FirstOrDefaultAsync(pr => pr.UserCode == changeDepartment.UserCode, cancellationToken: token) ??
                 throw new NotFoundException($"We cannot found user with that UserCode: {changeDepartment.UserCode}");
 
             getUser.DepartmentID = changeDepartment.DepartmentId;
 
-            await _database.SaveChangesAsync();
+            await _database.SaveChangesAsync(token);
             _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
             return new DepartmentResponse()
             {
@@ -55,7 +55,7 @@ namespace HumanResources.Infrastructure.Repository
             };
         }
 
-        public async Task<Departments> DepartmentInfoAsync(int departmentId)
+        public async Task<Departments> DepartmentInfoAsync(int departmentId, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
@@ -69,7 +69,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await _database.Departments
                 .Include(pr => pr.Users)
-                .FirstOrDefaultAsync(pr => pr.Id == departmentId)??
+                .FirstOrDefaultAsync(pr => pr.Id == departmentId, cancellationToken: token) ??
                 throw new NotFoundException($"We cannot find department with DepartmentID: {departmentId}");
 
 
@@ -77,7 +77,7 @@ namespace HumanResources.Infrastructure.Repository
 
         }
 
-        public async Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto departmentInfo)
+        public async Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto departmentInfo, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
@@ -95,9 +95,9 @@ namespace HumanResources.Infrastructure.Repository
             };
 
             await _database.Departments
-                .AddAsync(newDepartment);
+                .AddAsync(newDepartment, token);
 
-            await _database.SaveChangesAsync();
+            await _database.SaveChangesAsync(token);
             _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
 
 
@@ -109,7 +109,7 @@ namespace HumanResources.Infrastructure.Repository
         }
 
      
-        public async Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto changeDepartment, int depratmentID)
+        public async Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto changeDepartment, int depratmentID, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
@@ -121,7 +121,7 @@ namespace HumanResources.Infrastructure.Repository
             }
 
             var getDeparmentsCount = await _database.Departments
-                .CountAsync();
+                .CountAsync(cancellationToken: token);
 
             if(depratmentID < 1 || depratmentID > getDeparmentsCount) 
             {
@@ -130,12 +130,12 @@ namespace HumanResources.Infrastructure.Repository
 
             var getDepartment = await _database.
                 Departments.
-                FirstOrDefaultAsync(pr => pr.Id == depratmentID);
+                FirstOrDefaultAsync(pr => pr.Id == depratmentID, cancellationToken: token);
 
             getDepartment!.Name = changeDepartment.Name;
             getDepartment!.Description = changeDepartment.Description;
 
-            await _database.SaveChangesAsync();
+            await _database.SaveChangesAsync(token);
             _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
 
             return new DepartmentResponse()
@@ -145,14 +145,14 @@ namespace HumanResources.Infrastructure.Repository
             };
         }
 
-        public async Task<List<Departments>> GetAllDeparmentsAsync()
+        public async Task<List<Departments>> GetAllDeparmentsAsync(CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
                 throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
 
             var deparments = await _database.Departments
-                .ToListAsync();
+                .ToListAsync(cancellationToken: token);
 
             return deparments;
         }

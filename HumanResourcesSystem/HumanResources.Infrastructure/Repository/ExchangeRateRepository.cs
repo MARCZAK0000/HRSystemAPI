@@ -25,19 +25,19 @@ namespace HumanResources.Infrastructure.Repository
         }
 
 
-        public async Task<List<CurrenciesResponse>> AddRatesToDbAsync(string currencyCode)
+        public async Task<List<CurrenciesResponse>> AddRatesToDbAsync(string currencyCode, CancellationToken token)
         {
             var count = await _database
                 .ExchangeRates
                 .Where(pr=>pr.NameFrom==currencyCode)
-                .CountAsync();
+                .CountAsync(cancellationToken: token);
 
             if(count >= 3)
             {
                 throw new BadRequestException("Use Update rather AddToDb ");
             }
 
-            var result = await GetValueFromApiAsync(currencyCode);
+            var result = await GetValueFromApiAsync(currencyCode, token);
 
 
             result.ForEach(async item =>
@@ -52,22 +52,22 @@ namespace HumanResources.Infrastructure.Repository
                         Rate = (decimal)item.value,
                         ModifiededDate = DateTime.Now
                                                
-                    });
+                    }, token);
             });
 
-            await _database.SaveChangesAsync();
+            await _database.SaveChangesAsync(token);
             _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
             return result;
         }
 
-        public async Task<List<CurrenciesResponse>> UpdateRatesAsync(string currency)
+        public async Task<List<CurrenciesResponse>> UpdateRatesAsync(string currency, CancellationToken token)
         {
-            var result = await GetValueFromApiAsync(currency);
+            var result = await GetValueFromApiAsync(currency, token);
 
             var getCurrency = await _database
                 .ExchangeRates
                 .Where(pr => pr.NameFrom == currency)
-                .ToListAsync();
+                .ToListAsync(cancellationToken: token);
 
 
             var i = 0;
@@ -85,7 +85,7 @@ namespace HumanResources.Infrastructure.Repository
                 }
             });
 
-            await _database.SaveChangesAsync();
+            await _database.SaveChangesAsync(token);
             _database.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
             
             return result;
@@ -114,19 +114,19 @@ namespace HumanResources.Infrastructure.Repository
             return result;
         }
 
-        private async Task<List<CurrenciesResponse>> GetValueFromApiAsync(string currencyCode)
+        private async Task<List<CurrenciesResponse>> GetValueFromApiAsync(string currencyCode, CancellationToken token)
         {
             var url = $"https://api.currencyapi.com/v3/latest?apikey={_apiKey.API_KEY}&base_currency={currencyCode}&currencies=";
             var listOfCurrencies = new List<string>() { "PLN,", "USD," , "EUR" };
 
             listOfCurrencies.ForEach(item => url += item);
             using var client = new HttpClient();
-            var response = await client.GetAsync(url);
+            var response = await client.GetAsync(url, token);
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
                 throw new BadRequestException("Request has an error");
             }
-            var data = await response.Content.ReadAsStringAsync();
+            var data = await response.Content.ReadAsStringAsync(token);
 
             var result = GetValueFromJSON(data, listOfCurrencies);
 

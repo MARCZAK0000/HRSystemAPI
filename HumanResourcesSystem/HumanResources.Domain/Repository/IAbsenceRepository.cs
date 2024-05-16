@@ -5,12 +5,12 @@ namespace HumanResources.Domain.Repository
 {
     public interface IAbsenceRepository
     {
-        Task<Absence> CreateAbsenceAsync(CreateAbsenceDto createAbsence);
+        Task<Absence> CreateAbsenceAsync(CreateAbsenceDto createAbsence, CancellationToken token);
 
-        Task<List<Absence>> ShowAbsencesByYearAsync(string userID, int year);
+        Task<List<Absence>> ShowAbsencesByYearAsync(string userID, int year, CancellationToken token);
 
-        Task<Absence> AbsenceDecisionAsync(AbsenceDecisionInfoDto infoDto);
+        Task<Absence> AbsenceDecisionAsync(AbsenceDecisionInfoDto infoDto, CancellationToken token);
 
-        Task<MemoryStream> GenerateAbsenceReportPDF(List<AbsenceInfoDto> list, (string userID, int year) info); 
+        Task<MemoryStream> GenerateAbsenceReportPDF(List<AbsenceInfoDto> list, (string userID, int year) info, CancellationToken token); 
     }
 }

@@ -59,10 +59,10 @@ namespace HumanResources.API.Controllers
             return Ok(result);
         }
         [HttpGet("token")]
-        public async Task<IActionResult> GenerateConfirmEmailToken()
+        public async Task<IActionResult> GenerateConfirmEmailToken(CancellationToken token)
         {
 
-            var result = await _accountHandlerService.GenerateConfirmEmailTokenAsync();
+            var result = await _accountHandlerService.GenerateConfirmEmailTokenAsync(token);
             
             return Ok(result);
         }
@@ -95,9 +95,9 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpGet("forget_password")]
-        public async Task<IActionResult> GenerateForgetPasswordToken([FromQuery] GenerateForgetPasswordDto forgetPasswordDto)
+        public async Task<IActionResult> GenerateForgetPasswordToken([FromQuery] GenerateForgetPasswordDto forgetPasswordDto, CancellationToken token)
         {
-            var result = await _accountHandlerService.GenerateForgetPasswordTokenAsync(forgetPasswordDto.Email, forgetPasswordDto.PhoneNumber);
+            var result = await _accountHandlerService.GenerateForgetPasswordTokenAsync(forgetPasswordDto.Email, forgetPasswordDto.PhoneNumber, token);
             if (!result.Result)
             {
                 return BadRequest(result);

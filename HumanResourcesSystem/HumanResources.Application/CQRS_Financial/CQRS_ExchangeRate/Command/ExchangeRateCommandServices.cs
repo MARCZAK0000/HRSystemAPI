@@ -13,12 +13,12 @@ namespace HumanResources.Application.CQRS_Financial.CQRS_ExchangeRate.Command
             _reposiotry = reposiotry;
         }
 
-        public async Task<List<CurrenciesResponse>> AddRatesToDbAsync(string currencyCode) => 
-            await _reposiotry.AddRatesToDbAsync(currencyCode);
+        public async Task<List<CurrenciesResponse>> AddRatesToDbAsync(string currencyCode, CancellationToken token) => 
+            await _reposiotry.AddRatesToDbAsync(currencyCode, token);
 
 
-        public async Task<List<CurrenciesResponse>> UpdateRatesAsync(string currencyCode) =>
-            await _reposiotry.UpdateRatesAsync(currencyCode);
+        public async Task<List<CurrenciesResponse>> UpdateRatesAsync(string currencyCode, CancellationToken token) =>
+            await _reposiotry.UpdateRatesAsync(currencyCode, token);
         
     }
 }

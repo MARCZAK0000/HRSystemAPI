@@ -16,11 +16,11 @@ namespace HumanResources.Application.CQRS_Absence.Command
             _absenceRepository = absenceRepository;
         }
 
-        public async Task<AbsenceInfoDto> CreateAbsenceAsync(CreateAbsenceDto createAbsence) => 
-            _mapper.Map<AbsenceInfoDto>(await _absenceRepository.CreateAbsenceAsync(createAbsence));
+        public async Task<AbsenceInfoDto> CreateAbsenceAsync(CreateAbsenceDto createAbsence, CancellationToken token) =>
+            _mapper.Map<AbsenceInfoDto>(await _absenceRepository.CreateAbsenceAsync(createAbsence, token));
 
-        public async Task<AbsenceDecisionDto> AbsenceDecisionAsync(AbsenceDecisionInfoDto absenceDecision)=>
-            _mapper.Map<AbsenceDecisionDto>(await _absenceRepository.AbsenceDecisionAsync(absenceDecision));
+        public async Task<AbsenceDecisionDto> AbsenceDecisionAsync(AbsenceDecisionInfoDto absenceDecision, CancellationToken token) =>
+            _mapper.Map<AbsenceDecisionDto>(await _absenceRepository.AbsenceDecisionAsync(absenceDecision, token));
 
     }
 }

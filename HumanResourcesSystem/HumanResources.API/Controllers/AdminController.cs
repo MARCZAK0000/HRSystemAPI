@@ -78,9 +78,9 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpPost("email")]
-        public async Task<IActionResult> SendEmailTestAsync([FromBody] SendEmailDto emailResponse)
+        public async Task<IActionResult> SendEmailTestAsync([FromBody] SendEmailDto emailResponse, CancellationToken token)
         {
-            var result = await _emailServices.SendEmailAsync(emailResponse);
+            var result = await _emailServices.SendEmailAsync(emailResponse, token);
 
             return Ok(result);
         }

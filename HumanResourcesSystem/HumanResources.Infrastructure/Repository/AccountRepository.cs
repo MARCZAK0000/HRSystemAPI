@@ -204,7 +204,7 @@ namespace HumanResources.Infrastructure.Repository
             return true;
         }
 
-        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync()
+        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(CancellationToken cancellationToken)
         {
 
             var currentUser = _userContext.GetCurrentUser();
@@ -236,7 +236,7 @@ namespace HumanResources.Infrastructure.Repository
                 EmailBody = renderMessage
             };
 
-            var result = await _emailServices.SendEmailAsync(emailInformations);
+            var result = await _emailServices.SendEmailAsync(emailInformations, cancellationToken);
             return result;
         }
 
@@ -306,7 +306,7 @@ namespace HumanResources.Infrastructure.Repository
 
         }
 
-        public async Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber)
+        public async Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber, CancellationToken cancellationToken)
         {
 
             var user = await _userManager.FindByEmailAsync(email);
@@ -331,7 +331,7 @@ namespace HumanResources.Infrastructure.Repository
                 EmailTo = email,
                 EmailSubject = "Forget Password",
                 EmailBody = emailMessageBody
-            });
+            }, cancellationToken);
 
             return new UserResponse()
             {

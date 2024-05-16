@@ -11,14 +11,14 @@ namespace HumanResources.Domain.Repository
 {
     public interface IDepartmentReposiotry
     {
-        Task<DepartmentResponse> ChangeUserDepartmentAsync (ChangeDepartmentDto changeDepartment);
+        Task<DepartmentResponse> ChangeUserDepartmentAsync (ChangeDepartmentDto changeDepartment, CancellationToken token);
 
-        Task<Departments> DepartmentInfoAsync(int departmentId);    
+        Task<Departments> DepartmentInfoAsync(int departmentId, CancellationToken token);    
 
-        Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto departmentInfo);
+        Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto departmentInfo, CancellationToken token);
 
-        Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto changeDepartment, int depratmentID);
+        Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto changeDepartment, int depratmentID, CancellationToken token);
 
-        Task<List<Departments>> GetAllDeparmentsAsync();
+        Task<List<Departments>> GetAllDeparmentsAsync(CancellationToken token);
     }
 }

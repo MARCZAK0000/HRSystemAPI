@@ -22,11 +22,11 @@ namespace HumanResources.Application.CQRS_Attendance.Command
             _mapper = mapper;
         }
 
-        public async Task<bool> UserArrivalAsync(UserArrivalDto userArrival)
-            => await _attendanceRepository.UserArrivalAsync(userArrival);
+        public async Task<bool> UserArrivalAsync(UserArrivalDto userArrival, CancellationToken token)
+            => await _attendanceRepository.UserArrivalAsync(userArrival, token);
 
-        public async Task<bool> UserDepartureAsync(UserDepartureDto userDeparture)
-            => await _attendanceRepository.UserDepartureAsync(userDeparture);
+        public async Task<bool> UserDepartureAsync(UserDepartureDto userDeparture, CancellationToken token)
+            => await _attendanceRepository.UserDepartureAsync(userDeparture, token);
 
     }
 }

@@ -18,18 +18,18 @@ namespace HumanResources.Infrastructure.Repository
             _emailAuthenticationSettings = emailAuthenticationSettings;
         }
 
-        public async Task<EmailResponseDto> SendEmailAsync(SendEmailDto sendEmail)
+        public async Task<EmailResponseDto> SendEmailAsync(SendEmailDto sendEmail, CancellationToken token)
         {
             var messeage = await CreateMessage(sendEmail);
             using var smtp = new SmtpClient();
-            await smtp.ConnectAsync(_emailAuthenticationSettings.Host, _emailAuthenticationSettings.Port, MailKit.Security.SecureSocketOptions.StartTls);
+            await smtp.ConnectAsync(_emailAuthenticationSettings.Host, _emailAuthenticationSettings.Port, MailKit.Security.SecureSocketOptions.StartTls, token);
             if (!smtp.IsConnected)
             {
                 throw new BadRequestException("Cannot connect to SMTP");
             }
-            await smtp.AuthenticateAsync(new NetworkCredential(_emailAuthenticationSettings.Email, _emailAuthenticationSettings.Password));
+            await smtp.AuthenticateAsync(new NetworkCredential(_emailAuthenticationSettings.Email, _emailAuthenticationSettings.Password), token);
             await smtp.SendAsync(messeage);
-            await smtp.DisconnectAsync(true);
+            await smtp.DisconnectAsync(true, token);
 
             return new EmailResponseDto() 
             {

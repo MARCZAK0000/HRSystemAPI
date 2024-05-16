@@ -69,7 +69,6 @@ namespace HumanResources.Infrastructure.Repository
 
             var rateEur = currentExchagneRate.Where(pr => pr.Name == "EUR").Select(pr => pr.Value).FirstOrDefault();
             var rateUSD = currentExchagneRate.Where(pr => pr.Name == "USD").Select(pr=>pr.Value).FirstOrDefault();
-            await Task.Delay(2000, token);
             userPayment.RateEURO = userPayment.CalculateRate((amount, rate) =>
             {
                 return rate * amount;
@@ -131,7 +130,6 @@ namespace HumanResources.Infrastructure.Repository
                 throw new BadRequestException("UpdateUserPaymentRate: we didn't found currency Rate in Db");
             }
 
-            await Task.Delay(2000, token);
             CalculatePayment(out decimal rateEur, out decimal rateUSD, currentExchangeRate);
 
             findUserPayment.RatePLN = updateUserPaymentRate.RatePLN;

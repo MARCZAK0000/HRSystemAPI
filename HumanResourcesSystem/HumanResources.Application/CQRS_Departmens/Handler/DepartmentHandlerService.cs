@@ -23,14 +23,14 @@ namespace HumanResources.Application.CQRS_Departmens.Handler
             _cache = cache;
         }
 
-        public async Task<DepartmentInfoDto> DepartmentInfoAsync(int departmentId) =>
-            _mapper.Map<DepartmentInfoDto>(await _departmentRepository.DepartmentInfoAsync(departmentId));
+        public async Task<DepartmentInfoDto> DepartmentInfoAsync(int departmentId , CancellationToken token) =>
+            _mapper.Map<DepartmentInfoDto>(await _departmentRepository.DepartmentInfoAsync(departmentId, token));
 
-        public async Task<List<DepartmentInfoDto>> GetAllDepartmenst()
+        public async Task<List<DepartmentInfoDto>> GetAllDepartmenst(CancellationToken token)
         {
             if (!_cache.TryGetValue(CacheKeys.GetAllDeparmentsCache, out var departmentInfo))
             {
-                departmentInfo = await _departmentRepository.GetAllDeparmentsAsync();
+                departmentInfo = await _departmentRepository.GetAllDeparmentsAsync(token);
                 var options = CacheOptions.FastOptions();
                 _cache.Set(CacheKeys.GetAllDeparmentsCache, departmentInfo, options);
             }

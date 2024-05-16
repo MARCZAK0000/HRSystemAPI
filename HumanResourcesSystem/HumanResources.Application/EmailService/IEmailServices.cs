@@ -9,6 +9,6 @@ namespace HumanResources.Application.EmailService
 {
     public interface IEmailServices
     {
-        Task<EmailResponseDto> SendEmailAsync(SendEmailDto sendEmail);
+        Task<EmailResponseDto> SendEmailAsync(SendEmailDto sendEmail, CancellationToken token);
     }
 }

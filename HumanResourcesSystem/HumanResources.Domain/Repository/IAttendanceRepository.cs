@@ -11,19 +11,19 @@ namespace HumanResources.Domain.Repository
 {
     public interface IAttendanceRepository
     {
-        Task<bool> UserArrivalAsync(UserArrivalDto userArrival);
+        Task<bool> UserArrivalAsync(UserArrivalDto userArrival, CancellationToken token);
 
-        Task<List<Arrivals>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto);
+        Task<List<Arrivals>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto, CancellationToken token);
 
-        Task<bool> UserDepartureAsync(UserDepartureDto userDeparture);
+        Task<bool> UserDepartureAsync(UserDepartureDto userDeparture, CancellationToken token);
 
-        Task<Arrivals> GetUserAttendanceByDateAsync(DateTime date);
+        Task<Arrivals> GetUserAttendanceByDateAsync(DateTime date, CancellationToken token);
 
-        Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto month);
+        Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto month, CancellationToken token);
 
-        Task <List<Arrivals>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted);
+        Task <List<Arrivals>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted, CancellationToken token);
 
-        Task<GetAttendanceStatsDto> GetInformationsAboutUserForLeadersAttendanceByMonth(GetAttendanceByMonthDto monthDto, string UserCode);
+        Task<GetAttendanceStatsDto> GetInformationsAboutUserForLeadersAttendanceByMonth(GetAttendanceByMonthDto monthDto, string UserCode, CancellationToken token);
 
     }
 }

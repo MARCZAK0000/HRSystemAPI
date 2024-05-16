@@ -9,9 +9,9 @@ namespace HumanResources.Application.CQRS_Attendance.Command
 {
     public interface IAttendanceCommandService
     {
-        Task<bool> UserArrivalAsync(UserArrivalDto userArrival);
+        Task<bool> UserArrivalAsync(UserArrivalDto userArrival, CancellationToken token);
 
-        Task<bool> UserDepartureAsync(UserDepartureDto userDeparture);
+        Task<bool> UserDepartureAsync(UserDepartureDto userDeparture, CancellationToken token);
 
     }
 }

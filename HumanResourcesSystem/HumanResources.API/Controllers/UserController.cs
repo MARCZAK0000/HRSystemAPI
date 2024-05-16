@@ -20,17 +20,17 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpGet("info")]
-        public async Task<IActionResult> GetInfromationsAboutUserAsync() 
+        public async Task<IActionResult> GetInfromationsAboutUserAsync(CancellationToken token) 
         {
-            var result = await _userHandlerServices.GetInfromationsAboutUserAsync();
+            var result = await _userHandlerServices.GetInfromationsAboutUserAsync(token);
 
             return Ok(result);
         }
 
         [HttpPut("info")]
-        public async Task<IActionResult> UpdateInfromationsAboutUser([FromBody] UpdateAccountInformationsDto updateAccountInformations)
+        public async Task<IActionResult> UpdateInfromationsAboutUser([FromBody] UpdateAccountInformationsDto updateAccountInformations, CancellationToken token)
         {
-            var result = await _userCommandServices.UpdateInfromationsAboutUserAsync(updateAccountInformations);
+            var result = await _userCommandServices.UpdateInfromationsAboutUserAsync(updateAccountInformations, token);
 
             if (!result)
             {

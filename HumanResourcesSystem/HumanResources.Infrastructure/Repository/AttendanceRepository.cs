@@ -30,7 +30,7 @@ namespace HumanResources.Infrastructure.Repository
             _mapper = mapper;
         }
 
-        public async Task<bool> UserArrivalAsync(UserArrivalDto userArrival)
+        public async Task<bool> UserArrivalAsync(UserArrivalDto userArrival, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
@@ -39,7 +39,7 @@ namespace HumanResources.Infrastructure.Repository
             var checkRequest = await _dbContext
                 .Arrivals
                 .FirstOrDefaultAsync(pr => pr.UserId == user.Id 
-                    && pr.CreateDay.Date == userArrival.ArrivalDate.Date);
+                    && pr.CreateDay.Date == userArrival.ArrivalDate.Date, token);
 
             if (checkRequest is not null)
             {
@@ -55,12 +55,12 @@ namespace HumanResources.Infrastructure.Repository
                 
             };
 
-            await _dbContext.Arrivals.AddAsync(newArrival);
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.Arrivals.AddAsync(newArrival, token);
+            await _dbContext.SaveChangesAsync(token);
             return true;
         }
 
-        public async Task<bool> UserDepartureAsync(UserDepartureDto userDeparture)
+        public async Task<bool> UserDepartureAsync(UserDepartureDto userDeparture, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
@@ -68,7 +68,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var findResult = await _dbContext
                 .Arrivals
-                .FirstOrDefaultAsync(pr => pr.Id == userDeparture.Id && pr.UserId == user.Id) ??
+                .FirstOrDefaultAsync(pr => pr.Id == userDeparture.Id && pr.UserId == user.Id, token) ??
                 throw new BadRequestException("We cannot find Request with that ID and this UserCode");
 
             if (findResult.IsCompleted)
@@ -79,7 +79,7 @@ namespace HumanResources.Infrastructure.Repository
             findResult.Departure = userDeparture.DepartureDate;
             findResult.CompleteDay();
             findResult.CalculateDuration();
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync(token);
             _dbContext.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
 
 
@@ -88,7 +88,7 @@ namespace HumanResources.Infrastructure.Repository
 
         }
 
-        public async Task<List<Arrivals>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto)
+        public async Task<List<Arrivals>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto, CancellationToken token)
         {
             
             var currentUser = _userContext.GetCurrentUser();
@@ -103,7 +103,7 @@ namespace HumanResources.Infrastructure.Repository
                 .Where(pr => pr.UserId == user.Id && 
                     pr.CreateDay.Year == year && 
                         pr.CreateDay.Month == month )
-                .ToListAsync();
+                .ToListAsync(cancellationToken: token);
 
 
 
@@ -112,7 +112,7 @@ namespace HumanResources.Infrastructure.Repository
 
 
 
-        public async Task<Arrivals> GetUserAttendanceByDateAsync(DateTime date)
+        public async Task<Arrivals> GetUserAttendanceByDateAsync(DateTime date, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
@@ -120,14 +120,14 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await _dbContext.Arrivals
                 .Where(pr => pr.UserId == user.Id)
-                .FirstOrDefaultAsync(pr => pr.CreateDay.Date == date.Date)
+                .FirstOrDefaultAsync(pr => pr.CreateDay.Date == date.Date, cancellationToken: token)
                 ?? throw new NotFoundException($"We cannot find arrival with that date: {date.Date}");
 
 
             return result;
         }
 
-        public async Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto monthDto)
+        public async Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto monthDto, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
 
@@ -146,23 +146,23 @@ namespace HumanResources.Infrastructure.Repository
 
 
             var completedDays = await baseQuery
-                .CountAsync(pr => pr.IsCompleted == true);
+                .CountAsync(pr => pr.IsCompleted == true, cancellationToken: token);
 
             var notCompletedDays = await baseQuery
-                .CountAsync(pr => pr.IsCompleted == false);
+                .CountAsync(pr => pr.IsCompleted == false, cancellationToken: token);
 
             var numberOfDays = await baseQuery
-                .CountAsync();
+                .CountAsync(token);
 
             var listOfCompletedDays = _mapper.Map<List<GetArrivalsDto>>(await baseQuery
                 .Where(pr => pr.IsCompleted == true)
-                .ToListAsync());
+                .ToListAsync(token));
 
             return new GetAttendanceStatsDto(completedDays, notCompletedDays, numberOfDays, listOfCompletedDays);
 
         }
 
-        public async Task<List<Arrivals>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted)
+        public async Task<List<Arrivals>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
@@ -181,12 +181,12 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await baseQuery.
                 Where(pr => pr.IsCompleted == isCompleted)
-                .ToListAsync();
+                .ToListAsync(cancellationToken: token);
 
             return result;
         }
 
-        public async Task<GetAttendanceStatsDto> GetInformationsAboutUserForLeadersAttendanceByMonth(GetAttendanceByMonthDto monthDto, string userCode)
+        public async Task<GetAttendanceStatsDto> GetInformationsAboutUserForLeadersAttendanceByMonth(GetAttendanceByMonthDto monthDto, string userCode, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id)??
@@ -204,13 +204,13 @@ namespace HumanResources.Infrastructure.Repository
             var baseQuery = _dbContext.Arrivals
                 .Where(pr => pr.UserCode == userCode && pr.CreateDay.Year == year && pr.CreateDay.Month == month);
 
-            var completedDays = await baseQuery.CountAsync(pr=>pr.IsCompleted == true);
+            var completedDays = await baseQuery.CountAsync(pr=>pr.IsCompleted == true, cancellationToken: token);
 
-            var notCompletedDays = await baseQuery.CountAsync(pr => pr.IsCompleted == false);
+            var notCompletedDays = await baseQuery.CountAsync(pr => pr.IsCompleted == false, cancellationToken: token);
 
-            var countDays = await baseQuery.CountAsync();
+            var countDays = await baseQuery.CountAsync(cancellationToken: token);
 
-            var listOfCompletedDays = _mapper.Map<List<GetArrivalsDto>>(await baseQuery.Where(pr=>pr.IsCompleted == true).ToListAsync());
+            var listOfCompletedDays = _mapper.Map<List<GetArrivalsDto>>(await baseQuery.Where(pr=>pr.IsCompleted == true).ToListAsync(cancellationToken: token));
 
             return new GetAttendanceStatsDto(completedDays, notCompletedDays, countDays, listOfCompletedDays);
         }

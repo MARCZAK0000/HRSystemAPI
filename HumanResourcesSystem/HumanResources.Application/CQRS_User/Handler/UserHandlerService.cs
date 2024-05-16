@@ -22,7 +22,7 @@ namespace HumanResources.Application.CQRS_User.Handler
             _mapperProfile = mappperProfile;
         }
 
-        public async Task<GetInfromationsDto> GetInfromationsAboutUserAsync() 
-            => _mapperProfile.Map<GetInfromationsDto>(await _userRepository.GetInfromationsAboutUserAsync());
+        public async Task<GetInfromationsDto> GetInfromationsAboutUserAsync(CancellationToken token) 
+            => _mapperProfile.Map<GetInfromationsDto>(await _userRepository.GetInfromationsAboutUserAsync(token));
     }
 }

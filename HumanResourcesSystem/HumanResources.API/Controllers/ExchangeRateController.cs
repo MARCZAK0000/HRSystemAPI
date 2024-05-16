@@ -19,16 +19,16 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddRatesToDbAsync([FromBody] GetExchangeRateAsyncDto getExchange)
+        public async Task<IActionResult> AddRatesToDbAsync([FromBody] GetExchangeRateAsyncDto getExchange, CancellationToken token)
         {
-            var result = await _exchangeRateCommandServices.AddRatesToDbAsync(getExchange.CurrencyCode);
+            var result = await _exchangeRateCommandServices.AddRatesToDbAsync(getExchange.CurrencyCode, token);
             return Ok(result);
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateRatesAsync([FromBody] GetExchangeRateAsyncDto getExchange)
+        public async Task<IActionResult> UpdateRatesAsync([FromBody] GetExchangeRateAsyncDto getExchange, CancellationToken token)
         {
-            var result = await _exchangeRateCommandServices.UpdateRatesAsync(getExchange.CurrencyCode);
+            var result = await _exchangeRateCommandServices.UpdateRatesAsync(getExchange.CurrencyCode, token);
 
             return Ok(result);
         }

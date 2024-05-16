@@ -6,9 +6,9 @@ namespace HumanResources.Domain.Repository
 {
     public interface IUserRepository
     {
-        Task<UserInfo> GetInfromationsAboutUserAsync();
+        Task<UserInfo> GetInfromationsAboutUserAsync(CancellationToken token);
 
-        Task<bool> UpdateInformationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformationsDto);
+        Task<bool> UpdateInformationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformationsDto, CancellationToken token);
 
     }
 }

@@ -16,11 +16,11 @@ namespace HumanResources.Application.CQRS.UserHandler
             _accountRepository = accountRepository;
         }
 
-        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync() =>
-            await _accountRepository.GenerateConfirmEmailTokenAsync();
+        public async Task<EmailResponseDto> GenerateConfirmEmailTokenAsync(CancellationToken cancellationToken) =>
+            await _accountRepository.GenerateConfirmEmailTokenAsync(cancellationToken);
 
-        public async Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber) =>
-            await _accountRepository.GenerateForgetPasswordTokenAsync(email, phonenumber);
+        public async Task<UserResponse> GenerateForgetPasswordTokenAsync(string email, string phonenumber, CancellationToken token) =>
+            await _accountRepository.GenerateForgetPasswordTokenAsync(email, phonenumber, token);
 
         public async Task<UserResponse> GeneratePhoneNumberChangeTokenAsync(ChangePhoneNumberDto phoneNumber) =>
             await _accountRepository.GeneratePhoneNumberChangeTokenAsync(phoneNumber);

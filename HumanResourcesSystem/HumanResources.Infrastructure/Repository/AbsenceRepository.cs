@@ -29,7 +29,7 @@ namespace HumanResources.Infrastructure.Repository
             _userContext = userContext;
         }
 
-        public async Task<Absence> CreateAbsenceAsync(CreateAbsenceDto createAbsence)
+        public async Task<Absence> CreateAbsenceAsync(CreateAbsenceDto createAbsence, CancellationToken token)
         {
 
 
@@ -41,7 +41,7 @@ namespace HumanResources.Infrastructure.Repository
                 .Where(pr => pr.UserId == user.Id)
                 .FirstOrDefaultAsync(
                 pr => (pr.StartTime.Date <= createAbsence.StartTime.Date && pr.EndTime.Date >= createAbsence.StartTime.Date) &&
-                (pr.StartTime.Date <= createAbsence.EndTime.Date && pr.EndTime > createAbsence.EndTime.Date));
+                (pr.StartTime.Date <= createAbsence.EndTime.Date && pr.EndTime > createAbsence.EndTime.Date), token);
 
             if (findAbsences != null)
             {
@@ -60,15 +60,15 @@ namespace HumanResources.Infrastructure.Repository
             newAbsences.CalculatePeriodOfTime();
 
             await _database.Absences
-                .AddAsync(newAbsences);
+                .AddAsync(newAbsences, token);
 
-            await _database.SaveChangesAsync();
+            await _database.SaveChangesAsync(token);
 
             return newAbsences;
 
         }
 
-        public async Task<List<Absence>> ShowAbsencesByYearAsync(string userID, int year)
+        public async Task<List<Absence>> ShowAbsencesByYearAsync(string userID, int year, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
 
@@ -88,7 +88,7 @@ namespace HumanResources.Infrastructure.Repository
             var result = await _database.Absences
                 .Include(pr => pr.AbsencesType)
                 .Where(pr => pr.StartTime.Year == year && pr.UserId == userID)
-                .ToListAsync();
+                .ToListAsync(cancellationToken: token);
 
             if (!result.Any())
             {
@@ -98,7 +98,7 @@ namespace HumanResources.Infrastructure.Repository
             return result;
         }
 
-        public async Task<Absence> AbsenceDecisionAsync(AbsenceDecisionInfoDto infoDto)
+        public async Task<Absence> AbsenceDecisionAsync(AbsenceDecisionInfoDto infoDto, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
 
@@ -113,7 +113,7 @@ namespace HumanResources.Infrastructure.Repository
             var getLeaderDepartmentID = await _database.UserInfo
                 .Where(pr => pr.UserId == user.Id)
                 .Select(pr => pr.DepartmentID)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(cancellationToken: token);
 
             if (getLeaderDepartmentID <= 0)
             {
@@ -132,7 +132,7 @@ namespace HumanResources.Infrastructure.Repository
             }
 
             var subordinateAbsence = await baseQuery 
-                .FirstOrDefaultAsync(pr => pr.Id == infoDto.AbsenceId && pr.User.UserCode == infoDto.UserCode) ??
+                .FirstOrDefaultAsync(pr => pr.Id == infoDto.AbsenceId && pr.User.UserCode == infoDto.UserCode, cancellationToken: token) ??
                 throw new NotFoundException("Not Found Absences");
 
             if (subordinateAbsence.IsAccepted)
@@ -143,7 +143,7 @@ namespace HumanResources.Infrastructure.Repository
             if (!infoDto.Decision)
             {
                 subordinateAbsence.Declined = true;
-                await _database.SaveChangesAsync();
+                await _database.SaveChangesAsync(token);
                 return subordinateAbsence;
             }
 
@@ -172,20 +172,22 @@ namespace HumanResources.Infrastructure.Repository
             {
                 subordinateAbsence.Declined = true;
 
-                await _database.SaveChangesAsync();
+                await _database.SaveChangesAsync(token);
                 throw new BadRequestException($"User: {subordinateAbsence.User.UserCode} used all of his absence days");
             }
 
 
             subordinateAbsence.User.DaysOfAbsencesToUse-= daysToUse;
-            await _database.SaveChangesAsync();
+            await _database.SaveChangesAsync(token);
             return subordinateAbsence;
 
 
         }
 
-        public Task<MemoryStream> GenerateAbsenceReportPDF(List<AbsenceInfoDto> list, (string userID, int year) info)
+        public Task<MemoryStream> GenerateAbsenceReportPDF(List<AbsenceInfoDto> list, (string userID, int year) info, CancellationToken token)
         {
+            
+            token.ThrowIfCancellationRequested();
             var count = Math.Ceiling((decimal)(list.Count/ 20));
             var iteration = 0;
             QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;

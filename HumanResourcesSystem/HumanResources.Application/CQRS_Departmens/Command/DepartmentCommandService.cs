@@ -18,14 +18,14 @@ namespace HumanResources.Application.CQRS_Departmens.Command
         }
 
 
-        public async Task<DepartmentResponse> ChangeUserDeparmentAsync(ChangeDepartmentDto changeDepartment) =>
-            await _departmentRepository.ChangeUserDepartmentAsync(changeDepartment);
+        public async Task<DepartmentResponse> ChangeUserDeparmentAsync(ChangeDepartmentDto changeDepartment, CancellationToken token) =>
+            await _departmentRepository.ChangeUserDepartmentAsync(changeDepartment, token);
 
 
-        public async Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto addDepartment) =>
-            await _departmentRepository.AddDepartmentAsync(addDepartment);
+        public async Task<DepartmentResponse> AddDepartmentAsync(DepartmentUpdateDto addDepartment, CancellationToken token) =>
+            await _departmentRepository.AddDepartmentAsync(addDepartment, token);
 
-        public async Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto departmentUpdate, int departmentID) =>
-            await _departmentRepository.UpdateDepartmentAsync(departmentUpdate, departmentID);
+        public async Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto departmentUpdate, int departmentID, CancellationToken token) =>
+            await _departmentRepository.UpdateDepartmentAsync(departmentUpdate, departmentID, token);
     }
 }

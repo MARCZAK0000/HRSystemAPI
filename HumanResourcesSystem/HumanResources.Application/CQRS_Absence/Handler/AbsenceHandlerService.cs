@@ -23,16 +23,16 @@ namespace HumanResources.Application.CQRS_Absence.Handler
            
         }
 
-        public async Task<MemoryStream> GeneratePdfReportAsync(string userID, int year)
+        public async Task<MemoryStream> GeneratePdfReportAsync(string userID, int year, CancellationToken token)
         {
-            var list = _mapper.Map<List<AbsenceInfoDto>>(await _absenceRepository.ShowAbsencesByYearAsync(userID, year));
-            var result = await _absenceRepository.GenerateAbsenceReportPDF(list, (userID, year));
+            var list = _mapper.Map<List<AbsenceInfoDto>>(await _absenceRepository.ShowAbsencesByYearAsync(userID, year, token));
+            var result = await _absenceRepository.GenerateAbsenceReportPDF(list, (userID, year), token);
             return result;
         }
            
 
-        public async Task<List<AbsenceInfoDto>> ShowAbsencesByYearAsync(string userID, int year) => 
-            _mapper.Map<List<AbsenceInfoDto>>(await _absenceRepository.ShowAbsencesByYearAsync(userID, year));
+        public async Task<List<AbsenceInfoDto>> ShowAbsencesByYearAsync(string userID, int year, CancellationToken token) => 
+            _mapper.Map<List<AbsenceInfoDto>>(await _absenceRepository.ShowAbsencesByYearAsync(userID, year, token));
             
     }
 }
