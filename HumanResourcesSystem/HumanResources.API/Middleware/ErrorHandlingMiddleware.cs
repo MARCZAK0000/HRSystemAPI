@@ -1,6 +1,7 @@
 ﻿using HumanResources.Application.ServiceLogger;
 using HumanResources.Domain.Exceptions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -133,7 +134,10 @@ namespace HumanResources.API.Middleware
                 var response = JsonSerializer.Serialize(problemDetails);
                 await context.Response.WriteAsync(response);
             }
-
+            catch (TaskCanceledException ex) 
+            {
+                LogInformations(context);
+            }
             catch (Exception ex)//Error 500
             {
                 LogInformations(context);

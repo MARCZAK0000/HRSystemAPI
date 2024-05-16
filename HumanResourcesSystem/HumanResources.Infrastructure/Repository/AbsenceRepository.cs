@@ -111,14 +111,20 @@ namespace HumanResources.Infrastructure.Repository
             }
 
             var getLeaderDepartmentID = await _database.UserInfo
-                .FirstOrDefaultAsync(pr=>pr.UserId == user.Id)??
+                .Where(pr => pr.UserId == user.Id)
+                .Select(pr => pr.DepartmentID)
+                .FirstOrDefaultAsync();
+
+            if (getLeaderDepartmentID <= 0)
+            {
                 throw new NotFoundException("NotFound leader");
+            }
 
             var baseQuery = _database
                 .Absences
                 .Include(pr => pr.AbsencesType)
                 .Include(pr => pr.User)
-                .Where(pr => pr.User.DepartmentID == getLeaderDepartmentID.DepartmentID);
+                .Where(pr => pr.User.DepartmentID == getLeaderDepartmentID);
 
             if(!baseQuery.Any()) 
             {
