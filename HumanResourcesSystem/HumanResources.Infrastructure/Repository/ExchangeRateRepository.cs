@@ -1,10 +1,12 @@
-﻿using HumanResources.Domain.Entities;
+﻿using HumanResources.Application.Authentication;
+using HumanResources.Domain.Entities;
 using HumanResources.Domain.Events;
 using HumanResources.Domain.Exceptions;
 using HumanResources.Domain.JsonResponse;
 using HumanResources.Domain.Repository;
 using HumanResources.Infrastructure.Authentication;
 using HumanResources.Infrastructure.Database;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -18,15 +20,27 @@ namespace HumanResources.Infrastructure.Repository
 
         private readonly HumanResourcesDatabase _database;
 
-        public ExchangeRateRepository(ExchangeRateAPIAuthenticationSettings apiKey, HumanResourcesDatabase database)
+        private readonly IUserContext _userContext;
+
+        private readonly UserManager<User> _userManager;    
+
+        public ExchangeRateRepository(ExchangeRateAPIAuthenticationSettings apiKey, HumanResourcesDatabase database
+            ,IUserContext userContext, UserManager<User> userManager)
         {
             _apiKey = apiKey;
             _database = database;
+            _userContext = userContext;
+            _userManager = userManager;
         }
 
 
         public async Task<List<CurrenciesResponse>> AddRatesToDbAsync(string currencyCode, CancellationToken token)
         {
+            var currentUser = _userContext.GetCurrentUser();
+
+            var user = await _userManager.FindByIdAsync(currentUser.Id)??
+                throw new InvalidEmailOrPasswordExcepiton("Invalid username");
+
             var count = await _database
                 .ExchangeRates
                 .Where(pr=>pr.NameFrom==currencyCode)
@@ -62,6 +76,11 @@ namespace HumanResources.Infrastructure.Repository
 
         public async Task<List<CurrenciesResponse>> UpdateRatesAsync(string currency, CancellationToken token)
         {
+            var currentUser = _userContext.GetCurrentUser();
+
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("Invalid username");
+
             var result = await GetValueFromApiAsync(currency, token);
 
             var getCurrency = await _database

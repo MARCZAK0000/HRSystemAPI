@@ -9,6 +9,8 @@ using HumanResources.Domain.UserModelDto;
 using HumanResources.Domain.AbsenceModelDto;
 using HumanResources.Domain.Validations.AttendanceValidatons;
 using HumanResources.Domain.Validations.AbsenceValidatons;
+using HumanResources.Domain.FinancialModelDto;
+using HumanResources.Domain.Validations.FinancialValidations;
 
 namespace HumanResources.Domain.ServiceExtension
 {
@@ -37,6 +39,11 @@ namespace HumanResources.Domain.ServiceExtension
             //Absence Validation
             services.AddScoped<IValidator<CreateAbsenceDto>, CreateAbsenceValidator>();
             services.AddScoped<IValidator<AbsenceDecisionInfoDto>, AbsenceDecisionInfoValidator>();
+
+
+            //Financial Validation
+            services.AddScoped<IValidator<SetUserPaymentRateDto>, SetUserPaymentRateValidator>();
+            services.AddScoped<IValidator<GetExchangeRateAsyncDto>, GetExchangeRateValidator>();
         }
     }
 }
