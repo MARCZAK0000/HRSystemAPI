@@ -4220,6 +4220,7 @@
     "net7.0": [
       "FluentAssertions >= 6.12.0",
       "HumanResources.Application >= 1.0.0",
+      "HumanResources.Domain >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
@@ -4263,6 +4264,9 @@
           "projectReferences": {
             "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Application\\HumanResources.Application.csproj": {
               "projectPath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Application\\HumanResources.Application.csproj"
+            },
+            "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Domain\\HumanResources.Domain.csproj": {
+              "projectPath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Domain\\HumanResources.Domain.csproj"
             }
           }
         }

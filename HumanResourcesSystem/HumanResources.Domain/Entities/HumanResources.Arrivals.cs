@@ -23,6 +23,8 @@ namespace HumanResources.Domain.Entities
 
         public DateTime CreateDay { get; set; } 
 
+        public TimeSpan? Duration { get; private set; }
+
         public bool IsCompleted { get; private set; } = false;
 
         public int TimeLimit { get; } = 8;
@@ -39,6 +41,11 @@ namespace HumanResources.Domain.Entities
 
             IsCompleted = true;
                
+        }
+
+        public void CalculateDuration()
+        {
+            Duration = Departure - Arrival;
         }
     }
 }

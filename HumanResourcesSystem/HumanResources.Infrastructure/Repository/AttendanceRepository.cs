@@ -78,7 +78,7 @@ namespace HumanResources.Infrastructure.Repository
 
             findResult.Departure = userDeparture.DepartureDate;
             findResult.CompleteDay();
-
+            findResult.CalculateDuration();
             await _dbContext.SaveChangesAsync();
             _dbContext.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
 

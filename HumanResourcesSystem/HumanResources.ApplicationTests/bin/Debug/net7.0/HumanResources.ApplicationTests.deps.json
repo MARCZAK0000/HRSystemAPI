@@ -10,6 +10,7 @@
         "dependencies": {
           "FluentAssertions": "6.12.0",
           "HumanResources.Application": "1.0.0",
+          "HumanResources.Domain": "1.0.0",
           "MSTest.TestAdapter": "2.2.10",
           "MSTest.TestFramework": "2.2.10",
           "Microsoft.NET.Test.Sdk": "17.5.0",

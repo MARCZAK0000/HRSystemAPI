@@ -141,6 +141,9 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Property<DateTime?>("Departure")
                         .HasColumnType("datetime2");
 
+                    b.Property<TimeSpan?>("Duration")
+                        .HasColumnType("time");
+
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
 

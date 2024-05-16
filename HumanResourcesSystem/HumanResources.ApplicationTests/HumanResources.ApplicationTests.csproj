@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HumanResources.Application\HumanResources.Application.csproj" />
+    <ProjectReference Include="..\HumanResources.Domain\HumanResources.Domain.csproj" />
   </ItemGroup>
 
 </Project>

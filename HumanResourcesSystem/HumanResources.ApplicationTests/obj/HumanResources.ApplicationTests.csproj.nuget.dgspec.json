@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Application\\HumanResources.Application.csproj": {
                 "projectPath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Application\\HumanResources.Application.csproj"
+              },
+              "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Domain\\HumanResources.Domain.csproj": {
+                "projectPath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Domain\\HumanResources.Domain.csproj"
               }
             }
           }
