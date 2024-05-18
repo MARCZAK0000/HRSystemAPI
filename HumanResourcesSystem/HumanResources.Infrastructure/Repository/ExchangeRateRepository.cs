@@ -1,4 +1,5 @@
 ﻿using HumanResources.Application.Authentication;
+using HumanResources.Domain.CurrencyData;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.Events;
 using HumanResources.Domain.Exceptions;
@@ -22,15 +23,18 @@ namespace HumanResources.Infrastructure.Repository
 
         private readonly IUserContext _userContext;
 
-        private readonly UserManager<User> _userManager;    
+        private readonly UserManager<User> _userManager;
+
+        private readonly CurrencyFactory _currencyFactory;
 
         public ExchangeRateRepository(ExchangeRateAPIAuthenticationSettings apiKey, HumanResourcesDatabase database
-            ,IUserContext userContext, UserManager<User> userManager)
+            ,IUserContext userContext, UserManager<User> userManager, CurrencyFactory currencyFactory)
         {
             _apiKey = apiKey;
             _database = database;
             _userContext = userContext;
             _userManager = userManager;
+            _currencyFactory = currencyFactory;
         }
 
 
@@ -50,8 +54,10 @@ namespace HumanResources.Infrastructure.Repository
             {
                 throw new BadRequestException("Use Update rather AddToDb ");
             }
+            
+            var factory = _currencyFactory.Fetch(currencyCode);
 
-            var result = await GetValueFromApiAsync(currencyCode, token);
+            var result = await factory.GetResponseAsync(_apiKey.API_KEY, token);
 
 
             result.ForEach(async item =>
@@ -81,7 +87,9 @@ namespace HumanResources.Infrastructure.Repository
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
                 throw new InvalidEmailOrPasswordExcepiton("Invalid username");
 
-            var result = await GetValueFromApiAsync(currency, token);
+
+            var factory = _currencyFactory.Fetch(currency);
+            var result = await factory.GetResponseAsync(_apiKey.API_KEY, token);
 
             var getCurrency = await _database
                 .ExchangeRates
@@ -109,53 +117,5 @@ namespace HumanResources.Infrastructure.Repository
             
             return result;
         }
-
-        private static List<CurrenciesResponse> GetValueFromJSON(string jsonString, List<string> currencies)
-        {
-
-            var json = JsonConvert.DeserializeObject(jsonString) as JObject;
-            var data = json!["data"];
-            var result = new List<CurrenciesResponse>();
-
-            for (int i = 0; i < currencies.Count; i++)
-            {
-                var currentIndex = currencies[i].Replace(",",string.Empty);
-                var currency = data[$"{currentIndex}"];
-
-                result.Add(new CurrenciesResponse()
-                {
-                    code = currency["code"].Value<string>(),
-                    value = currency["value"].Value<double>(),
-                });
-            }
-
-
-            return result;
-        }
-
-        private async Task<List<CurrenciesResponse>> GetValueFromApiAsync(string currencyCode, CancellationToken token)
-        {
-            var url = $"https://api.currencyapi.com/v3/latest?apikey={_apiKey.API_KEY}&base_currency={currencyCode}&currencies=";
-            var listOfCurrencies = new List<string>() { "PLN,", "USD," , "EUR" };
-
-            listOfCurrencies.ForEach(item => url += item);
-            using var client = new HttpClient();
-            var response = await client.GetAsync(url, token);
-            if (response.StatusCode != System.Net.HttpStatusCode.OK)
-            {
-                throw new BadRequestException("Request has an error");
-            }
-            var data = await response.Content.ReadAsStringAsync(token);
-
-            var result = GetValueFromJSON(data, listOfCurrencies);
-
-            if (!result.Any())
-            {
-                throw new NotFoundException("There is a problem with JSON conversion or response is empty");
-            }
-
-            return result;
-        }
-
     }
 }

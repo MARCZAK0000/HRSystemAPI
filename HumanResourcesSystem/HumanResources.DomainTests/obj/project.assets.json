@@ -1241,7 +1241,8 @@
           "FluentValidation.AspNetCore": "11.3.0",
           "MailKit": "4.4.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.14",
-          "MimeKit": "4.4.0"
+          "MimeKit": "4.4.0",
+          "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
           "bin/placeholder/HumanResources.Domain.dll": {}

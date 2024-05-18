@@ -251,6 +251,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
       "System.Formats.Asn1/8.0.0": {
         "runtime": {
           "lib/net7.0/System.Formats.Asn1.dll": {
@@ -302,7 +310,8 @@
           "FluentValidation.AspNetCore": "11.3.0",
           "MailKit": "4.4.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.14",
-          "MimeKit": "4.4.0"
+          "MimeKit": "4.4.0",
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "HumanResources.Domain.dll": {}
@@ -504,6 +513,13 @@
       "sha512": "sha512-pKvznVpvK35cJb21LdjvhB3MW2FrlAqG3PH36uVKHhlgnfMS5tIRsKJEMgo0hiPyJJhN2f1llHptu2w8CvF9Vg==",
       "path": "mimekit/4.4.0",
       "hashPath": "mimekit.4.4.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
     "System.Formats.Asn1/8.0.0": {
       "type": "package",

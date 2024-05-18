@@ -1,4 +1,5 @@
-﻿using HumanResources.Domain.Entities;
+﻿using HumanResources.Domain.CurrencyData;
+using HumanResources.Domain.Entities;
 using HumanResources.Domain.Repository;
 using HumanResources.Infrastructure.Authentication;
 using HumanResources.Infrastructure.Database;
@@ -9,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using Org.BouncyCastle.Asn1.X509.Qualified;
 using System.Text;
 
 namespace HumanResources.Infrastructure.Extension
@@ -46,6 +46,7 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<IDepartmentReposiotry, DepartmentRepository>();
             service.AddScoped(typeof(IPDFReportRepository<>), typeof(PDFReportRepository<>));
             service.AddScoped<IExchangeRateRepository, ExchangeRateRepository>();
+            service.AddScoped<CurrencyFactory>();
             service.AddScoped<IEmployeePayRepository, EmployeePayRepository>();
 
             var exchangeRateAPI = new ExchangeRateAPIAuthenticationSettings();
@@ -80,6 +81,7 @@ namespace HumanResources.Infrastructure.Extension
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSettings.JwtKey)),
                 };
             });
+
 
         }
     }
