@@ -18,6 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("HumanResources.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HumanResources.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("HumarnResource.IntegrationTest")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.
 

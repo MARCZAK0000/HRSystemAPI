@@ -1,1 +1,6 @@
-{ }
+{
+  "HumanResources.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Api",
+  "HumanResources.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Application",
+  "HumanResources.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Domain",
+  "HumanResources.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Infrastructure"
+}

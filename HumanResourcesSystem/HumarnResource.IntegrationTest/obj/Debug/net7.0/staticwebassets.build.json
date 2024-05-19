@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "f6jfVJ63PxQ57/ox3vTjk5Uw1hoh4ln8FntHDnIQbnU=",
+  "Hash": "gDPVqQFWnB4vweA5asUMuvm1tE/ZGzI2M8rjyf175iM=",
   "Source": "HumarnResource.IntegrationTest",
   "BasePath": "_content/HumarnResource.IntegrationTest",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Api\\HumanResources.API.csproj",
+      "Version": 2,
+      "Source": "HumanResources.API",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }
