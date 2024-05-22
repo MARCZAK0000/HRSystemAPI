@@ -516,3 +516,4 @@ C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSyst
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumarnResource.IntegrationTest\bin\Debug\net7.0\HumanResources.Application.pdb
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumarnResource.IntegrationTest\bin\Debug\net7.0\HumanResources.Domain.pdb
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumarnResource.IntegrationTest\bin\Debug\net7.0\HumanResources.Infrastructure.pdb
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumarnResource.IntegrationTest\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll

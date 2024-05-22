@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oBCeFwGn4wnfUBbqQH13k+kp9mA32evrMuP4ycbK4W4Hu8NgF0CxEy8PUE5jgbGnrP3TuCL/HZKmeaOk0dPTlA==",
+  "dgSpecHash": "oRcJRFzhuEt7Oza+plVVGctpCckThhWAB/PnPiSWhxcIPoIHsR8osKotbgcmbJQ2Z7RpDLKHZ/X+7i4QCdbdow==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumarnResource.IntegrationTest\\HumarnResource.IntegrationTest.csproj",
   "expectedPackageFiles": [
@@ -29,9 +29,10 @@
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
-    "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.14\\microsoft.entityframeworkcore.7.0.14.nupkg.sha512",
-    "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.14\\microsoft.entityframeworkcore.abstractions.7.0.14.nupkg.sha512",
-    "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.14\\microsoft.entityframeworkcore.analyzers.7.0.14.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.19\\microsoft.entityframeworkcore.7.0.19.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.19\\microsoft.entityframeworkcore.abstractions.7.0.19.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.19\\microsoft.entityframeworkcore.analyzers.7.0.19.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.19\\microsoft.entityframeworkcore.inmemory.7.0.19.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.14\\microsoft.entityframeworkcore.relational.7.0.14.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.14\\microsoft.entityframeworkcore.sqlserver.7.0.14.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
