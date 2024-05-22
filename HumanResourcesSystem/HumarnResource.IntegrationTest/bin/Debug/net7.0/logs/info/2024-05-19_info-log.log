@@ -1,0 +1,1163 @@
+2024-05-19 09:38:25.3778 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:38:25.3962 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:38:25.3962 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:38:25.3975 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:38:25.3975 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:38:25.3975 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:38:25.3975 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:38:25.8155 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 09:38:25.9588 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:38:25.9717 INFOExecuted DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:38:25.9756 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:38:26.1615 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 09:38:26.2556 INFORequest starting HTTP/1.1 POST https://localhost/api/account/signin text/plain;+charset=utf-8 57
+2024-05-19 09:38:26.3388 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:38:26.3524 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 09:38:26.3764 INFOExecuting ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-19 09:38:26.3856 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 31.167ms
+2024-05-19 09:38:26.3856 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:38:26.3856 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: text/plain; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 09:38:26.3856 INFOIncoming...
+Outgoing Response:
+HTTP 415
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 09:38:26.3856 INFORequest finished HTTP/1.1 POST https://localhost/api/account/signin text/plain;+charset=utf-8 57 - 415 - application/problem+json;+charset=utf-8 137.6293ms
+2024-05-19 09:39:28.5451 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:39:28.5580 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:39:28.5580 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:39:28.5580 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:39:28.5580 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:39:28.5580 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:39:28.5580 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:39:28.8404 INFOExecuted DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 09:39:28.9668 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:28.9786 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:28.9786 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:29.0502 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 09:39:29.1169 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin text/plain;+charset=utf-8 57
+2024-05-19 09:39:29.1540 WARNFailed to determine the https port for redirect.
+2024-05-19 09:39:29.1714 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:39:29.1833 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 09:39:29.2062 INFOExecuting ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-19 09:39:29.2145 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 29.3256ms
+2024-05-19 09:39:29.2145 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:39:29.2145 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: text/plain; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 09:39:29.2145 INFOIncoming...
+Outgoing Response:
+HTTP 415
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 09:39:29.2145 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin text/plain;+charset=utf-8 57 - 415 - application/problem+json;+charset=utf-8 104.4993ms
+2024-05-19 09:39:29.3029 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 09:39:29.3040 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:29.3040 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:29.3040 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:29.3040 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 09:39:29.3786 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 09:39:29.3786 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:29.3786 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:29.3786 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:39:29.3885 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 09:39:29.3885 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin text/plain;+charset=utf-8 51
+2024-05-19 09:39:29.3998 WARNFailed to determine the https port for redirect.
+2024-05-19 09:39:29.3998 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:39:29.3998 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 09:39:29.3998 INFOExecuting ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-19 09:39:29.3998 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 5.8333ms
+2024-05-19 09:39:29.3998 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:39:29.3998 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: text/plain; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 09:39:29.3998 INFOIncoming...
+Outgoing Response:
+HTTP 415
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 09:39:29.3998 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin text/plain;+charset=utf-8 51 - 415 - application/problem+json;+charset=utf-8 17.8935ms
+2024-05-19 09:45:15.4646 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:45:15.4777 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:45:15.4777 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:45:15.4777 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:45:15.4777 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:45:15.4777 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:45:15.4777 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:45:15.7735 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 09:45:15.9101 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:45:15.9238 INFOExecuted DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:45:15.9238 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:45:16.0007 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 09:45:16.0573 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin text/plain;+charset=utf-8 57
+2024-05-19 09:45:16.1002 WARNFailed to determine the https port for redirect.
+2024-05-19 09:45:16.1197 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:45:16.1335 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 09:45:16.1571 INFOExecuting ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-19 09:45:16.1670 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 31.1706ms
+2024-05-19 09:45:16.1670 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:45:16.1670 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: text/plain; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 09:45:16.1670 INFOIncoming...
+Outgoing Response:
+HTTP 415
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 09:45:16.1670 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin text/plain;+charset=utf-8 57 - 415 - application/problem+json;+charset=utf-8 117.0873ms
+2024-05-19 09:50:57.6958 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:50:57.6958 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:50:57.6958 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:50:57.6958 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:50:57.6958 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:50:57.6958 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:50:57.6958 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 09:50:57.9952 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 09:50:58.1374 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:50:58.1492 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:50:58.1492 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 09:50:58.2187 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 09:50:58.2728 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 09:50:58.3109 WARNFailed to determine the https port for redirect.
+2024-05-19 09:50:58.3302 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:50:58.3445 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 09:50:58.4746 INFOExecuted DbCommand (22ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserCode], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-19 09:50:58.6652 INFOExecuted DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-05-19 09:50:58.6837 INFOExecuted DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-05-19 09:50:58.6837 INFOExecuted DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-05-19 09:50:58.7081 INFOExecuted DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-05-19 09:50:58.7111 INFOExecuted DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-05-19 09:50:58.7111 INFOExecuted DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-05-19 09:50:58.7111 INFOExecuted DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-05-19 09:50:58.7111 INFOExecuted DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-05-19 09:50:58.7111 INFOExecuted DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-05-19 09:50:58.7111 INFOExecuted DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-05-19 09:50:58.7262 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-19 09:50:58.7262 INFOExecuted DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-05-19 09:50:58.8456 INFOExecuted DbCommand (3ms) [Parameters=[@p1='?' (Size = 450), @p2='?' (Size = 4000), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [RefreshToken] = @p0
+OUTPUT 1
+WHERE [Id] = @p1 AND [ConcurrencyStamp] = @p2;
+2024-05-19 09:50:58.8586 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-19 09:50:58.8721 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 525.2182ms
+2024-05-19 09:50:58.8721 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 09:50:58.8721 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 09:50:58.8721 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-19 09:50:58.8831 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 200 - application/json;+charset=utf-8 611.4744ms
+2024-05-19 10:19:30.3137 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:19:30.3268 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:19:30.3268 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:19:30.3268 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:19:30.3268 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:19:30.3268 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:19:30.3268 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:19:30.6156 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:19:30.7450 INFOExecuted DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:19:30.7450 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:19:30.7602 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:19:30.8288 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:19:30.8923 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin text/plain;+charset=utf-8 51
+2024-05-19 10:19:30.9325 WARNFailed to determine the https port for redirect.
+2024-05-19 10:19:30.9525 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:19:30.9646 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:19:30.9857 INFOExecuting ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-19 10:19:30.9938 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 26.8063ms
+2024-05-19 10:19:30.9938 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:19:30.9938 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: text/plain; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:19:30.9938 INFOIncoming...
+Outgoing Response:
+HTTP 415
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:19:30.9938 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin text/plain;+charset=utf-8 51 - 415 - application/problem+json;+charset=utf-8 109.5164ms
+2024-05-19 10:20:08.1498 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:08.1634 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:08.1634 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:08.1634 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:08.1634 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:08.1634 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:08.1634 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:08.4464 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:20:08.5752 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:20:08.5864 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:20:08.5864 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:20:08.6582 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:20:08.7223 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin appliaton/json;+charset=utf-8 51
+2024-05-19 10:20:08.7617 WARNFailed to determine the https port for redirect.
+2024-05-19 10:20:08.7802 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:20:08.7935 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:20:08.8163 INFOExecuting ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-19 10:20:08.8242 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 28.4924ms
+2024-05-19 10:20:08.8242 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:20:08.8242 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: appliaton/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:20:08.8242 INFOIncoming...
+Outgoing Response:
+HTTP 415
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:20:08.8242 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin appliaton/json;+charset=utf-8 51 - 415 - application/problem+json;+charset=utf-8 109.0767ms
+2024-05-19 10:20:28.4157 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:28.4157 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:28.4290 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:28.4290 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:28.4290 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:28.4290 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:28.4290 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:20:28.7214 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:20:28.8486 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:20:28.8600 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:20:28.8600 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:20:28.9311 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:20:28.9924 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin appliaton/json;+charset=utf-8 51
+2024-05-19 10:20:29.0292 WARNFailed to determine the https port for redirect.
+2024-05-19 10:20:29.0466 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:20:29.0595 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:20:29.0814 INFOExecuting ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-19 10:20:29.0888 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 27.3471ms
+2024-05-19 10:20:29.0888 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:20:29.0888 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: appliaton/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:20:29.0888 INFOIncoming...
+Outgoing Response:
+HTTP 415
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:20:29.0888 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin appliaton/json;+charset=utf-8 51 - 415 - application/problem+json;+charset=utf-8 103.5645ms
+2024-05-19 10:20:29.2056 INFOExecuted DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:20:29.2241 INFOExecuted DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TestHumanResourcesDb] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2024-05-19 10:20:29.2377 INFOExecuted DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [TestHumanResourcesDb];
+2024-05-19 10:20:29.3209 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:20:29.3209 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 10:20:29.3387 WARNFailed to determine the https port for redirect.
+2024-05-19 10:20:29.3387 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:20:29.3387 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:20:29.4603 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 113.6731ms
+2024-05-19 10:20:29.4603 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:20:29.4603 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 10:20:29.4603 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-19 10:20:29.4603 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 500 - application/json 135.8603ms
+2024-05-19 10:22:36.5861 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:36.5861 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:36.5861 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:36.5861 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:36.5861 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:36.6006 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:36.6006 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:36.9015 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:22:36.9589 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 10:22:36.9957 WARNFailed to determine the https port for redirect.
+2024-05-19 10:22:37.0134 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:22:37.0274 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:22:37.2926 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 266.448ms
+2024-05-19 10:22:37.2926 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:22:37.2926 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 10:22:37.2926 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-19 10:22:37.3115 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 500 - application/json 353.6668ms
+2024-05-19 10:22:53.3856 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:53.3989 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:53.3989 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:53.3989 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:53.3989 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:53.3989 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:53.3989 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:22:53.6903 INFOExecuted DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:22:53.8275 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:22:53.8393 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:22:53.8393 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:22:53.9153 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:22:53.9824 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin appliaton/json;+charset=utf-8 51
+2024-05-19 10:22:54.0214 WARNFailed to determine the https port for redirect.
+2024-05-19 10:22:54.0404 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:22:54.0404 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:22:54.0750 INFOExecuting ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-19 10:22:54.0750 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 28.1245ms
+2024-05-19 10:22:54.0750 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:22:54.0862 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: appliaton/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:22:54.0862 INFOIncoming...
+Outgoing Response:
+HTTP 415
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:22:54.0862 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin appliaton/json;+charset=utf-8 51 - 415 - application/problem+json;+charset=utf-8 108.2130ms
+2024-05-19 10:23:17.0743 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:17.0926 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:17.0926 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:17.0926 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:17.0926 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:17.0926 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:17.0926 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:17.4952 INFOExecuted DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:23:17.6447 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:23:17.6578 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:23:17.6578 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:23:17.7398 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:23:17.8308 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-19 10:23:17.8922 WARNFailed to determine the https port for redirect.
+2024-05-19 10:23:17.9188 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:23:17.9394 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:23:18.0423 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-19 10:23:18.0541 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 112.0578ms
+2024-05-19 10:23:18.0541 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:23:18.0541 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:23:18.0541 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:23:18.0541 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 232.7897ms
+2024-05-19 10:23:49.8740 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:49.8867 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:49.8867 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:49.8867 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:49.8867 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:49.8867 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:49.8867 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:23:50.1918 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:23:50.2489 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 56
+2024-05-19 10:23:50.2860 WARNFailed to determine the https port for redirect.
+2024-05-19 10:23:50.3037 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:23:50.3037 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:23:50.5788 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 262.6363ms
+2024-05-19 10:23:50.5788 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:23:50.5849 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 56 
+
+2024-05-19 10:23:50.5849 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-19 10:23:50.5849 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 56 - 500 - application/json 350.6417ms
+2024-05-19 10:24:49.5666 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:24:49.5838 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:24:49.5857 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:24:49.5857 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:24:49.5857 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:24:49.5857 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:24:49.5857 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:24:50.0795 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:24:50.1866 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 10:24:50.2384 WARNFailed to determine the https port for redirect.
+2024-05-19 10:24:50.2814 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:24:50.3004 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:24:50.7575 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 453.766ms
+2024-05-19 10:24:50.7575 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:24:50.7811 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 10:24:50.7811 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-19 10:24:50.8342 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 500 - application/json 649.6859ms
+2024-05-19 10:25:09.2555 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:25:09.2726 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:25:09.2726 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:25:09.2726 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:25:09.2726 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:25:09.2726 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:25:09.2726 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:25:09.7352 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:25:12.4505 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 10:25:12.5022 WARNFailed to determine the https port for redirect.
+2024-05-19 10:25:12.5458 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:25:12.5653 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:25:12.9914 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 423.75ms
+2024-05-19 10:25:12.9914 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:25:13.0132 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 10:25:13.0132 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-19 10:25:13.0840 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 500 - application/json 634.1688ms
+2024-05-19 10:26:34.8559 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:34.8684 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:34.8684 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:34.8684 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:34.8684 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:34.8684 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:34.8684 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:35.1486 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:26:35.2873 INFOExecuted DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:35.2989 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:35.2989 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:35.3708 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:26:35.4313 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-19 10:26:35.4670 WARNFailed to determine the https port for redirect.
+2024-05-19 10:26:35.4857 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:26:35.4979 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:26:35.5482 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-19 10:26:35.5560 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 56.2763ms
+2024-05-19 10:26:35.5560 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:26:35.5560 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:26:35.5560 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:26:35.5560 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 132.0705ms
+2024-05-19 10:26:45.8574 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:45.8707 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:45.8707 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:45.8707 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:45.8707 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:45.8707 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:45.8707 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:46.1540 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:26:46.2862 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:46.2978 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:46.2978 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:46.3715 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:26:46.4328 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-19 10:26:46.4691 WARNFailed to determine the https port for redirect.
+2024-05-19 10:26:46.4867 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:26:46.5003 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:26:46.5517 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-19 10:26:46.5603 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 57.7965ms
+2024-05-19 10:26:46.5603 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:26:46.5603 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:26:46.5603 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:26:46.5603 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 134.5861ms
+2024-05-19 10:26:58.1208 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:58.1382 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:58.1382 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:58.1382 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:58.1382 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:58.1382 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:58.1473 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:26:58.5796 INFOExecuted DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:26:58.7354 INFOExecuted DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:58.7546 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:58.7606 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:26:58.8916 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:27:02.3151 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-19 10:27:02.3648 WARNFailed to determine the https port for redirect.
+2024-05-19 10:27:02.4098 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:27:02.4268 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:27:02.5022 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-19 10:27:02.5488 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 115.8627ms
+2024-05-19 10:27:02.5488 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:27:02.5571 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:27:02.5571 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:27:02.5571 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 250.2363ms
+2024-05-19 10:28:01.7926 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:01.8060 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:01.8060 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:01.8060 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:01.8060 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:01.8060 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:01.8060 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:02.1288 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:28:02.1867 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 10:28:02.2235 WARNFailed to determine the https port for redirect.
+2024-05-19 10:28:02.2418 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:28:02.2561 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:28:02.5181 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 263.8012ms
+2024-05-19 10:28:02.5221 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:28:02.5221 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 10:28:02.5221 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-19 10:28:02.5221 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 500 - application/json 352.2013ms
+2024-05-19 10:28:10.9740 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:10.9870 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:10.9870 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:10.9870 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:10.9870 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:10.9870 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:10.9870 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:28:11.2697 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:28:11.4081 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:28:11.4205 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:28:11.4205 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:28:11.5019 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:28:11.5660 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-19 10:28:11.6062 WARNFailed to determine the https port for redirect.
+2024-05-19 10:28:11.6256 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:28:11.6388 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:28:11.6907 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-19 10:28:11.6991 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 58.0652ms
+2024-05-19 10:28:11.6991 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:28:11.6991 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:28:11.6991 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:28:11.6991 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 140.3283ms
+2024-05-19 10:29:16.8724 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:29:16.8892 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:29:16.8892 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:29:16.8892 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:29:16.8892 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:29:16.8892 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:29:16.8970 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:29:17.3826 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:29:28.2439 INFORequest starting HTTP/1.1 POST https://localhost:7068/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 10:29:28.3345 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:29:28.3518 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:29:28.8186 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 464.5127ms
+2024-05-19 10:29:28.8196 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:29:28.9026 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost:7068 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 10:29:28.9026 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-19 10:29:29.0188 INFORequest finished HTTP/1.1 POST https://localhost:7068/api/account/signin application/json;+charset=utf-8 57 - 500 - application/json 775.5559ms
+2024-05-19 10:30:59.7512 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:30:59.7650 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:30:59.7650 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:30:59.7650 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:30:59.7650 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:30:59.7650 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:30:59.7650 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:31:00.0841 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:31:00.1453 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 10:31:00.1852 WARNFailed to determine the https port for redirect.
+2024-05-19 10:31:00.2042 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:31:00.2193 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:31:00.4942 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 276.2058ms
+2024-05-19 10:31:00.4942 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:31:00.4942 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 10:31:00.4942 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-19 10:31:00.5143 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 500 - application/json 370.1031ms
+2024-05-19 10:36:45.9699 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:36:45.9872 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:36:45.9872 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:36:45.9872 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:36:45.9925 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:36:45.9925 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:36:45.9925 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:36:46.3570 INFOExecuted DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:36:46.5056 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:36:46.5206 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:36:46.5259 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:36:46.6275 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:36:48.2709 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-19 10:36:48.3240 WARNFailed to determine the https port for redirect.
+2024-05-19 10:36:48.3680 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:36:48.3834 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:36:48.5522 INFOExecuted DbCommand (27ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserCode], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-19 10:36:48.7417 INFOExecuted DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-05-19 10:36:48.7719 INFOExecuted DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-05-19 10:36:48.7825 INFOExecuted DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-05-19 10:36:48.8036 INFOExecuted DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-05-19 10:36:48.8036 INFOExecuted DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-05-19 10:36:48.8036 INFOExecuted DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-05-19 10:36:48.8036 INFOExecuted DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-05-19 10:36:48.8036 INFOExecuted DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-05-19 10:36:48.8193 INFOExecuted DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-05-19 10:36:48.8193 INFOExecuted DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-05-19 10:36:48.8193 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-19 10:36:48.8379 INFOExecuted DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-05-19 10:36:48.9730 INFOExecuted DbCommand (3ms) [Parameters=[@p1='?' (Size = 450), @p2='?' (Size = 4000), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [RefreshToken] = @p0
+OUTPUT 1
+WHERE [Id] = @p1 AND [ConcurrencyStamp] = @p2;
+2024-05-19 10:36:48.9859 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-19 10:36:49.0082 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 619.2111ms
+2024-05-19 10:36:49.0082 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:36:49.0082 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-19 10:36:49.0082 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:36:50.6681 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 200 - application/json;+charset=utf-8 2398.8120ms
+2024-05-19 10:37:01.8354 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:37:01.8549 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:37:01.8549 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:37:01.8549 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:37:01.8549 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:37:01.8549 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:37:01.8549 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-19 10:37:02.2797 INFOExecuted DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-19 10:37:02.4457 INFOExecuted DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:37:02.4621 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:37:02.4621 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-19 10:37:02.6622 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-19 10:37:04.8989 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-19 10:37:04.9491 WARNFailed to determine the https port for redirect.
+2024-05-19 10:37:04.9926 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:37:05.0073 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-19 10:37:05.0824 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-19 10:37:05.1026 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 86.2822ms
+2024-05-19 10:37:05.1026 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-19 10:37:05.1026 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-19 10:37:05.1026 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-19 10:37:05.1189 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 219.1076ms

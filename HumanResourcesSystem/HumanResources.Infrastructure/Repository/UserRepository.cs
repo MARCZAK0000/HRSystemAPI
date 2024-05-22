@@ -1,4 +1,5 @@
 ﻿using HumanResources.Application.Authentication;
+using HumanResources.Domain.CalculateDays;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.Events;
 using HumanResources.Domain.Exceptions;
@@ -19,13 +20,21 @@ namespace HumanResources.Infrastructure.Repository
 
         private readonly HumanResourcesDatabase _dbContext;
 
+        private readonly CalculateDays _calculateDays;
+
+        private readonly CalculateFactory _calculateFactory;
+
         public UserRepository(IUserContext userContext, 
             UserManager<User> userManager,
-            HumanResourcesDatabase dbContext)
+            HumanResourcesDatabase dbContext,
+            CalculateDays calculateDays, 
+            CalculateFactory calculateFactory)
         {
             _userContext = userContext;
             _userManager = userManager;
             _dbContext = dbContext; 
+            _calculateDays = calculateDays;
+            _calculateFactory = calculateFactory;   
 
         }
 
@@ -52,15 +61,21 @@ namespace HumanResources.Infrastructure.Repository
                 throw new InvalidEmailOrPasswordExcepiton("ChangePassword: We cannot find user with that Email and Password"); ;
 
             var isAlreadyUser = await _dbContext.UserInfo.FirstOrDefaultAsync(pr => pr.UserId == user.Id, cancellationToken: token);
-
+            var initCalculaton = _calculateFactory.CalculateDays(_calculateDays.Country, new CalculateDaysInfo
+            {
+                BonusDays = _calculateDays.BounusDays,
+                InitialDays = _calculateDays.InitialDays,
+                RequirmentYears = _calculateDays.RequirementsYears,
+                Level = updateAccountInformations.EducationLevel,
+            });
             if (isAlreadyUser != null)
             {
                 isAlreadyUser.Name = updateAccountInformations.FirstName;
                 isAlreadyUser.LastName = updateAccountInformations.LastName;
                 isAlreadyUser.EducationTitle = updateAccountInformations.EducationLevel;
                 isAlreadyUser.YearsOfExperiences = updateAccountInformations.YearsOfExperiences;
-
-                isAlreadyUser.CalculateDaysOfAbsences();
+                isAlreadyUser.DaysOfAbsencesToUse = initCalculaton.CalculateDays(daysOfAbsenceCurrentYears: (int)isAlreadyUser.DaysOfAbsencesCurrentYear!, (int)isAlreadyUser.YearsOfExperiences);
+                
                 await _dbContext.SaveChangesAsync(token);
                 _dbContext.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
                 return true;
@@ -74,9 +89,9 @@ namespace HumanResources.Infrastructure.Repository
                 YearsOfExperiences = updateAccountInformations.YearsOfExperiences,
                 UserId = user.Id,
                 UserCode = user.UserCode
-
+                
             };
-            userInfo.CalculateDaysOfAbsences();
+            userInfo.DaysOfAbsencesToUse = initCalculaton.CalculateDays(daysOfAbsenceCurrentYears: 0, yearsOfExpierience: (int)userInfo.YearsOfExperiences);
 
             await _dbContext.UserInfo
                 .AddAsync(userInfo, token);

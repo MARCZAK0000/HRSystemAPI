@@ -1,4 +1,5 @@
 ﻿using HumanResources.API.Controllers;
+using HumanResources.Domain.CalculateDays;
 using HumanResources.Domain.Enums;
 
 namespace HumanResources.Domain.Entities
@@ -22,37 +23,6 @@ namespace HumanResources.Domain.Entities
         public int? YearsOfExperiences { get; set; }
 
         public EducationLevel? EducationTitle { get; set; }
-
-        public void CalculateDaysOfAbsences()
-        {
-            const int InitialDays = 20;
-            const int InitialBonus = 8;
-
-            var CalculateYearsOfExperiences = YearsOfExperiences;
-
-            switch (EducationTitle)
-            {
-                case EducationLevel.Primary:
-                    CalculateYearsOfExperiences += 0;
-                    break;
-
-                case EducationLevel.Secondary:
-                    CalculateYearsOfExperiences += 4;
-                    break;
-
-                case EducationLevel.Higher:
-                    CalculateYearsOfExperiences += 8;
-                    break;
-
-                default:
-                    CalculateYearsOfExperiences += 0;
-                    break;
-            }
-
-            DaysOfAbsencesToUse = CalculateYearsOfExperiences >= 10 ?
-                (InitialDays + InitialBonus) - DaysOfAbsencesCurrentYear
-                : InitialDays - DaysOfAbsencesCurrentYear;
-        }
 
         public virtual List<Absence>? Absences { get; set; }
 

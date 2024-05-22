@@ -1,4 +1,5 @@
-﻿using HumanResources.Domain.CurrencyData;
+﻿using HumanResources.Domain.CalculateDays;
+using HumanResources.Domain.CurrencyData;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.Repository;
 using HumanResources.Infrastructure.Authentication;
@@ -47,6 +48,7 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped(typeof(IPDFReportRepository<>), typeof(PDFReportRepository<>));
             service.AddScoped<IExchangeRateRepository, ExchangeRateRepository>();
             service.AddScoped<CurrencyFactory>();
+            service.AddScoped<CalculateFactory>();
             service.AddScoped<IEmployeePayRepository, EmployeePayRepository>();
 
             var exchangeRateAPI = new ExchangeRateAPIAuthenticationSettings();
@@ -54,6 +56,11 @@ namespace HumanResources.Infrastructure.Extension
 
 
             service.AddSingleton(exchangeRateAPI);
+
+            var calculateDays = new CalculateDays();
+            configuration.GetSection("Calculate_Days_of_Absence").Bind(calculateDays);
+
+            service.AddSingleton(calculateDays);
 
             var emailAuthenticationSettings = new EmailAuthenticationSettings();
             configuration.GetSection("EmailAuthentication").Bind(emailAuthenticationSettings);  //Register IN DI
@@ -81,7 +88,6 @@ namespace HumanResources.Infrastructure.Extension
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSettings.JwtKey)),
                 };
             });
-
 
         }
     }
