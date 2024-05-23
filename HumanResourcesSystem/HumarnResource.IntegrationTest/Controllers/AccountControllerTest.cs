@@ -1,19 +1,20 @@
 ﻿using FluentAssertions;
 using HumarnResource.IntegrationTest.Data;
+using Microsoft.AspNetCore.Mvc.Testing;
 using System.Text;
 using System.Text.Json;
 
 namespace HumarnResource.IntegrationTest.Controllers
 {
-    public class AccountControllerTest
+    public class AccountControllerTest:IClassFixture<WebApplicationFactory<Program>>
     {
 
-        readonly TestFactory factory;
-        HttpClient client;
-        public AccountControllerTest()
+
+        readonly HttpClient client;
+        public AccountControllerTest(WebApplicationFactory<Program> webApplication)
         {
-            factory = new TestFactory();
-            client = factory.CreateClient();
+            
+            client = TestWebFactory.ReturnClient(webApplication);
                
         }
 
@@ -32,7 +33,7 @@ namespace HumarnResource.IntegrationTest.Controllers
             }),
             Encoding.UTF8,
             "application/json");
-
+            
             var response = await client.PostAsync("/api/account/register", stringContest);
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
         }

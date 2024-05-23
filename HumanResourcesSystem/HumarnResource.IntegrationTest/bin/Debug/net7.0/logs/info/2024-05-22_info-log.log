@@ -1,0 +1,1204 @@
+2024-05-22 19:29:26.3419 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:29:26.3678 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:29:26.3678 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:29:26.3678 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:29:26.4078 INFOSaved 9 entities to in-memory store.
+2024-05-22 19:29:26.4175 INFOSaved 6 entities to in-memory store.
+2024-05-22 19:29:26.5788 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:29:29.1735 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57
+2024-05-22 19:29:29.2295 WARNFailed to determine the https port for redirect.
+2024-05-22 19:29:29.2941 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:29:29.3089 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:29:29.4876 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 176.1562ms
+2024-05-22 19:29:29.4876 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:29:29.5119 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 57 
+
+2024-05-22 19:29:29.5119 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 19:29:29.5605 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 57 - 404 - application/json 388.1539ms
+2024-05-22 19:36:49.8815 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:36:49.9055 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:36:49.9055 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:36:49.9055 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:36:49.9410 INFOSaved 9 entities to in-memory store.
+2024-05-22 19:36:49.9526 INFOSaved 6 entities to in-memory store.
+2024-05-22 19:36:50.0167 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:36:52.0213 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 108
+2024-05-22 19:36:52.0798 WARNFailed to determine the https port for redirect.
+2024-05-22 19:36:52.1267 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 19:36:52.1476 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:36:52.3868 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:36:52.4293 INFOSaved 2 entities to in-memory store.
+2024-05-22 19:36:52.4339 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 19:36:52.4549 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 301.401ms
+2024-05-22 19:36:52.4549 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 19:36:52.4622 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 108 
+
+2024-05-22 19:36:52.4622 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:36:52.4622 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 108 - 201 - application/json;+charset=utf-8 450.9624ms
+2024-05-22 19:37:22.2416 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:22.2659 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:22.2659 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:22.2659 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:22.3030 INFOSaved 9 entities to in-memory store.
+2024-05-22 19:37:22.3136 INFOSaved 6 entities to in-memory store.
+2024-05-22 19:37:22.3792 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:37:24.3721 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50
+2024-05-22 19:37:24.4255 WARNFailed to determine the https port for redirect.
+2024-05-22 19:37:24.4721 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:37:24.4867 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:37:24.6616 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 172.6191ms
+2024-05-22 19:37:24.6616 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:37:24.6843 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 50 
+
+2024-05-22 19:37:24.6843 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 19:37:24.7253 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50 - 404 - application/json 354.7043ms
+2024-05-22 19:37:47.3051 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:37:47.3051 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:37:47.3051 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:37:47.3051 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:37:47.3051 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:37:47.3051 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:37:47.3051 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:37:47.7266 INFOExecuted DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-22 19:37:47.8619 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 19:37:47.8740 INFOExecuted DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 19:37:47.8740 INFOExecuted DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 19:37:47.9489 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:37:48.0079 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-22 19:37:48.0459 WARNFailed to determine the https port for redirect.
+2024-05-22 19:37:48.0635 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:37:48.0753 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:37:48.1265 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-22 19:37:48.1354 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 58.193ms
+2024-05-22 19:37:48.1354 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:37:48.1354 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-22 19:37:48.1354 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:37:48.1354 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 135.3753ms
+2024-05-22 19:37:48.3645 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:48.3734 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:48.3734 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:48.3734 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:48.4023 INFOSaved 9 entities to in-memory store.
+2024-05-22 19:37:48.4023 INFOSaved 6 entities to in-memory store.
+2024-05-22 19:37:48.4219 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:37:48.4476 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 108
+2024-05-22 19:37:48.4476 WARNFailed to determine the https port for redirect.
+2024-05-22 19:37:48.4476 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 19:37:48.4476 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:37:48.6088 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:48.6465 INFOSaved 2 entities to in-memory store.
+2024-05-22 19:37:48.6465 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 19:37:48.6543 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 195.2064ms
+2024-05-22 19:37:48.6543 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 19:37:48.6543 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 108 
+
+2024-05-22 19:37:48.6543 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:37:48.6543 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 108 - 201 - application/json;+charset=utf-8 208.7249ms
+2024-05-22 19:37:48.7033 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:37:48.7171 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50
+2024-05-22 19:37:48.7171 WARNFailed to determine the https port for redirect.
+2024-05-22 19:37:48.7171 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:37:48.7171 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:37:48.8456 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-22 19:37:48.9183 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:37:48.9183 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 19:37:48.9183 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 196.0174ms
+2024-05-22 19:37:48.9183 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:37:48.9183 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 50 
+
+2024-05-22 19:37:48.9183 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:37:48.9183 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50 - 200 - application/json;+charset=utf-8 202.9067ms
+2024-05-22 19:38:13.2662 WARNNo store type was specified for the decimal property 'MonthPayment' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:38:13.2787 WARNNo store type was specified for the decimal property 'MonthPaymentEuro' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:38:13.2787 WARNNo store type was specified for the decimal property 'MonthPaymentUSD' on entity type 'EmployeePayHistory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:38:13.2787 WARNNo store type was specified for the decimal property 'RateEURO' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:38:13.2787 WARNNo store type was specified for the decimal property 'RatePLN' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:38:13.2787 WARNNo store type was specified for the decimal property 'RateUSD' on entity type 'EmployeePay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:38:13.2787 WARNNo store type was specified for the decimal property 'Rate' on entity type 'ExchangeRate'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 19:38:13.5675 INFOExecuted DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2024-05-22 19:38:13.6937 INFOExecuted DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 19:38:13.7051 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 19:38:13.7051 INFOExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbsencesTypes] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 19:38:13.7769 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:38:13.8395 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-22 19:38:13.8768 WARNFailed to determine the https port for redirect.
+2024-05-22 19:38:13.8940 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:38:13.9060 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:38:13.9576 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-22 19:38:13.9659 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 58.0271ms
+2024-05-22 19:38:13.9659 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:38:13.9659 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-22 19:38:13.9659 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:38:13.9659 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 133.5019ms
+2024-05-22 19:38:14.1895 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:38:14.1982 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:38:14.1982 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:38:14.1982 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:38:14.2357 INFOSaved 9 entities to in-memory store.
+2024-05-22 19:38:14.2442 INFOSaved 6 entities to in-memory store.
+2024-05-22 19:38:14.2442 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:38:14.2847 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 108
+2024-05-22 19:38:14.2908 WARNFailed to determine the https port for redirect.
+2024-05-22 19:38:14.2908 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 19:38:14.2908 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:38:14.4428 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:38:14.4774 INFOSaved 2 entities to in-memory store.
+2024-05-22 19:38:14.4774 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 19:38:14.4774 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 187.9098ms
+2024-05-22 19:38:14.4774 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 19:38:14.4774 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 108 
+
+2024-05-22 19:38:14.4774 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:38:14.4774 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 108 - 201 - application/json;+charset=utf-8 202.3653ms
+2024-05-22 19:38:14.5361 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:38:14.5500 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50
+2024-05-22 19:38:14.5500 WARNFailed to determine the https port for redirect.
+2024-05-22 19:38:14.5500 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:38:14.5561 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:38:14.6773 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-22 19:38:14.7244 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:38:14.7244 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 19:38:14.7244 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 169.8164ms
+2024-05-22 19:38:14.7244 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:38:14.7244 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 50 
+
+2024-05-22 19:38:14.7244 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:38:14.7244 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50 - 200 - application/json;+charset=utf-8 176.2081ms
+2024-05-22 19:41:19.9065 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:41:19.9263 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:41:19.9263 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:41:19.9263 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:41:19.9564 INFOSaved 9 entities to in-memory store.
+2024-05-22 19:41:19.9645 INFOSaved 6 entities to in-memory store.
+2024-05-22 19:41:19.9996 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:41:20.1108 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-22 19:41:20.1519 WARNFailed to determine the https port for redirect.
+2024-05-22 19:41:20.1712 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:41:20.1838 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:41:20.2380 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-22 19:41:20.2481 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 61.8056ms
+2024-05-22 19:41:20.2481 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:41:20.2481 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-22 19:41:20.2481 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:41:20.2481 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 144.5016ms
+2024-05-22 19:41:20.3044 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:41:20.3266 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 108
+2024-05-22 19:41:20.3266 WARNFailed to determine the https port for redirect.
+2024-05-22 19:41:20.3266 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 19:41:20.3395 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:41:20.5282 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:41:20.5623 INFOSaved 2 entities to in-memory store.
+2024-05-22 19:41:20.5623 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 19:41:20.5623 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 229.6773ms
+2024-05-22 19:41:20.5623 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 19:41:20.5623 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 108 
+
+2024-05-22 19:41:20.5623 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:41:20.5708 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 108 - 201 - application/json;+charset=utf-8 244.2844ms
+2024-05-22 19:41:20.5918 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 19:41:20.6056 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50
+2024-05-22 19:41:20.6056 WARNFailed to determine the https port for redirect.
+2024-05-22 19:41:20.6056 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:41:20.6056 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 19:41:20.7384 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-22 19:41:20.7906 INFOSaved 1 entities to in-memory store.
+2024-05-22 19:41:20.7906 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 19:41:20.7906 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 180.4158ms
+2024-05-22 19:41:20.7906 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 19:41:20.7906 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 50 
+
+2024-05-22 19:41:20.7906 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 19:41:20.7906 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50 - 200 - application/json;+charset=utf-8 186.7026ms
+2024-05-22 20:23:37.9782 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:23:38.0028 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:23:38.0028 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:23:38.0028 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:23:38.0371 INFOSaved 9 entities to in-memory store.
+2024-05-22 20:23:38.0476 INFOSaved 6 entities to in-memory store.
+2024-05-22 20:23:38.0885 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:23:38.2024 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 112
+2024-05-22 20:23:38.2489 WARNFailed to determine the https port for redirect.
+2024-05-22 20:23:38.2682 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:23:38.2799 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:23:38.4654 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:23:38.5003 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:23:38.5003 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:23:38.5173 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 235.5094ms
+2024-05-22 20:23:38.5173 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:23:38.5173 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-22 20:23:38.5173 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:23:38.5234 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 112 - 201 - application/json;+charset=utf-8 322.6416ms
+2024-05-22 20:23:38.5901 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:23:38.6161 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:23:38.6226 WARNFailed to determine the https port for redirect.
+2024-05-22 20:23:38.6226 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:23:38.6226 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:23:38.6904 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:23:38.6904 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:23:38.6904 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:23:38.6904 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 65.281ms
+2024-05-22 20:23:38.6904 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:23:38.6904 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:23:38.6904 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:23:38.6904 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 78.0561ms
+2024-05-22 20:23:38.7164 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:23:38.7290 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:23:38.7290 WARNFailed to determine the https port for redirect.
+2024-05-22 20:23:38.7290 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:23:38.7290 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:23:38.7924 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:23:38.7924 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:23:38.7924 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:23:38.7924 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 58.961ms
+2024-05-22 20:23:38.7924 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:23:38.7924 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:23:38.7924 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:23:38.7924 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 65.2750ms
+2024-05-22 20:23:38.8130 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:23:38.8241 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:23:38.8241 WARNFailed to determine the https port for redirect.
+2024-05-22 20:23:38.8241 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:23:38.8241 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:23:38.9008 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:23:38.9008 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:23:38.9008 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:23:38.9008 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 74.0319ms
+2024-05-22 20:23:38.9008 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:23:38.9008 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:23:38.9008 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:23:38.9008 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 79.6217ms
+2024-05-22 20:23:38.9284 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:23:38.9438 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-22 20:23:38.9476 WARNFailed to determine the https port for redirect.
+2024-05-22 20:23:38.9476 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:23:38.9476 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:23:38.9682 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-22 20:23:38.9682 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 18.9458ms
+2024-05-22 20:23:38.9682 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:23:38.9682 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-22 20:23:38.9682 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:23:38.9682 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 26.6578ms
+2024-05-22 20:23:38.9920 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:23:39.0081 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50
+2024-05-22 20:23:39.0081 WARNFailed to determine the https port for redirect.
+2024-05-22 20:23:39.0081 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:23:39.0081 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:23:39.0081 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 5.9731ms
+2024-05-22 20:23:39.0081 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:23:39.0081 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 50 
+
+2024-05-22 20:23:39.0081 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 20:23:39.0249 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 50 - 404 - application/json 18.6283ms
+2024-05-22 20:26:32.2729 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:26:32.2932 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:26:32.2932 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:26:32.2932 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:26:32.3231 INFOSaved 9 entities to in-memory store.
+2024-05-22 20:26:32.3231 INFOSaved 6 entities to in-memory store.
+2024-05-22 20:26:32.3660 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:32.4765 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 112
+2024-05-22 20:26:32.5184 WARNFailed to determine the https port for redirect.
+2024-05-22 20:26:32.5366 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:26:32.5488 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:26:32.7411 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:26:32.7809 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:26:32.7809 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:26:32.7995 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 248.3675ms
+2024-05-22 20:26:32.7995 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:26:32.7995 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-22 20:26:32.7995 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:26:32.8066 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 112 - 201 - application/json;+charset=utf-8 331.1582ms
+2024-05-22 20:26:32.8831 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:32.9063 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:26:32.9063 WARNFailed to determine the https port for redirect.
+2024-05-22 20:26:32.9157 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:26:32.9157 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:26:32.9834 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:26:32.9834 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:26:32.9834 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:26:32.9834 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 66.62ms
+2024-05-22 20:26:32.9834 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:26:32.9834 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:26:32.9834 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:26:32.9834 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 80.8480ms
+2024-05-22 20:26:33.0102 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:33.0102 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:26:33.0322 WARNFailed to determine the https port for redirect.
+2024-05-22 20:26:33.0322 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:26:33.0322 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:26:33.0961 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:26:33.0961 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:26:33.0961 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:26:33.0961 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 62.0168ms
+2024-05-22 20:26:33.0961 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:26:33.0961 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:26:33.0961 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:26:33.0961 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 76.0625ms
+2024-05-22 20:26:33.1170 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:33.1283 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:26:33.1283 WARNFailed to determine the https port for redirect.
+2024-05-22 20:26:33.1283 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:26:33.1336 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:26:33.1908 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:26:33.1908 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:26:33.1908 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:26:33.1908 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 58.552ms
+2024-05-22 20:26:33.1908 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:26:33.1908 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:26:33.1908 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:26:33.1908 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 64.0669ms
+2024-05-22 20:26:33.2141 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:33.2447 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:33.2736 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:33.3040 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:33.3341 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:26:33.3603 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-22 20:26:33.3603 WARNFailed to determine the https port for redirect.
+2024-05-22 20:26:33.3603 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:26:33.3681 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:26:33.3864 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-22 20:26:33.3864 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 19.7898ms
+2024-05-22 20:26:33.3864 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:26:33.3864 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-22 20:26:33.3864 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:26:33.3864 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 28.7132ms
+2024-05-22 20:28:48.8888 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:48.9090 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:48.9090 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:48.9090 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:48.9392 INFOSaved 9 entities to in-memory store.
+2024-05-22 20:28:48.9479 INFOSaved 6 entities to in-memory store.
+2024-05-22 20:28:48.9822 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:49.0923 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 112
+2024-05-22 20:28:49.1322 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:49.1496 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:28:49.1496 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:49.3465 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:49.3817 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:28:49.3848 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:28:49.3990 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 234.4703ms
+2024-05-22 20:28:49.3990 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:28:49.3990 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-22 20:28:49.3990 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:49.3990 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 112 - 201 - application/json;+charset=utf-8 314.1417ms
+2024-05-22 20:28:49.4730 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:49.4994 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:28:49.4994 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:49.4994 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:28:49.5107 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:49.5724 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:49.5724 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:28:49.5724 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:28:49.5724 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 64.6457ms
+2024-05-22 20:28:49.5724 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:28:49.5724 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:28:49.5724 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:49.5724 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 76.5456ms
+2024-05-22 20:28:49.5982 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:49.6097 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:28:49.6097 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:49.6097 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:28:49.6097 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:49.6725 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:49.6725 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:28:49.6725 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:28:49.6725 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 58.7838ms
+2024-05-22 20:28:49.6725 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:28:49.6725 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:28:49.6725 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:49.6725 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 64.4562ms
+2024-05-22 20:28:49.6930 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:49.7036 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113
+2024-05-22 20:28:49.7036 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:49.7036 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:28:49.7036 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:49.7673 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:49.7821 INFOSaved 2 entities to in-memory store.
+2024-05-22 20:28:49.7821 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:28:49.7821 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 73.6816ms
+2024-05-22 20:28:49.7821 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-22 20:28:49.7821 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-22 20:28:49.7821 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:49.7821 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 113 - 201 - application/json;+charset=utf-8 80.4718ms
+2024-05-22 20:28:49.8086 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:49.8238 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 55
+2024-05-22 20:28:49.8238 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:49.8238 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:49.8238 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:49.9530 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-22 20:28:50.0027 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:50.0027 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:28:50.0027 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 173.107ms
+2024-05-22 20:28:50.0027 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.0027 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-22 20:28:50.0027 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:50.0027 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 55 - 200 - application/json;+charset=utf-8 180.9717ms
+2024-05-22 20:28:50.0292 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:50.0440 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 55
+2024-05-22 20:28:50.0440 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:50.0440 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.0440 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:50.1121 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-22 20:28:50.1121 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:50.1121 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:28:50.1121 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 63.0905ms
+2024-05-22 20:28:50.1121 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.1121 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-22 20:28:50.1121 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:50.1121 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 55 - 200 - application/json;+charset=utf-8 69.9996ms
+2024-05-22 20:28:50.1363 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:50.1497 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 55
+2024-05-22 20:28:50.1497 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:50.1497 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.1497 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:50.2142 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-22 20:28:50.2142 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:50.2142 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:28:50.2142 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 59.7107ms
+2024-05-22 20:28:50.2142 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.2142 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-22 20:28:50.2142 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:50.2142 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 55 - 200 - application/json;+charset=utf-8 65.9330ms
+2024-05-22 20:28:50.2380 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:50.2501 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 54
+2024-05-22 20:28:50.2501 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:50.2501 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.2501 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:50.3147 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-22 20:28:50.3147 INFOSaved 1 entities to in-memory store.
+2024-05-22 20:28:50.3147 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-22 20:28:50.3147 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 60.3975ms
+2024-05-22 20:28:50.3147 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.3147 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-22 20:28:50.3147 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:50.3147 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 54 - 200 - application/json;+charset=utf-8 66.2315ms
+2024-05-22 20:28:50.3364 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 20:28:50.3364 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-22 20:28:50.3536 WARNFailed to determine the https port for redirect.
+2024-05-22 20:28:50.3536 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.3536 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 20:28:50.3711 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-22 20:28:50.3711 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 16.4418ms
+2024-05-22 20:28:50.3711 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-22 20:28:50.3711 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-22 20:28:50.3711 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-22 20:28:50.3711 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 23.1515ms
+2024-05-22 21:36:11.6221 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:36:11.6426 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:36:11.6426 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:36:11.6426 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:36:11.6729 INFOSaved 9 entities to in-memory store.
+2024-05-22 21:36:11.6809 INFOSaved 6 entities to in-memory store.
+2024-05-22 21:36:11.8255 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 21:36:12.3730 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 14
+2024-05-22 21:36:12.4129 WARNFailed to determine the https port for redirect.
+2024-05-22 21:36:12.4319 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:36:12.4319 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 21:36:12.4979 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-22 21:36:12.5083 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 61.169ms
+2024-05-22 21:36:12.5083 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:36:12.5083 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 14 
+
+2024-05-22 21:36:12.5083 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-22 21:36:12.5083 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 14 - 400 - application/problem+json;+charset=utf-8 142.3942ms
+2024-05-22 21:36:49.5002 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:36:49.5202 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:36:49.5202 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:36:49.5202 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:36:49.5501 INFOSaved 9 entities to in-memory store.
+2024-05-22 21:36:49.5584 INFOSaved 6 entities to in-memory store.
+2024-05-22 21:36:49.5996 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 21:36:49.7085 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 21:36:49.7466 WARNFailed to determine the https port for redirect.
+2024-05-22 21:36:49.7647 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:36:49.7768 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 21:36:49.8191 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 40.3906ms
+2024-05-22 21:36:49.8191 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:36:49.8225 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 21:36:49.8225 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 21:36:49.8225 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 124.9396ms
+2024-05-22 21:37:05.0774 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:37:05.0972 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:37:05.0972 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:37:05.0972 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:37:05.1289 INFOSaved 9 entities to in-memory store.
+2024-05-22 21:37:05.1379 INFOSaved 6 entities to in-memory store.
+2024-05-22 21:37:05.1735 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 21:37:05.2840 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 21:37:05.3244 WARNFailed to determine the https port for redirect.
+2024-05-22 21:37:05.3430 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:37:05.3549 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 21:37:05.3962 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 39.4058ms
+2024-05-22 21:37:05.3962 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:37:05.3999 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 21:37:05.3999 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 21:37:05.3999 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 127.1890ms
+2024-05-22 21:38:23.7695 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:38:23.7916 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:38:23.7916 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:38:23.7916 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:38:23.8242 INFOSaved 9 entities to in-memory store.
+2024-05-22 21:38:23.8242 INFOSaved 6 entities to in-memory store.
+2024-05-22 21:38:23.8694 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 21:38:23.9793 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 21:38:24.0178 WARNFailed to determine the https port for redirect.
+2024-05-22 21:38:24.0362 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:38:24.0481 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 21:38:24.0951 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 44.8581ms
+2024-05-22 21:38:24.0951 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:38:24.0951 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 21:38:24.0951 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 21:38:24.1020 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 131.4042ms
+2024-05-22 21:38:30.6310 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:38:30.6568 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:38:30.6568 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:38:30.6568 INFOSaved 1 entities to in-memory store.
+2024-05-22 21:38:30.6994 INFOSaved 9 entities to in-memory store.
+2024-05-22 21:38:30.7125 INFOSaved 6 entities to in-memory store.
+2024-05-22 21:38:30.7869 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 21:38:33.8351 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 21:38:33.8919 WARNFailed to determine the https port for redirect.
+2024-05-22 21:38:33.9402 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:38:33.9566 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 21:38:34.1165 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 157.4971ms
+2024-05-22 21:38:34.1165 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 21:38:34.1408 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 21:38:34.1408 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 21:38:34.1783 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 341.4454ms
+2024-05-22 22:20:09.3792 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:10.2205 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:10.2280 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:10.2280 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:10.2280 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:10.2537 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:20:10.2637 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:20:10.3275 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:20:10.5173 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:20:10.5758 WARNFailed to determine the https port for redirect.
+2024-05-22 22:20:10.6257 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:20:10.6401 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:20:10.7987 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 156.1646ms
+2024-05-22 22:20:10.7987 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:20:10.8226 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 22:20:10.8226 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 22:20:10.8618 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 345.4478ms
+2024-05-22 22:20:51.4523 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:53.0323 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:53.0407 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:53.0407 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:53.0407 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:20:53.0674 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:20:53.0806 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:20:53.1499 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:20:53.3443 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:20:53.3971 WARNFailed to determine the https port for redirect.
+2024-05-22 22:20:53.4466 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:20:53.4466 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:20:53.6112 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 147.7363ms
+2024-05-22 22:20:53.6112 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:20:53.6332 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 22:20:53.6332 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 22:20:53.6770 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 330.7613ms
+2024-05-22 22:22:38.5684 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:22:38.6984 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:22:38.6984 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:22:38.6984 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:22:38.6984 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:22:38.7368 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:22:38.7494 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:22:38.8215 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:22:50.9563 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:22:51.0106 WARNFailed to determine the https port for redirect.
+2024-05-22 22:22:51.0572 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:22:51.0739 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:22:51.2316 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 155.108ms
+2024-05-22 22:22:51.2316 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:22:51.2540 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 22:22:51.2540 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 22:22:51.2972 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 342.0222ms
+2024-05-22 22:23:46.4224 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:46.5239 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:46.5239 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:46.5239 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:46.5239 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:46.5502 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:23:46.5585 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:23:46.6000 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:23:46.7137 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:23:46.7574 WARNFailed to determine the https port for redirect.
+2024-05-22 22:23:46.7764 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:23:46.7892 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:23:46.8342 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 42.7808ms
+2024-05-22 22:23:46.8342 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:23:46.8378 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 22:23:46.8378 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 22:23:46.8378 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 136.1628ms
+2024-05-22 22:23:54.1503 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:54.2863 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:54.2941 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:54.2941 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:54.2941 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:23:54.3217 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:23:54.3217 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:23:54.4056 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:25:15.6014 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:25:15.6567 WARNFailed to determine the https port for redirect.
+2024-05-22 22:25:15.7023 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:25:15.7163 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:31:35.4047 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 379685.8901ms
+2024-05-22 22:31:35.4047 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:31:38.4113 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 22:31:40.5988 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 22:31:45.2196 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 389619.7812ms
+2024-05-22 22:33:28.8424 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:33:29.0009 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:33:29.0086 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:33:29.0086 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:33:29.0086 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:33:29.0455 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:33:29.0658 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:33:29.1496 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:33:29.3537 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:33:29.4058 WARNFailed to determine the https port for redirect.
+2024-05-22 22:33:29.4553 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:33:29.4710 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:38:48.5334 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:38:48.6608 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:38:48.6709 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:38:48.6709 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:38:48.6709 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:38:48.6997 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:38:48.6997 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:38:48.7766 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:38:48.9891 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:38:49.0408 WARNFailed to determine the https port for redirect.
+2024-05-22 22:38:49.0908 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:38:49.1066 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:40:25.8919 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 96782.9025ms
+2024-05-22 22:40:25.8919 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:40:25.9185 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 22:40:25.9185 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 22:40:25.9576 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 401 - application/json 96969.8560ms
+2024-05-22 22:41:12.5893 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:41:12.7158 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:41:12.7158 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:41:12.7158 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:41:12.7281 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:41:12.7515 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:41:12.7625 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:41:12.8356 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:41:13.0301 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:41:13.0942 WARNFailed to determine the https port for redirect.
+2024-05-22 22:41:13.1470 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:41:13.1640 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:41:44.5651 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 31398.5095ms
+2024-05-22 22:41:44.5651 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:41:46.8341 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 22:41:50.8358 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 22:41:52.8498 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 404 - application/json 39820.9685ms
+2024-05-22 22:44:41.2716 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:44:41.4113 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:44:41.4196 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:44:41.4196 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:44:41.4196 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:44:41.4474 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:44:41.4613 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:44:41.5394 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:44:41.7573 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:44:41.8127 WARNFailed to determine the https port for redirect.
+2024-05-22 22:44:41.8634 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:44:41.8779 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-22 22:44:49.6967 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 7816.5072ms
+2024-05-22 22:44:49.6967 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:44:49.7215 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-22 22:44:49.7215 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-22 22:44:49.7665 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 404 - application/json 8010.9031ms
+2024-05-22 22:46:36.8635 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:46:39.6013 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:46:39.6102 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:46:39.6102 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:46:39.6102 INFOSaved 1 entities to in-memory store.
+2024-05-22 22:46:39.6385 INFOSaved 9 entities to in-memory store.
+2024-05-22 22:46:39.6524 INFOSaved 6 entities to in-memory store.
+2024-05-22 22:46:39.7293 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 22:46:39.9337 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-22 22:46:39.9925 WARNFailed to determine the https port for redirect.
+2024-05-22 22:46:40.0411 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-22 22:46:40.0573 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
