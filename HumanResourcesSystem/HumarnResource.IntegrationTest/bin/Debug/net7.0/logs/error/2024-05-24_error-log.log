@@ -1,0 +1,1032 @@
+2024-05-24 08:21:07.0339 ERRORAn exception occurred in the database while saving changes for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.ArgumentException: An item with the same key has already been added. Key: 100
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-24 08:21:42.1748 ERRORIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 08:21:42.1748 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:22:38.6153 ERRORAn exception occurred in the database while saving changes for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.ArgumentException: An item with the same key has already been added. Key: 100
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-24 08:22:38.8479 ERRORIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 08:22:38.8479 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:24:58.3177 ERRORAn exception occurred in the database while saving changes for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.ArgumentException: An item with the same key has already been added. Key: 100
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-24 08:24:59.5035 ERRORIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 08:24:59.5035 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:25:08.1882 ERRORAn exception occurred in the database while saving changes for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.ArgumentException: An item with the same key has already been added. Key: 100
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-24 08:25:09.3868 ERRORIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 08:25:09.3868 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:32:42.3780 ERRORAn exception occurred in the database while saving changes for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.ArgumentException: An item with the same key has already been added. Key: 100
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-24 08:32:42.6445 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-24 08:32:42.6445 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:32:42.7981 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:32:42.7981 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:32:42.8763 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:32:42.8763 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:32:42.9385 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:32:42.9385 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:32:43.3637 ERRORIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-24 08:32:43.3637 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:33:20.7773 ERRORAn exception occurred in the database while saving changes for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.ArgumentException: An item with the same key has already been added. Key: 100
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-24 08:33:20.9967 ERRORIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 08:33:20.9967 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:34:43.1237 ERRORAn exception occurred in the database while saving changes for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.ArgumentException: An item with the same key has already been added. Key: 100
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-24 08:35:29.0752 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-24 08:35:29.0752 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:35:32.6284 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:35:32.6284 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:38:29.0288 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:38:29.0288 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-24 08:38:29.0288 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:38:29.1771 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:38:29.1771 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:38:29.1771 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:38:29.2565 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:38:29.2565 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:38:29.2565 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:38:29.3345 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:38:29.3345 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:38:29.3345 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:39:27.0907 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method527(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:01.2559 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-24 08:40:01.2559 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:07.0827 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:07.0896 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-24 08:40:07.0896 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:07.2308 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:07.2308 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:40:07.2308 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:07.3107 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:07.3107 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:40:07.3107 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:07.3741 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:07.3741 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:40:07.3741 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:41.3419 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 08:40:41.3419 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:41.4376 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 08:40:41.4376 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:41.4510 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 08:40:41.4510 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:41.4653 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 08:40:41.4653 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:47.7705 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:47.7773 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-24 08:40:47.7773 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:47.9224 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:47.9224 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:40:47.9224 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:48.0055 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:48.0055 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:40:48.0055 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:40:48.0717 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method522(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:40:48.0717 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:40:48.0717 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:43:25.9481 ERRORAn exception occurred while iterating over the results of a query for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method533(Closure)
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryExpression.ResultEnumerable.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextHelper()
+   at Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryShapedQueryCompilingExpressionVisitor.QueryingEnumerable`1.Enumerator.MoveNextAsync()
+2024-05-24 08:43:51.2696 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:43:51.2696 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:43.4511 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 08:45:43.4511 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:43.5467 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 08:45:43.5467 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:43.5663 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 08:45:43.5663 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:43.5663 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 08:45:43.5663 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:57.5071 ERRORAn exception occurred in the database while saving changes for context type 'HumanResources.Infrastructure.Database.HumanResourcesDatabase'.
+System.ArgumentException: An item with the same key has already been added. Key: 100
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-24 08:45:57.7708 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 112 
+
+2024-05-24 08:45:57.7708 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:57.9069 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:45:57.9069 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:57.9835 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:45:57.9835 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:58.0462 ERRORIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 113 
+
+2024-05-24 08:45:58.0462 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 08:45:58.4429 ERRORIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-24 08:45:58.4429 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:44:44.8478 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:44:44.8554 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:44:45.0893 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:44:45.0893 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:44:45.1110 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 10:44:45.1110 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:44:45.1110 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:44:45.1110 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:45:06.6537 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:45:06.6537 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:45:06.7472 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:45:06.7472 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:45:06.7676 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 10:45:06.7676 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:45:06.7676 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:45:06.7676 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:45:21.5115 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:45:21.5115 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:45:21.5921 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:45:21.5921 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:45:21.6248 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 10:45:21.6248 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:45:21.6248 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:45:21.6248 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:46:42.8786 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:46:42.8786 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:46:43.9804 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:46:43.9804 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:46:45.0045 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 10:46:45.0045 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:46:46.0298 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:46:46.0298 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:47:21.7828 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:47:21.7828 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:47:21.8864 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:47:21.8864 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:47:21.9060 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 10:47:21.9060 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:47:21.9060 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:47:21.9060 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:47:36.5328 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:47:36.5328 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:47:36.6258 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:47:36.6258 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:47:36.6525 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 10:47:36.6525 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:47:36.6525 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:47:36.6525 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:48:59.2831 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:48:59.2831 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:48:59.5789 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:48:59.5789 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:48:59.7487 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 10:48:59.7487 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:48:59.9066 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:48:59.9066 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 10:57:19.6572 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 10:57:19.6572 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:00:13.3764 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 55 
+
+2024-05-24 11:00:13.3764 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:00:56.7620 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 54 
+
+2024-05-24 11:00:56.7620 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
