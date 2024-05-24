@@ -1,9 +1,8 @@
 ﻿using HumanResources.Infrastructure.Database;
 using HumarnResource.IntegrationTest.Authentication;
-using HumarnResource.IntegrationTest.FakeDatabaseSeeder;
+using HumarnResource.IntegrationTest.Database;
 using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -32,7 +31,7 @@ namespace HumarnResource.IntegrationTest
                         options.UseInMemoryDatabase("HumanResourcesDatabase");
 
                     });
-                    services.AddScoped<FakeDatabaseSeeder.FakeDatabaseSeeder>();
+                    services.AddScoped<FakeDatabaseSeeder>();
                 }));
 
 
@@ -56,7 +55,7 @@ namespace HumarnResource.IntegrationTest
             var context = scope.ServiceProvider.GetRequiredService<HumanResourcesDatabase>();
             await context.Database.EnsureCreatedAsync();
             //await context.Roles.AddAsync(FakeDatabaseSeeder.FakeDatabaseSeeder.GetRoles());
-            await context.Users.AddAsync(FakeDatabaseSeeder.FakeDatabaseSeeder.GetUser());
+            await context.Users.AddAsync(FakeDatabaseSeeder.GetUser());
 
             await context.SaveChangesAsync();
         }

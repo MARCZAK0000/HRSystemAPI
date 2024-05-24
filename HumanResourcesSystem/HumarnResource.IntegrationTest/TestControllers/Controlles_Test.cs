@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using HumarnResource.IntegrationTest.Data;
-using Microsoft.AspNetCore.Mvc.Testing;
 using System.Text;
 using System.Text.Json;
 
@@ -16,7 +15,7 @@ namespace HumarnResource.IntegrationTest.Controllers
         }
         [Theory]
         [ClassData(typeof(RegisterUserData))]
-        public async Task Register_ShouldBeOk(string Email, string Password, string ConfirmPassword, string Phone)
+        public async Task Account_ARegister_ShouldBeOk(string Email, string Password, string ConfirmPassword, string Phone)
         {
 
             
@@ -37,7 +36,7 @@ namespace HumarnResource.IntegrationTest.Controllers
 
         [Theory]
         [ClassData(typeof(SignInUserData))]
-        public async Task SignInUser_ShouldBeOK(string Email, string Password)
+        public async Task Account_BSignInUser_ShouldBeOK(string Email, string Password)
         {
             using var stringContest = new StringContent(JsonSerializer.Serialize(new
             {
@@ -52,7 +51,7 @@ namespace HumarnResource.IntegrationTest.Controllers
         }
 
         [Fact]
-        public async Task AccountController_SignInUser_ShouldBeWrong()
+        public async Task Account_CSignInUser_ShouldBeWrong()
         {
 
             using var stringContest = new StringContent(JsonSerializer.Serialize(new

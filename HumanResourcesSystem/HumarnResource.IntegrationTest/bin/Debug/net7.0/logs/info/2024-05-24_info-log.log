@@ -5707,3 +5707,1245 @@ Content-Type: application/problem+json; charset=utf-8
 Content-Length: 
 
 2024-05-24 11:01:03.1151 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 15.2871ms
+2024-05-24 11:40:27.2368 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:27.2567 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:27.2567 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:27.2567 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:27.2862 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:40:27.2939 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:40:27.3306 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:40:27.5356 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:40:27.5948 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:40:27.6303 WARNFailed to determine the https port for redirect.
+2024-05-24 11:40:27.6479 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:40:27.6591 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:40:27.8302 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:27.8630 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:40:27.8630 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:40:27.8796 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 218.3453ms
+2024-05-24 11:40:27.8796 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:40:27.8796 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:40:27.8796 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:40:27.8796 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 291.8253ms
+2024-05-24 11:40:27.8973 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:40:27.8973 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:40:27.8973 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:40:27.9618 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:27.9618 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:40:27.9639 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:40:27.9639 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 63.1513ms
+2024-05-24 11:40:27.9639 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:40:27.9639 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:40:27.9639 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:40:27.9639 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 67.7375ms
+2024-05-24 11:40:27.9639 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:40:27.9639 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:40:27.9639 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:40:28.0366 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:28.0366 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:40:28.0366 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:40:28.0366 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 68.6871ms
+2024-05-24 11:40:28.0366 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:40:28.0366 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:40:28.0366 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:40:28.0366 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 71.6904ms
+2024-05-24 11:40:28.0366 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:40:28.0366 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:40:28.0366 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:40:28.0984 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:28.0984 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:40:28.0984 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:40:28.0984 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 58.4564ms
+2024-05-24 11:40:28.0984 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:40:28.0984 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:40:28.0984 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:40:28.0984 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 58.9467ms
+2024-05-24 11:40:28.0984 INFORequest starting HTTP/1.1 GET http://localhost/api/user/info - -
+2024-05-24 11:40:28.1066 INFOExecuting endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:40:28.1066 INFORoute matched with {action = "GetInfromationsAboutUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInfromationsAboutUserAsync(System.Threading.CancellationToken) on controller HumanResources.API.Controllers.UserController (HumanResources.API).
+2024-05-24 11:40:28.2233 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.UserModelDto.GetInfromationsDto'.
+2024-05-24 11:40:28.2233 INFOExecuted action HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API) in 119.8326ms
+2024-05-24 11:40:28.2299 INFOExecuted endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:40:28.2299 INFOIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 11:40:28.2299 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:40:28.2299 INFORequest finished HTTP/1.1 GET http://localhost/api/user/info - - - 200 - application/json;+charset=utf-8 126.8978ms
+2024-05-24 11:40:28.2299 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-24 11:40:28.2299 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:40:28.2299 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:40:28.3070 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:40:28.3070 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:40:28.3081 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 72.2136ms
+2024-05-24 11:40:28.3081 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:40:28.3081 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-24 11:40:28.3081 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:40:28.3081 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 200 - application/json;+charset=utf-8 75.5012ms
+2024-05-24 11:40:28.3081 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-24 11:40:28.3081 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:40:28.3081 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:40:28.3296 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-24 11:40:28.3296 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 17.119ms
+2024-05-24 11:40:28.3296 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:40:28.3296 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-24 11:40:28.3296 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:40:28.3296 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 19.9094ms
+2024-05-24 11:41:01.6543 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:01.6736 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:01.6736 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:01.6736 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:01.7029 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:41:01.7029 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:41:01.7461 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:41:01.9249 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:01.9745 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:41:02.0130 WARNFailed to determine the https port for redirect.
+2024-05-24 11:41:02.0309 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:02.0309 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:02.2122 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:02.2448 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:02.2482 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:02.2482 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 216.1419ms
+2024-05-24 11:41:02.2482 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:02.2632 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:41:02.2632 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:02.2632 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 292.9829ms
+2024-05-24 11:41:02.2790 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:41:02.2790 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:02.2790 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:02.3440 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:02.3440 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:02.3440 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:02.3440 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 63.251ms
+2024-05-24 11:41:02.3440 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:02.3440 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:41:02.3440 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:02.3440 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 68.4355ms
+2024-05-24 11:41:02.3440 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:41:02.3440 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:02.3440 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:02.4190 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:02.4190 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:02.4190 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:02.4190 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 68.2264ms
+2024-05-24 11:41:02.4190 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:02.4190 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:41:02.4190 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:02.4190 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 71.4448ms
+2024-05-24 11:41:02.4190 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:41:02.4190 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:02.4190 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:02.4802 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:02.4802 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:02.4802 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:02.4802 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 59.483ms
+2024-05-24 11:41:02.4802 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:02.4802 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:41:02.4802 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:02.4802 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 59.8985ms
+2024-05-24 11:41:02.4802 INFORequest starting HTTP/1.1 GET http://localhost/api/user/info - -
+2024-05-24 11:41:02.4802 INFOExecuting endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:41:02.4802 INFORoute matched with {action = "GetInfromationsAboutUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInfromationsAboutUserAsync(System.Threading.CancellationToken) on controller HumanResources.API.Controllers.UserController (HumanResources.API).
+2024-05-24 11:41:02.6278 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.UserModelDto.GetInfromationsDto'.
+2024-05-24 11:41:02.6278 INFOExecuted action HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API) in 140.2298ms
+2024-05-24 11:41:02.6278 INFOExecuted endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:41:02.6278 INFOIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 11:41:02.6278 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:02.6278 INFORequest finished HTTP/1.1 GET http://localhost/api/user/info - - - 200 - application/json;+charset=utf-8 150.1329ms
+2024-05-24 11:41:02.6384 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-24 11:41:02.6384 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:41:02.6384 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:02.7317 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:02.7317 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:02.7317 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 91.0318ms
+2024-05-24 11:41:02.7317 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:41:02.7317 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-24 11:41:02.7317 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:02.7317 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 200 - application/json;+charset=utf-8 94.9097ms
+2024-05-24 11:41:02.7317 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-24 11:41:02.7317 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:02.7317 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:02.7539 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-24 11:41:02.7539 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 16.6717ms
+2024-05-24 11:41:02.7539 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:02.7539 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-24 11:41:02.7539 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:02.7539 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 19.7437ms
+2024-05-24 11:41:17.7637 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:17.7833 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:17.7833 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:17.7833 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:17.8122 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:41:17.8122 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:41:17.8575 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:41:18.0481 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:18.1003 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:41:18.1405 WARNFailed to determine the https port for redirect.
+2024-05-24 11:41:18.1580 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.1693 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.2449 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 73.6602ms
+2024-05-24 11:41:18.2449 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.2483 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:41:18.2483 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:41:18.2483 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 404 - application/json 159.9301ms
+2024-05-24 11:41:18.3392 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:41:18.3455 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.3455 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.3455 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 5.0895ms
+2024-05-24 11:41:18.3455 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.3455 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:41:18.3455 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:41:18.3455 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 404 - application/json 13.1713ms
+2024-05-24 11:41:18.3552 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:41:18.3552 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.3552 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.3713 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 12.0428ms
+2024-05-24 11:41:18.3713 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.3713 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:41:18.3713 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:41:18.3713 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 404 - application/json 17.3109ms
+2024-05-24 11:41:18.3713 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:41:18.3713 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.3713 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.3713 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 1.1264ms
+2024-05-24 11:41:18.3713 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.3713 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:41:18.3713 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:41:18.3713 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 404 - application/json 2.5283ms
+2024-05-24 11:41:18.3896 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:41:18.3896 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:18.3896 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.4962 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:18.5283 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:18.5283 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:18.5283 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 144.7206ms
+2024-05-24 11:41:18.5283 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:18.5283 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:41:18.5283 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:18.5283 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 149.1031ms
+2024-05-24 11:41:18.5283 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:41:18.5283 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:18.5283 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.5997 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:18.5997 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:18.5997 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:18.5997 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 61.3444ms
+2024-05-24 11:41:18.5997 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:18.5997 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:41:18.5997 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:18.5997 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 61.7289ms
+2024-05-24 11:41:18.5997 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:41:18.5997 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:18.5997 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.6619 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:18.6619 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:18.6619 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:18.6619 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 59.4334ms
+2024-05-24 11:41:18.6619 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:18.6619 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:41:18.6619 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:18.6619 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 59.8545ms
+2024-05-24 11:41:18.6619 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:41:18.6619 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:18.6619 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.7231 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:18.7231 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:41:18.7231 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:18.7231 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 59.0326ms
+2024-05-24 11:41:18.7231 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:41:18.7231 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:41:18.7231 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:18.7231 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 59.4191ms
+2024-05-24 11:41:18.7231 INFORequest starting HTTP/1.1 GET http://localhost/api/user/info - -
+2024-05-24 11:41:18.7231 INFOExecuting endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:41:18.7313 INFORoute matched with {action = "GetInfromationsAboutUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInfromationsAboutUserAsync(System.Threading.CancellationToken) on controller HumanResources.API.Controllers.UserController (HumanResources.API).
+2024-05-24 11:41:18.8412 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.UserModelDto.GetInfromationsDto'.
+2024-05-24 11:41:18.8412 INFOExecuted action HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API) in 116.9667ms
+2024-05-24 11:41:18.8412 INFOExecuted endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:41:18.8412 INFOIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 11:41:18.8412 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:18.8412 INFORequest finished HTTP/1.1 GET http://localhost/api/user/info - - - 200 - application/json;+charset=utf-8 121.5853ms
+2024-05-24 11:41:18.8412 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-24 11:41:18.8412 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:41:18.8412 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.9218 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:18.9218 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:41:18.9218 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 68.8307ms
+2024-05-24 11:41:18.9218 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:41:18.9218 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-24 11:41:18.9218 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:18.9218 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 200 - application/json;+charset=utf-8 71.3433ms
+2024-05-24 11:41:18.9218 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-24 11:41:18.9218 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.9218 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:41:18.9382 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-24 11:41:18.9382 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 14.0182ms
+2024-05-24 11:41:18.9382 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:41:18.9382 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-24 11:41:18.9382 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:41:18.9382 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 14.5008ms
+2024-05-24 11:41:37.7870 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:37.8152 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:37.8152 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:37.8152 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:41:37.8574 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:41:37.8574 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:41:37.9776 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:41:38.3168 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:42:00.7384 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:00.7580 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:00.7580 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:00.7580 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:00.7880 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:42:00.7976 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:42:00.8338 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:42:01.0104 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:42:01.0602 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:42:01.0993 WARNFailed to determine the https port for redirect.
+2024-05-24 11:42:01.1173 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.1288 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.2053 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 74.642ms
+2024-05-24 11:42:01.2053 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.2053 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:42:01.2053 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:42:01.2194 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 404 - application/json 160.1219ms
+2024-05-24 11:42:01.2977 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:42:01.2977 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.2977 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.3083 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 5.0593ms
+2024-05-24 11:42:01.3083 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.3083 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:42:01.3083 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:42:01.3083 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 404 - application/json 12.0578ms
+2024-05-24 11:42:01.3083 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:42:01.3083 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.3083 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.3274 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 10.548ms
+2024-05-24 11:42:01.3274 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.3274 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:42:01.3274 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:42:01.3274 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 404 - application/json 15.0794ms
+2024-05-24 11:42:01.3274 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:42:01.3274 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.3274 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.3274 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 1.0132ms
+2024-05-24 11:42:01.3274 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.3274 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:42:01.3274 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:42:01.3274 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 404 - application/json 2.2249ms
+2024-05-24 11:42:01.3274 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:42:01.3274 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:42:01.3425 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.4522 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:01.4883 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:42:01.4883 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:42:01.4992 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 156.6377ms
+2024-05-24 11:42:01.4992 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:42:01.4992 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:42:01.4992 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:42:01.4992 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 160.8542ms
+2024-05-24 11:42:01.4992 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:42:01.4992 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:42:01.4992 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.5621 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:01.5621 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:42:01.5621 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:42:01.5621 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 61.2592ms
+2024-05-24 11:42:01.5621 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:42:01.5621 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:42:01.5621 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:42:01.5621 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 61.7353ms
+2024-05-24 11:42:01.5621 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:42:01.5621 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:42:01.5621 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.6256 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:01.6256 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:42:01.6256 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:42:01.6256 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 60.524ms
+2024-05-24 11:42:01.6256 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:42:01.6256 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:42:01.6256 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:42:01.6256 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 60.9193ms
+2024-05-24 11:42:01.6256 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:42:01.6256 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:42:01.6256 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.6860 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:01.6860 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:42:01.6860 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:42:01.6860 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 58.7067ms
+2024-05-24 11:42:01.6860 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:42:01.6860 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:42:01.6860 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:42:01.6860 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 59.0766ms
+2024-05-24 11:42:01.6860 INFORequest starting HTTP/1.1 GET http://localhost/api/user/info - -
+2024-05-24 11:42:01.6860 INFOExecuting endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:42:01.6860 INFORoute matched with {action = "GetInfromationsAboutUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInfromationsAboutUserAsync(System.Threading.CancellationToken) on controller HumanResources.API.Controllers.UserController (HumanResources.API).
+2024-05-24 11:42:01.8068 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.UserModelDto.GetInfromationsDto'.
+2024-05-24 11:42:01.8137 INFOExecuted action HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API) in 119.3672ms
+2024-05-24 11:42:01.8137 INFOExecuted endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:42:01.8137 INFOIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 11:42:01.8137 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:42:01.8137 INFORequest finished HTTP/1.1 GET http://localhost/api/user/info - - - 200 - application/json;+charset=utf-8 124.0917ms
+2024-05-24 11:42:01.8137 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-24 11:42:01.8137 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:42:01.8137 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.8877 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:01.8877 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:42:01.8877 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 69.3991ms
+2024-05-24 11:42:01.8877 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:42:01.8877 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-24 11:42:01.8877 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:42:01.8877 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 200 - application/json;+charset=utf-8 71.8596ms
+2024-05-24 11:42:01.8877 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-24 11:42:01.8877 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.8877 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:42:01.9043 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-24 11:42:01.9043 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 14.0594ms
+2024-05-24 11:42:01.9043 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:42:01.9043 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-24 11:42:01.9043 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:42:01.9043 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 14.5855ms
+2024-05-24 11:42:29.7248 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:29.7582 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:29.7582 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:29.7630 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:29.8090 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:42:29.8247 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:42:29.9085 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:42:30.1687 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:42:45.9355 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:45.9689 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:45.9689 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:45.9689 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:42:46.0103 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:42:46.0230 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:42:46.1018 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:42:46.3804 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:43:39.4024 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:39.4239 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:39.4239 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:39.4239 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:39.4535 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:43:39.4535 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:43:39.4978 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:43:39.6761 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:43:39.7271 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:43:39.7665 WARNFailed to determine the https port for redirect.
+2024-05-24 11:43:39.7843 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:43:39.7958 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:39.9661 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:39.9987 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:43:39.9987 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.0147 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 216.7413ms
+2024-05-24 11:43:40.0147 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:43:40.0147 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:43:40.0147 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.0147 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 294.7797ms
+2024-05-24 11:43:40.0327 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:43:40.0327 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:43:40.0327 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.0986 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:40.0986 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:43:40.0986 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.0986 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 64.5358ms
+2024-05-24 11:43:40.0986 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:43:40.0986 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:43:40.0986 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.0986 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 69.1922ms
+2024-05-24 11:43:40.0986 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:43:40.1063 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:43:40.1063 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.1751 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:40.1751 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:43:40.1751 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.1751 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 69.9378ms
+2024-05-24 11:43:40.1751 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:43:40.1751 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:43:40.1751 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.1751 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 73.0649ms
+2024-05-24 11:43:40.1751 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:43:40.1751 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:43:40.1751 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.2374 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:40.2374 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:43:40.2374 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.2374 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 60.2372ms
+2024-05-24 11:43:40.2374 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:43:40.2374 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:43:40.2374 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.2374 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 60.6017ms
+2024-05-24 11:43:40.2374 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:43:40.2374 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.2464 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.3634 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-24 11:43:40.4106 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:40.4106 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.4106 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 165.2194ms
+2024-05-24 11:43:40.4106 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.4106 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:43:40.4106 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.4106 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 200 - application/json;+charset=utf-8 169.2838ms
+2024-05-24 11:43:40.4106 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:43:40.4106 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.4106 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.4754 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-24 11:43:40.4754 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:40.4754 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.4754 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 61.6918ms
+2024-05-24 11:43:40.4754 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.4754 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:43:40.4754 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.4754 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 200 - application/json;+charset=utf-8 62.1205ms
+2024-05-24 11:43:40.4754 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:43:40.4754 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.4795 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.5381 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-24 11:43:40.5381 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:40.5381 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.5381 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 59.5026ms
+2024-05-24 11:43:40.5381 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.5381 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:43:40.5381 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.5381 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 200 - application/json;+charset=utf-8 59.8417ms
+2024-05-24 11:43:40.5381 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:43:40.5381 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.5381 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.5987 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-24 11:43:40.5987 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:40.5987 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.5987 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 58.7227ms
+2024-05-24 11:43:40.5987 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.5987 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:43:40.5987 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.5987 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 200 - application/json;+charset=utf-8 59.1399ms
+2024-05-24 11:43:40.5987 INFORequest starting HTTP/1.1 GET http://localhost/api/user/info - -
+2024-05-24 11:43:40.6055 INFOExecuting endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:43:40.6055 INFORoute matched with {action = "GetInfromationsAboutUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInfromationsAboutUserAsync(System.Threading.CancellationToken) on controller HumanResources.API.Controllers.UserController (HumanResources.API).
+2024-05-24 11:43:40.7060 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.UserModelDto.GetInfromationsDto'.
+2024-05-24 11:43:40.7060 INFOExecuted action HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API) in 104.5894ms
+2024-05-24 11:43:40.7060 INFOExecuted endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:43:40.7060 INFOIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 11:43:40.7060 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.7060 INFORequest finished HTTP/1.1 GET http://localhost/api/user/info - - - 200 - application/json;+charset=utf-8 110.9392ms
+2024-05-24 11:43:40.7166 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-24 11:43:40.7166 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:43:40.7166 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.7166 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:43:40.7166 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:43:40.7166 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 5.9136ms
+2024-05-24 11:43:40.7166 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:43:40.7166 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-24 11:43:40.7166 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.7166 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 200 - application/json;+charset=utf-8 9.5872ms
+2024-05-24 11:43:40.7166 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-24 11:43:40.7295 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.7295 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:43:40.7504 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-24 11:43:40.7504 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 22.1312ms
+2024-05-24 11:43:40.7504 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:43:40.7504 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-24 11:43:40.7504 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:43:40.7504 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 22.6908ms
+2024-05-24 11:44:04.4929 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:04.5152 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:04.5152 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:04.5152 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:04.5470 INFOSaved 9 entities to in-memory store.
+2024-05-24 11:44:04.5470 INFOSaved 6 entities to in-memory store.
+2024-05-24 11:44:04.5931 INFOUser profile is available. Using 'C:\Users\jjmar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 11:44:04.7822 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:44:04.8309 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:44:04.8699 WARNFailed to determine the https port for redirect.
+2024-05-24 11:44:04.8876 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:44:04.8876 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.0644 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.0966 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:44:05.0966 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.1128 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 211.7357ms
+2024-05-24 11:44:05.1128 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:44:05.1128 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:44:05.1128 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.1128 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 289.0000ms
+2024-05-24 11:44:05.1328 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:44:05.1372 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:44:05.1372 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.1989 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.1989 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:44:05.1989 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.1989 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 64.1403ms
+2024-05-24 11:44:05.1989 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:44:05.1989 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:44:05.1989 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.1989 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 69.2607ms
+2024-05-24 11:44:05.1989 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:44:05.1989 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:44:05.1989 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.2760 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.2768 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:44:05.2768 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.2768 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 70.1873ms
+2024-05-24 11:44:05.2768 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:44:05.2768 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:44:05.2768 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.2768 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 73.7544ms
+2024-05-24 11:44:05.2768 INFORequest starting HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107
+2024-05-24 11:44:05.2768 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:44:05.2768 INFORoute matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(HumanResources.Domain.ModelDtos.RegisterAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.3374 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.3374 INFOSaved 2 entities to in-memory store.
+2024-05-24 11:44:05.3374 INFOExecuting CreatedResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.3374 INFOExecuted action HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API) in 58.596ms
+2024-05-24 11:44:05.3374 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RegisterUser (HumanResources.API)'
+2024-05-24 11:44:05.3374 INFOIncoming...
+HTTP POST /api/account/register 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 107 
+
+2024-05-24 11:44:05.3374 INFOIncoming...
+Outgoing Response:
+HTTP 201
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.3374 INFORequest finished HTTP/1.1 POST http://localhost/api/account/register application/json;+charset=utf-8 107 - 201 - application/json;+charset=utf-8 59.0910ms
+2024-05-24 11:44:05.3428 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51
+2024-05-24 11:44:05.3428 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.3428 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.3631 INFOExecuting BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-05-24 11:44:05.3631 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 18.4728ms
+2024-05-24 11:44:05.3631 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.3631 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 51 
+
+2024-05-24 11:44:05.3631 INFOIncoming...
+Outgoing Response:
+HTTP 400
+Content-Type: application/problem+json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.3631 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 51 - 400 - application/problem+json;+charset=utf-8 22.3617ms
+2024-05-24 11:44:05.3631 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:44:05.3631 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.3631 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.4823 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-24 11:44:05.5313 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.5313 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.5313 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 164.7425ms
+2024-05-24 11:44:05.5313 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.5313 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:44:05.5313 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.5313 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 200 - application/json;+charset=utf-8 165.2343ms
+2024-05-24 11:44:05.5498 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:44:05.5498 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.5498 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.6113 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-24 11:44:05.6113 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.6113 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.6113 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 62.7147ms
+2024-05-24 11:44:05.6113 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.6113 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:44:05.6113 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.6113 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 200 - application/json;+charset=utf-8 63.1344ms
+2024-05-24 11:44:05.6113 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:44:05.6113 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.6113 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.6739 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-24 11:44:05.6739 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.6739 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.6739 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 59.7095ms
+2024-05-24 11:44:05.6739 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.6739 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:44:05.6739 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.6739 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 200 - application/json;+charset=utf-8 60.0957ms
+2024-05-24 11:44:05.6739 INFORequest starting HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52
+2024-05-24 11:44:05.6739 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.6739 INFORoute matched with {action = "SignInUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignInUser(HumanResources.Domain.ModelDtos.LoginAccountAsyncDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.7344 INFOAuthenticationScheme: Identity.Application signed in.
+2024-05-24 11:44:05.7344 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.7344 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.7344 INFOExecuted action HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API) in 58.2349ms
+2024-05-24 11:44:05.7344 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.SignInUser (HumanResources.API)'
+2024-05-24 11:44:05.7344 INFOIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:44:05.7344 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.7344 INFORequest finished HTTP/1.1 POST http://localhost/api/account/signin application/json;+charset=utf-8 52 - 200 - application/json;+charset=utf-8 58.6335ms
+2024-05-24 11:44:05.7344 INFORequest starting HTTP/1.1 GET http://localhost/api/user/info - -
+2024-05-24 11:44:05.7344 INFOExecuting endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:44:05.7344 INFORoute matched with {action = "GetInfromationsAboutUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInfromationsAboutUserAsync(System.Threading.CancellationToken) on controller HumanResources.API.Controllers.UserController (HumanResources.API).
+2024-05-24 11:44:05.8411 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.UserModelDto.GetInfromationsDto'.
+2024-05-24 11:44:05.8411 INFOExecuted action HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API) in 103.9453ms
+2024-05-24 11:44:05.8411 INFOExecuted endpoint 'HumanResources.API.Controllers.UserController.GetInfromationsAboutUserAsync (HumanResources.API)'
+2024-05-24 11:44:05.8411 INFOIncoming...
+HTTP GET /api/user/info 
+Host: localhost 
+Content-Type:  
+Content-Length:  
+
+2024-05-24 11:44:05.8411 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.8411 INFORequest finished HTTP/1.1 GET http://localhost/api/user/info - - - 200 - application/json;+charset=utf-8 109.7870ms
+2024-05-24 11:44:05.8411 INFORequest starting HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23
+2024-05-24 11:44:05.8411 INFOExecuting endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:44:05.8411 INFORoute matched with {action = "RefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(HumanResources.Domain.ModelDtos.RefreshTokenDto) on controller HumanResources.API.Controllers.AccountController (HumanResources.API).
+2024-05-24 11:44:05.8594 INFOSaved 1 entities to in-memory store.
+2024-05-24 11:44:05.8594 INFOExecuting OkObjectResult, writing value of type 'HumanResources.Domain.Response.UserResponse'.
+2024-05-24 11:44:05.8594 INFOExecuted action HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API) in 5.9546ms
+2024-05-24 11:44:05.8594 INFOExecuted endpoint 'HumanResources.API.Controllers.AccountController.RefreshToken (HumanResources.API)'
+2024-05-24 11:44:05.8594 INFOIncoming...
+HTTP POST /api/account/refresh 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 23 
+
+2024-05-24 11:44:05.8594 INFOIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 
+
+2024-05-24 11:44:05.8594 INFORequest finished HTTP/1.1 POST http://localhost/api/account/refresh application/json;+charset=utf-8 23 - 200 - application/json;+charset=utf-8 9.1427ms

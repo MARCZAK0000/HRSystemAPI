@@ -1030,3 +1030,99 @@ HTTP 200
 Content-Type: 
 Content-Length: 
 
+2024-05-24 11:41:18.2483 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:41:18.2483 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:41:18.3455 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:41:18.3455 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:41:18.3713 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:41:18.3713 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:41:18.3713 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:41:18.3713 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:42:01.2053 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:42:01.2053 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:42:01.3083 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:42:01.3083 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:42:01.3274 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:42:01.3274 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
+2024-05-24 11:42:01.3274 ERRORIncoming...
+HTTP POST /api/account/signin 
+Host: localhost 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 52 
+
+2024-05-24 11:42:01.3274 ERRORIncoming...
+Outgoing Response:
+HTTP 200
+Content-Type: 
+Content-Length: 
+
