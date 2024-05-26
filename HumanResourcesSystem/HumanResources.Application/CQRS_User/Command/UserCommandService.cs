@@ -1,11 +1,5 @@
 ﻿using HumanResources.Domain.ModelDtos;
 using HumanResources.Domain.Repository;
-using HumanResources.Domain.UserModelDto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanResources.Application.CQRS_User.Command
 {
@@ -19,9 +13,12 @@ namespace HumanResources.Application.CQRS_User.Command
             _userRepository = accountReposiotry;
         }
 
-        public async Task<bool> UpdateInfromationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations, CancellationToken token)
-            => await _userRepository.UpdateInformationsAboutUserAsync(updateAccountInformations, token);
-        
-        
+        public async Task<bool> UpdateExperienceInformationsAboutUser(UpdateExperienceInfomrationsDto update, CancellationToken token) =>
+            await _userRepository.UpdateExperienceInformationsAboutUser(update, token);
+
+        public async Task<bool> UpdateInfromationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations, CancellationToken token) =>
+            await _userRepository.UpdateInformationsAboutUserAsync(updateAccountInformations, token);
+
+
     }
 }

@@ -98,6 +98,33 @@ namespace HumanResources.Infrastructure.Repository
             return result;
         }
 
+        public async Task<Absence> ShowAbsenceAsync(string userCode, int absenceId, CancellationToken token)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
+
+            if (!await _userManager.IsInRoleAsync(user, nameof(RolesEnum.Leader)))
+            {
+                userCode = user.UserCode;
+            }
+
+            var baseResult = _database.Absences
+                .Include(pr => pr.AbsencesType)
+                .Include(pr => pr.User)
+                .Where(pr => pr.User.UserCode == userCode);
+
+            var result = await baseResult
+                .Where(pr=>pr.Id == absenceId)
+                .FirstOrDefaultAsync(token)??
+                throw new NotFoundException("Not found absences in this year");
+
+
+
+            return result;
+        }
+
         public async Task<Absence> AbsenceDecisionAsync(AbsenceDecisionInfoDto infoDto, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
@@ -257,5 +284,7 @@ namespace HumanResources.Infrastructure.Repository
             var stream = new MemoryStream(document);
             return Task.FromResult(stream);
         }
+
+        
     }
 }

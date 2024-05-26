@@ -11,6 +11,8 @@ namespace HumanResources.Domain.Repository
 
         Task<Absence> AbsenceDecisionAsync(AbsenceDecisionInfoDto infoDto, CancellationToken token);
 
+        Task<Absence> ShowAbsenceAsync(string userCode, int absenceId, CancellationToken token);
+
         Task<MemoryStream> GenerateAbsenceReportPDF(List<AbsenceInfoDto> list, (string userID, int year) info, CancellationToken token); 
     }
 }

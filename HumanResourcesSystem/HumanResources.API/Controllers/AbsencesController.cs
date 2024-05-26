@@ -34,7 +34,13 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);  
         }
+        [HttpGet("info")]
+        public async Task<IActionResult> ShowAbsenceById([FromQuery] ShowAbsenceByIdDto update, CancellationToken token)
+        {
+            var result = await _absenceHandlerService.ShowAbsenceByIDAsync(userCode: update.UserCode, absenceId: update.AbsenceId, token: token);
 
+            return Ok(result);
+        }
         [HttpPut("leader")]
         public async Task<IActionResult> AbsenceDecision([FromBody] AbsenceDecisionInfoDto infoDto, CancellationToken token)
         {

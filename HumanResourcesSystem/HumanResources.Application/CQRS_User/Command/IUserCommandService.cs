@@ -1,10 +1,4 @@
 ﻿using HumanResources.Domain.ModelDtos;
-using HumanResources.Domain.UserModelDto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanResources.Application.CQRS_User.Command
 {
@@ -13,5 +7,6 @@ namespace HumanResources.Application.CQRS_User.Command
 
         Task<bool> UpdateInfromationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations, CancellationToken token);
 
+        Task<bool> UpdateExperienceInformationsAboutUser(UpdateExperienceInfomrationsDto update, CancellationToken token);
     }
 }

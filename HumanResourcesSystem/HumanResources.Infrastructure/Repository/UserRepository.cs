@@ -55,6 +55,7 @@ namespace HumanResources.Infrastructure.Repository
             return result;
         }
 
+
         public async Task<bool> UpdateInformationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformations, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
@@ -99,6 +100,38 @@ namespace HumanResources.Infrastructure.Repository
 
             await _dbContext.SaveChangesAsync(token);
             _dbContext.SaveChangesFailed += DatabaseFailed.SaveChangesFailed;
+
+            return true;
+        }
+
+
+        public async Task<bool> UpdateExperienceInformationsAboutUser(UpdateExperienceInfomrationsDto update, CancellationToken token)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("ChangePassword: We cannot find user with that Email and Password");
+
+            var findUser = await _dbContext
+                .UserInfo
+                .Where(pr=>pr.UserId == user.Id)
+                .FirstOrDefaultAsync(token)??
+                throw new NotFoundException("Insert your informations about user, first");
+
+            findUser.EducationTitle = update.Level;
+            findUser.YearsOfExperiences = update.YearsOfExperience;
+
+            var initCalculaton = _calculateFactory.CalculateDays(_calculateDays.Country, new CalculateDaysInfo
+            {
+                BonusDays = _calculateDays.BonusDays,
+                InitialDays = _calculateDays.InitialDays,
+                RequirmentYears = _calculateDays.RequirementsYears,
+                Level = update.Level,
+            });
+
+            findUser.DaysOfAbsencesToUse = initCalculaton.CalculateDays
+                (daysOfAbsenceCurrentYears: (int)findUser.DaysOfAbsencesCurrentYear!, yearsOfExpierience: (int)findUser.YearsOfExperiences);
+
+            await _dbContext.SaveChangesAsync(token);
 
             return true;
         }

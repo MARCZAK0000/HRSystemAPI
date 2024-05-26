@@ -40,7 +40,15 @@ namespace HumanResources.API.Controllers
             return Created(string.Empty, new { result = true }); 
         }
 
-       
+
+
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateExperienceInformationsAboutUser([FromBody] UpdateExperienceInfomrationsDto update, CancellationToken token)
+        {
+            var result = await _userCommandServices.UpdateExperienceInformationsAboutUser(update, token);
+
+            return Ok(result);  
+        }
          
 
         

@@ -1,6 +1,5 @@
 ﻿using HumanResources.Domain.Entities;
 using HumanResources.Domain.ModelDtos;
-using HumanResources.Domain.UserModelDto;
 
 namespace HumanResources.Domain.Repository
 {
@@ -10,5 +9,6 @@ namespace HumanResources.Domain.Repository
 
         Task<bool> UpdateInformationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformationsDto, CancellationToken token);
 
+        Task<bool> UpdateExperienceInformationsAboutUser(UpdateExperienceInfomrationsDto update, CancellationToken token);
     }
 }

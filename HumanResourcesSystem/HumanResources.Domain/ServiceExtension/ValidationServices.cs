@@ -28,6 +28,7 @@ namespace HumanResources.Domain.ServiceExtension
             services.AddScoped<IValidator<ChangePhoneNumberDto>, ChangePhoneNumberValidator>();
             services.AddScoped<IValidator<GenerateForgetPasswordDto>, GenerateForgetPasswordValidator>();
             services.AddScoped<IValidator<RefreshTokenDto>, RefreshTokenValidator>();
+            services.AddScoped<IValidator<UpdateExperienceInfomrationsDto>, UpdateExperienceInfomrationsValidator>();
             //User Validation
             services.AddScoped<IValidator<UpdateAccountInformationsDto>, UpdateUserInformationsValidator>();
 
@@ -39,6 +40,7 @@ namespace HumanResources.Domain.ServiceExtension
             //Absence Validation
             services.AddScoped<IValidator<CreateAbsenceDto>, CreateAbsenceValidator>();
             services.AddScoped<IValidator<AbsenceDecisionInfoDto>, AbsenceDecisionInfoValidator>();
+            services.AddScoped<IValidator<ShowAbsenceByIdDto>,ShowAbsenceByIdValidator>();
 
 
             //Financial Validation
