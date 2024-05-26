@@ -25,54 +25,54 @@ namespace HumanResources.API.Controllers
         }
 
         [HttpPost("role/manager")]
-        public async Task<IActionResult> AddToManager([FromBody] RoleUpdateDto updateDto)
+        public async Task<IActionResult> AddToManager([FromBody] RoleUpdateDto updateDto, CancellationToken token)
         {
             var role = RolesEnum.Manager;
-            var result = await _adminCommandService.AddToRoleAsync(updateDto.UserId, role);
+            var result = await _adminCommandService.AddToManagerAsync(updateDto.UserCode, role, token);
 
             return Ok(result);
         }
         [HttpPost("role/leader")]
-        public async Task<IActionResult> AddToLeader([FromBody] RoleUpdateDto updateDto)
+        public async Task<IActionResult> AddToLeader([FromBody] RoleUpdateDto updateDto, CancellationToken token)
         {
             var role = RolesEnum.Leader;
-            var result = await _adminCommandService.AddToRoleAsync(updateDto.UserId, role);
+            var result = await _adminCommandService.AddToLeaderAsync(updateDto.UserCode, role, token);
 
             return Ok(result);
         }
 
         [HttpPost("role/admin")]
-        public async Task<IActionResult> AddToAdmin([FromBody] RoleUpdateDto updateDto)
+        public async Task<IActionResult> AddToAdmin([FromBody] RoleUpdateDto updateDto, CancellationToken token)
         {
             var role = RolesEnum.Admin;
-            var result = await _adminCommandService.AddToRoleAsync(updateDto.UserId, role);
+            var result = await _adminCommandService.AddToAdminAsync(updateDto.UserCode, role, token);
 
             return Ok(result);
         }
 
         [HttpPost("role/remove/leader")]
-        public async Task<IActionResult> RemoveRoleLeader([FromBody] RoleUpdateDto roleUpdateDto)
+        public async Task<IActionResult> RemoveRoleLeader([FromBody] RoleUpdateDto roleUpdateDto, CancellationToken token)
         {
             var role = RolesEnum.Leader;
-            var result = await _adminCommandService.RemoveRoleAsync(roleUpdateDto.UserId, role);
+            var result = await _adminCommandService.RemoveLeaderAsync(roleUpdateDto.UserCode, role, token);
 
             return Ok(result);
         }
 
         [HttpPost("role/remove/manager")]
-        public async Task<IActionResult> RemoveRoleManager([FromBody] RoleUpdateDto roleUpdateDto)
+        public async Task<IActionResult> RemoveRoleManager([FromBody] RoleUpdateDto roleUpdateDto , CancellationToken token)
         {
             var role = RolesEnum.Manager;
-            var result = await _adminCommandService.RemoveRoleAsync(roleUpdateDto.UserId, role);
+            var result = await _adminCommandService.RemoveManagerAsync(roleUpdateDto.UserCode, role, token);
 
             return Ok(result);
         }
 
         [HttpPost("role/remove/admin")]
-        public async Task<IActionResult> RemoveRoleAdmin([FromBody] RoleUpdateDto roleUpdateDto)
+        public async Task<IActionResult> RemoveRoleAdmin([FromBody] RoleUpdateDto roleUpdateDto , CancellationToken token)
         {
             var role = RolesEnum.Admin;
-            var result = await _adminCommandService.RemoveRoleAsync(roleUpdateDto.UserId, role);
+            var result = await _adminCommandService.RemoveAdminAsync(roleUpdateDto.UserCode, role, token);
 
             return Ok(result);
         }

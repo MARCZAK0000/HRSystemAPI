@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HumanResources.Domain.Entities
 {
-    public class Arrivals
+    public class Attendance
     {
         public int Id { get; set; }
 
@@ -46,6 +46,6 @@ namespace HumanResources.Domain.Entities
         public void CalculateDuration()
         {
             Duration = Departure - Arrival;
-        }
+        } 
     }
 }

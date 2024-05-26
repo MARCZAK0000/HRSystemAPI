@@ -13,15 +13,15 @@ namespace HumanResources.Domain.Repository
     {
         Task<bool> UserArrivalAsync(UserArrivalDto userArrival, CancellationToken token);
 
-        Task<List<Arrivals>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto, CancellationToken token);
+        Task<List<Attendance>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto, CancellationToken token);
 
         Task<bool> UserDepartureAsync(UserDepartureDto userDeparture, CancellationToken token);
 
-        Task<Arrivals> GetUserAttendanceByDateAsync(DateTime date, CancellationToken token);
+        Task<Attendance> GetUserAttendanceByDateAsync(DateTime date, CancellationToken token);
 
         Task<GetAttendanceStatsDto> GetUserAttendanceStatsByMontAsync(GetAttendanceByMonthDto month, CancellationToken token);
 
-        Task <List<Arrivals>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted, CancellationToken token);
+        Task <List<Attendance>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted, CancellationToken token);
 
         Task<GetAttendanceStatsDto> GetInformationsAboutUserForLeadersAttendanceByMonth(GetAttendanceByMonthDto monthDto, string UserCode, CancellationToken token);
 

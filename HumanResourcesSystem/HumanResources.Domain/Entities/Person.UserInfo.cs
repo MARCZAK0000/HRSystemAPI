@@ -28,12 +28,16 @@ namespace HumanResources.Domain.Entities
 
         public virtual Departments Department { get; set; }
 
-        public virtual List<Arrivals> Arrivals { get; set; }
+        public virtual List<Attendance> Arrivals { get; set; }
 
         public int DepartmentID { get; set; } = 9;
 
         public virtual EmployeePay? EmployeePay { get; set; }
 
         public virtual List<EmployeePayHistory>? EmployeePayHistory { get; set; }
+
+        public virtual List<AdditionalHours>? AdditionalHours { get; set;}
+
+        public virtual Supervisiors? Supervisior { get; set; }
     }
 }

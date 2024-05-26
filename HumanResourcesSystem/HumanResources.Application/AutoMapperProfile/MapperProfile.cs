@@ -19,7 +19,7 @@ namespace HumanResources.Application.AutoMapperProfile
                 .ForMember(pr => pr.EducationLevelName, opt => opt.MapFrom(src => src.EducationTitle.ToString()));
 
 
-            CreateMap<Arrivals, GetArrivalsDto>();
+            CreateMap<Attendance, GetArrivalsDto>();
 
             CreateMap<Absence, AbsenceInfoDto>()
                 .ForMember(pr => pr.AbsenceTypeName, opt => opt.MapFrom(src => src.AbsencesType.Name));

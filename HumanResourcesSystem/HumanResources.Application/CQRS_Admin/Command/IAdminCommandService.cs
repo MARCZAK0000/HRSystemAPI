@@ -10,8 +10,12 @@ namespace HumanResources.Application.CQRS_Admin.Command
 {
     public interface IAdminCommandService
     {
-        Task<GetUserDto> AddToRoleAsync(string userId, RolesEnum role);
+        Task<GetUserDto> AddToLeaderAsync(string userCode, RolesEnum role, CancellationToken token);
+        Task<GetUserDto> AddToManagerAsync(string userCode, RolesEnum role, CancellationToken token);
+        Task<GetUserDto> AddToAdminAsync(string userCode, RolesEnum role, CancellationToken token);
 
-        Task<GetUserDto> RemoveRoleAsync(string userId, RolesEnum role);
+        Task<GetUserDto> RemoveLeaderAsync(string userCode, RolesEnum role, CancellationToken token);
+        Task<GetUserDto> RemoveManagerAsync(string userCode, RolesEnum role, CancellationToken token);
+        Task<GetUserDto> RemoveAdminAsync(string userCode, RolesEnum role, CancellationToken token);
     }
 }

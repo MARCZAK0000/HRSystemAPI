@@ -8,6 +8,6 @@ namespace HumanResources.Domain.AdminModelDto
 {
     public class RoleUpdateDto
     {
-        public string UserId {  get; set; }    
+        public string UserCode {  get; set; }    
     }
 }

@@ -5,8 +5,12 @@ namespace HumanResources.Domain.Repository
 {
     public interface IAdminRepository
     {
-        Task<GetUserDto> AddToRoleAsync(string userId, RolesEnum rolesEnum);
+        Task<GetUserDto> AddToLeaderAsync(string userCode, RolesEnum role, CancellationToken token);
+        Task<GetUserDto> AddToManagerAsync(string userCode, RolesEnum role, CancellationToken token);
+        Task<GetUserDto> AddToAdminAsync(string userCode, RolesEnum role, CancellationToken token);
 
-        Task<GetUserDto> RemoveRoleAsync(string userId, RolesEnum rolesEnum);
+        Task<GetUserDto> RemoveLeaderAsync(string userCode, RolesEnum role, CancellationToken token);
+        Task<GetUserDto> RemoveManagerAsync(string userCode, RolesEnum role, CancellationToken token);
+        Task<GetUserDto> RemoveAdminAsync(string userCode, RolesEnum role, CancellationToken token);
     }
 }

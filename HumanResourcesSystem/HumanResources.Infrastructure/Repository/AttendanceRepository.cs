@@ -46,7 +46,7 @@ namespace HumanResources.Infrastructure.Repository
                 throw new BadRequestException("You already create arrival request at this day");
             }
 
-            var newArrival = new Arrivals()
+            var newArrival = new Attendance()
             {
                 UserId = user.Id,
                 UserCode = user.UserCode,
@@ -88,7 +88,7 @@ namespace HumanResources.Infrastructure.Repository
 
         }
 
-        public async Task<List<Arrivals>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto, CancellationToken token)
+        public async Task<List<Attendance>> GetUserAttendanceByMonthAsync(GetAttendanceByMonthDto monthDto, CancellationToken token)
         {
             
             var currentUser = _userContext.GetCurrentUser();
@@ -112,7 +112,7 @@ namespace HumanResources.Infrastructure.Repository
 
 
 
-        public async Task<Arrivals> GetUserAttendanceByDateAsync(DateTime date, CancellationToken token)
+        public async Task<Attendance> GetUserAttendanceByDateAsync(DateTime date, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
@@ -162,7 +162,7 @@ namespace HumanResources.Infrastructure.Repository
 
         }
 
-        public async Task<List<Arrivals>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted, CancellationToken token)
+        public async Task<List<Attendance>> GetUserCompletedOrNotAttendenceByMonthAsync(GetAttendanceByMonthDto monthDto, bool isCompleted, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??

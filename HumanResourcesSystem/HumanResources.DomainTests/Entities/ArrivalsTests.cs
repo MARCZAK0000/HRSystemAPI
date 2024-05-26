@@ -11,7 +11,7 @@ namespace HumanResources.Domain.Entities.Tests
         {
             //arrange
 
-            var result = new Arrivals();
+            var result = new Attendance();
 
             result.Arrival = DateTime.Now;
             result.Departure = DateTime.Now.AddHours(9);
@@ -26,7 +26,7 @@ namespace HumanResources.Domain.Entities.Tests
         [Fact()]
         public void IsCompletedDay_ShouldBeFalse()
         {
-            var result = new Arrivals
+            var result = new Attendance
             {
                 Arrival = DateTime.Now,
                 Departure = DateTime.Now.AddHours(7)
@@ -41,7 +41,7 @@ namespace HumanResources.Domain.Entities.Tests
         [Fact()]
         public void CalculationDuration_ShouldbeGretherOrEqualTo_8()
         {
-            var result = new Arrivals
+            var result = new Attendance
             {
                 Arrival = DateTime.Now,
                 Departure = DateTime.Now.AddHours(8)
@@ -55,7 +55,7 @@ namespace HumanResources.Domain.Entities.Tests
         [Fact()]
         public void CalculationDuration_ShouldbeLessThan_8()
         {
-            var result = new Arrivals
+            var result = new Attendance
             {
                 Arrival = DateTime.Now,
                 Departure = DateTime.Now.AddHours(7)

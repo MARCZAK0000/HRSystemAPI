@@ -20,7 +20,7 @@ namespace HumanResources.Infrastructure.Database
 
         public new DbSet<Roles> Roles { get; set; }
 
-        public DbSet<Arrivals> Arrivals { get; set; }
+        public DbSet<Attendance> Arrivals { get; set; }
 
         public DbSet<AbsencesType> AbsencesTypes { get; set; }
         
@@ -29,6 +29,10 @@ namespace HumanResources.Infrastructure.Database
         public DbSet<EmployeePayHistory> EmployeePayHistory {  get; set; }
 
         public DbSet<ExchangeRate> ExchangeRates { get; set; }
+
+        public DbSet<AdditionalHours> AdditionalHours { get; set; }
+
+        public DbSet<Supervisiors> Supervisiors { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -41,6 +45,21 @@ namespace HumanResources.Infrastructure.Database
 
             builder.Entity<UserInfo>()
                 .HasKey(e => e.UserId);
+
+
+            builder.Entity<Supervisiors>()
+                .HasKey(e => e.UserID);
+
+            builder.Entity<Supervisiors>()
+                .HasOne(e => e.Departments)
+                .WithMany(e => e.Supervisiors)
+                .HasForeignKey(e => e.DepramentID);
+
+            //builder.Entity<Supervisiors>()
+            //    .HasOne(e => e.User)
+            //    .WithOne(e => e.Supervisior)
+            //    .HasForeignKey<Supervisiors>(e=>e.UserID)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Absence>()
                 .HasOne(e => e.AbsencesType)
@@ -69,6 +88,17 @@ namespace HumanResources.Infrastructure.Database
                 .HasForeignKey(e=>e.UserID)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.Entity<AdditionalHours>()
+                .HasOne(e => e.User)
+                .WithMany(e => e.AdditionalHours)
+                .HasForeignKey(e => e.UserID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<AdditionalHours>()
+                .HasOne(e => e.SuperVisior)
+                .WithMany(e=>e.SubordinateAdditionalHours)
+                .HasForeignKey(e=>e.SuperVisiorID) 
+                .OnDelete(DeleteBehavior.Restrict);
             base.OnModelCreating(builder);
 
 
