@@ -64,7 +64,7 @@ namespace HumanResources.Infrastructure.Repository
             var isAlreadyUser = await _dbContext.UserInfo.FirstOrDefaultAsync(pr => pr.UserId == user.Id, cancellationToken: token);
             var initCalculaton = _calculateFactory.CalculateDays(_calculateDays.Country, new CalculateDaysInfo
             {
-                BonusDays = _calculateDays.BounusDays,
+                BonusDays = _calculateDays.BonusDays,
                 InitialDays = _calculateDays.InitialDays,
                 RequirmentYears = _calculateDays.RequirementsYears,
                 Level = updateAccountInformations.EducationLevel,

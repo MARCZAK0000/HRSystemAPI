@@ -4,7 +4,7 @@
     {
         public int InitialDays { get; set; }
 
-        public int BounusDays { get; set; }
+        public int BonusDays { get; set; }
 
         public int RequirementsYears { get; set; }
 

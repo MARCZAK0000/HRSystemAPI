@@ -7,7 +7,7 @@ namespace HumanResources.Domain.Repository
     {
         Task<Absence> CreateAbsenceAsync(CreateAbsenceDto createAbsence, CancellationToken token);
 
-        Task<List<Absence>> ShowAbsencesByYearAsync(string userID, int year, CancellationToken token);
+        Task<List<Absence>> ShowAbsencesByYearAsync(string userCode, int year, CancellationToken token);
 
         Task<Absence> AbsenceDecisionAsync(AbsenceDecisionInfoDto infoDto, CancellationToken token);
 

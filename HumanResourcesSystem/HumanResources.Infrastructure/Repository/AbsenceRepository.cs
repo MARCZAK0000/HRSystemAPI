@@ -68,7 +68,7 @@ namespace HumanResources.Infrastructure.Repository
 
         }
 
-        public async Task<List<Absence>> ShowAbsencesByYearAsync(string userID, int year, CancellationToken token)
+        public async Task<List<Absence>> ShowAbsencesByYearAsync(string userCode, int year, CancellationToken token)
         {
             var currentUser = _userContext.GetCurrentUser();
 
@@ -77,7 +77,7 @@ namespace HumanResources.Infrastructure.Repository
 
             if(!await _userManager.IsInRoleAsync(user, nameof(RolesEnum.Leader)))
             {
-                userID = user.Id;
+                userCode = user.UserCode;
             }
 
             if (year < 2020 || year > 2050)
@@ -87,7 +87,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await _database.Absences
                 .Include(pr => pr.AbsencesType)
-                .Where(pr => pr.StartTime.Year == year && pr.UserId == userID)
+                .Where(pr => pr.StartTime.Year == year && pr.User.UserCode == userCode)
                 .ToListAsync(cancellationToken: token);
 
             if (!result.Any())
@@ -105,26 +105,16 @@ namespace HumanResources.Infrastructure.Repository
             var user = await _userManager.FindByIdAsync(currentUser.Id) ??
                 throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
 
-            if (!await _userManager.IsInRoleAsync(user, nameof(RolesEnum.Leader)))
-            {
-                throw new UnauthorizedExceptions("UnAuthorized");
-            }
-
-            var getLeaderDepartmentID = await _database.UserInfo
-                .Where(pr => pr.UserId == user.Id)
-                .Select(pr => pr.DepartmentID)
-                .FirstOrDefaultAsync(cancellationToken: token);
-
-            if (getLeaderDepartmentID <= 0)
-            {
-                throw new NotFoundException("NotFound leader");
-            }
+            var manager = await _database
+                .Supervisiors
+                .Where(pr => pr.UserID == user.Id)
+                .FirstOrDefaultAsync(token) ?? throw new ForbidenException("You don't have permission to that request");
 
             var baseQuery = _database
                 .Absences
                 .Include(pr => pr.AbsencesType)
                 .Include(pr => pr.User)
-                .Where(pr => pr.User.DepartmentID == getLeaderDepartmentID);
+                .Where(pr => pr.User.DepartmentID == manager.DepramentID);
 
             if(!baseQuery.Any()) 
             {
