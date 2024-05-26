@@ -67,13 +67,23 @@ namespace HumanResources.Infrastructure.Repository
             }
 
 
-            var result = await _database.Departments
-                .Include(pr => pr.Users)
-                .FirstOrDefaultAsync(pr => pr.Id == departmentId, cancellationToken: token) ??
-                throw new NotFoundException($"We cannot find department with DepartmentID: {departmentId}");
+            //var result = await _database.Departments
+            //    .Include(pr => pr.Users).ThenInclude(pr=>pr.User)
+            //    .FirstOrDefaultAsync(pr => pr.Id == departmentId, cancellationToken: token) ??
+            //    throw new NotFoundException($"We cannot find department with DepartmentID: {departmentId}");
 
 
-            return result;
+            var resultBase = _database.Departments
+                .Where(pr => pr.Id == departmentId);
+
+            var result = await resultBase
+                .Include(pr => pr.Users!)
+                .ThenInclude(pr => pr.User)
+                .FirstOrDefaultAsync(cancellationToken: token);
+                
+
+
+            return result!;
 
         }
 

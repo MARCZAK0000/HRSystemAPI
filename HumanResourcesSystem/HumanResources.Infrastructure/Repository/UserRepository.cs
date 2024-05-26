@@ -46,6 +46,7 @@ namespace HumanResources.Infrastructure.Repository
 
             var result = await _dbContext
                 .UserInfo
+                .Include(pr=>pr.User)
                 .Include(pr => pr.Department)
                 .FirstOrDefaultAsync(pr => pr.UserId == user.Id, cancellationToken: token) ??
                 throw new NotFoundException("Something went wrong with informations");
