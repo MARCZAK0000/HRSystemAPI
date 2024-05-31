@@ -92,6 +92,10 @@ namespace HumanResources.Infrastructure.Repository
 
             var userRole = await _userManager.GetRolesAsync(findUser.User);
 
+            if(await _dbContex.Supervisiors.AnyAsync(pr => pr.UserID == findUser.UserId, token)) 
+            {
+                return new GetUserDto(findUser.User.Email!, findUser.User.UserName!, findUser.UserCode, userRole.ToList());
+            }
             var superVisior = new Supervisiors()
             {
                 UserID = findUser.UserId,

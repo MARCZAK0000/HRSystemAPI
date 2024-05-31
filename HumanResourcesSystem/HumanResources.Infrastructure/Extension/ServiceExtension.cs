@@ -50,6 +50,7 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<CurrencyFactory>();
             service.AddScoped<CalculateFactory>();
             service.AddScoped<IEmployeePayRepository, EmployeePayRepository>();
+            service.AddScoped<IAdditionalHoursReposiotry, AdditionalHoursReposiotry>();
 
             var exchangeRateAPI = new ExchangeRateAPIAuthenticationSettings();
             configuration.GetSection("ExchangeRate_API").Bind(exchangeRateAPI);

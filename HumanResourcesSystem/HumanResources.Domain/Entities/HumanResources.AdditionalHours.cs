@@ -10,7 +10,9 @@ namespace HumanResources.Domain.Entities
     {
         public int AdditionalHoursID {  get; set; }    
         
-        public UserInfo User { get; set; }  
+        public UserInfo User { get; set; }
+        
+        public string Title { get; set; }
 
         public string UserID { get; set; }
 

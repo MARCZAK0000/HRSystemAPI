@@ -148,6 +148,10 @@ namespace HumanResources.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

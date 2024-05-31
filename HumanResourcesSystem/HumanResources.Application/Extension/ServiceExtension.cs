@@ -6,6 +6,8 @@ using HumanResources.Application.CQRS.UserCommand;
 using HumanResources.Application.CQRS.UserHandler;
 using HumanResources.Application.CQRS_Absence.Command;
 using HumanResources.Application.CQRS_Absence.Handler;
+using HumanResources.Application.CQRS_AdditionalHours.Command;
+using HumanResources.Application.CQRS_AdditionalHours.Handler;
 using HumanResources.Application.CQRS_Admin.Command;
 using HumanResources.Application.CQRS_Admin.Handler;
 using HumanResources.Application.CQRS_Attendance.Command;
@@ -74,6 +76,10 @@ namespace HumanResources.Application.Extension
             //Service for EmployeePay
             service.AddScoped<IEmployeePaysCommandServices, EmployeePaysCommandServices>();
             service.AddScoped<IEmployeePaysHandlerServices, EmployeePaysHandlerServices>();
+
+            //Service for AdditionalHours
+            service.AddScoped<IAdditionalHoursCommandServices,  AdditionalHoursCommandServices>();
+            service.AddScoped<IAdditionalHoursHandlerServices,  AdditionalHoursHandlerServices>();
             //AutoMapper
             service.AddAutoMapper(typeof(MapperProfile));
 
