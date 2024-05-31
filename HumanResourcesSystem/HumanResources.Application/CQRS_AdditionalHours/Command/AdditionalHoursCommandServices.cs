@@ -22,5 +22,9 @@ namespace HumanResources.Application.CQRS_AdditionalHours.Command
 
         public async Task<AdditionalHoursResponse> UpdateAdditionalHoursRequestAsync(UpdateAdditionalHoursRequestDto hours, CancellationToken token) => 
             await _additionalHoursReposiotry.UpdateAdditionalHoursRequestAsync(hours, token);
+
+        public async Task<AdditionalHoursResponse> DeleteAdditionalHoursRequestAsync(DeleteAdditionalHoursRequestDto hours, CancellationToken token) => 
+            await _additionalHoursReposiotry.DeleteAdditionalHoursRequestAsync(hours, token);
+
     }
 }

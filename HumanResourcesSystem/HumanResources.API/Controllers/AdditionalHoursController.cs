@@ -33,10 +33,19 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);  
         }
+        [HttpDelete]
+        public async Task<IActionResult> DeleteAdditionalHoursRequest([FromBody] DeleteAdditionalHoursRequestDto hours, CancellationToken token)
+        {
+            var result = await _additionalHoursCommand.DeleteAdditionalHoursRequestAsync(hours, token);
+
+            return Ok(result);
+        }
         [HttpGet("/info")]
         public async Task<IActionResult> ShowAdditionalHoursRequest([FromQuery] ShowAdditionalHoursDto hours, CancellationToken token)
         {
-            throw new NotImplementedException();
+            var result = await _additionalHoursHandler.ShowAdditionalHoursRequestByIDAsync(hours, token);
+
+            return Ok(result);
         }
 
         [HttpGet("/info/all")]
@@ -49,7 +58,9 @@ namespace HumanResources.API.Controllers
         [HttpGet("/info/date")]
         public async Task<IActionResult> ShowAdditionalHoursRequestByDate([FromQuery] ShowAdditionalHoursDateDto hours, CancellationToken token)
         {
-            throw new NotImplementedException();
+            var result = await _additionalHoursHandler.ShowAdditionalHoursRequestByDateAsync(hours, token);
+
+            return Ok(result);
         } 
     }
 }
