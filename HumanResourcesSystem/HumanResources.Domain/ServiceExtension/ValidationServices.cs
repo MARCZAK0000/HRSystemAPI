@@ -11,6 +11,8 @@ using HumanResources.Domain.Validations.AttendanceValidatons;
 using HumanResources.Domain.Validations.AbsenceValidatons;
 using HumanResources.Domain.FinancialModelDto;
 using HumanResources.Domain.Validations.FinancialValidations;
+using HumanResources.Domain.AdditionalHoursDto;
+using HumanResources.Domain.Validations.AdditionalHours;
 
 namespace HumanResources.Domain.ServiceExtension
 {
@@ -46,6 +48,14 @@ namespace HumanResources.Domain.ServiceExtension
             //Financial Validation
             services.AddScoped<IValidator<SetUserPaymentRateDto>, SetUserPaymentRateValidator>();
             services.AddScoped<IValidator<GetExchangeRateAsyncDto>, GetExchangeRateValidator>();
+
+            //Additional Hours Validation
+            services.AddScoped<IValidator<CreateAdditionalHoursRequestDto>, CreateAdditionalHoursRequestValidator>();
+            services.AddScoped<IValidator<UpdateAdditionalHoursRequestDto>, UpdateAdditionalHoursRequestValidator>();
+            services.AddScoped<IValidator<DeleteAdditionalHoursRequestDto>, DeleteAdditionalHoursRequestValidator>();
+            services.AddScoped<IValidator<ShowAdditionalHoursDto>, ShowAdditionalHoursValidator>();
+            services.AddScoped<IValidator<ShowAllAdditionalHoursDto>, ShowAllAdditionalHoursValidator>();
+            services.AddScoped<IValidator<ShowAdditionalHoursDateDto>, ShowAdditionalHoursDateValidator>();
         }
     }
 }
