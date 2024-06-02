@@ -20,7 +20,7 @@ namespace HumanResources.Domain.Validations.AdditionalHours
                 .LessThan(pr => pr.To).WithMessage("Invalid Date");
 
             RuleFor(pr => pr.To)
-                .GreaterThan(pr => pr.To).WithMessage("Invalid Date");
+                .GreaterThan(pr => pr.From).WithMessage("Invalid Date");
         }
     }
 }

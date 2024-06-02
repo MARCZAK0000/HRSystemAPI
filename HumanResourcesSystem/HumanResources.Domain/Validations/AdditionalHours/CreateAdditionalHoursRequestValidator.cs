@@ -16,12 +16,12 @@ namespace HumanResources.Domain.Validations.AdditionalHours
 
             RuleFor(pr => pr.StartTime)
                 .LessThan(pr => pr.EndTime).WithMessage("Invalid Date")
-                .GreaterThan(DateTime.Now).WithMessage("Invalid Date");
+                .GreaterThan(DateTime.Now).WithMessage("Invalid Date1");
 
 
             RuleFor(pr => pr.EndTime)
-                .GreaterThan(pr => pr.EndTime).WithMessage("Invalid Date")
-                .GreaterThan(DateTime.Now).WithMessage("Invalid Date");
+                .GreaterThan(pr => pr.StartTime).WithMessage("Invalid Date")
+                .GreaterThan(DateTime.Now).WithMessage("Invalid Date1");
         }
     }
 }
