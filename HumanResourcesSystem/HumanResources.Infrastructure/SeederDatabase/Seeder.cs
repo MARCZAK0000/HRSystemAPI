@@ -1,6 +1,7 @@
 ﻿using HumanResources.Domain.Entities;
 using HumanResources.Infrastructure.Database;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,11 @@ namespace HumanResources.Infrastructure.SeederDatabase
         {
             if (_database.Database.CanConnect())
             {
+                var migrations = await _database.Database.GetPendingMigrationsAsync();
+                if(migrations!=null && migrations.Any()) 
+                {
+                    await _database.Database.MigrateAsync(); 
+                }
                 if(!_database.Roles.Any()) 
                 {
                     var valuesAsList = Enum.GetValues(typeof(Domain.Enums.RolesEnum)).Cast<Domain.Enums.RolesEnum>().ToList();
