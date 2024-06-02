@@ -1,0 +1,12 @@
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\bin\Release\net7.0\HumanResources.Domain.deps.json
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\bin\Release\net7.0\HumanResources.Domain.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\bin\Release\net7.0\HumanResources.Domain.pdb
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\HumanResources.Domain.csproj.AssemblyReference.cache
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\HumanResources.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\HumanResources.Domain.AssemblyInfoInputs.cache
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\HumanResources.Domain.AssemblyInfo.cs
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\HumanResources.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\HumanResources.Domain.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\refint\HumanResources.Domain.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\HumanResources.Domain.pdb
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Domain\obj\Release\net7.0\ref\HumanResources.Domain.dll

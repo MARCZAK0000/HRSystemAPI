@@ -69,11 +69,11 @@ var seeder = scope.ServiceProvider.GetRequiredService<Seeder>();
 await seeder.Seed();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
 app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
