@@ -6,9 +6,8 @@ namespace HumanResources.Domain.Entities
     public class User : IdentityUser
     {
         public string UserCode { get; set; }
+        public string? RefreshToken { get; set; }
 
         public UserInfo UserInfo { get; set; }
-
-        public string? RefreshToken { get; set; }
     }
 }

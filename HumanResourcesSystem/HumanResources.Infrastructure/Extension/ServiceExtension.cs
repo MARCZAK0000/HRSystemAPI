@@ -17,12 +17,19 @@ namespace HumanResources.Infrastructure.Extension
 {
     public static class ServiceExtension
     {
-        public static void AddInfrastructure(this IServiceCollection service, IConfiguration configuration)
+        public static void AddInfrastructure(this IServiceCollection service, IConfiguration configuration, bool isDevlopment)
         {
+
             service.AddDbContext<HumanResourcesDatabase>(opt =>
             {
-                opt.UseSqlServer(configuration.GetConnectionString("HRSystemDbConnection"));
-
+                if (isDevlopment)
+                {
+                    opt.UseSqlServer(configuration.GetConnectionString("MyConnectionString"));
+                }
+                else
+                {
+                    opt.UseSqlServer(configuration.GetConnectionString("HumanResourcesDbConnection"));
+                }
             });
 
 

@@ -133,15 +133,15 @@ namespace HumanResources.Infrastructure.Repository
                 throw new InvalidEmailOrPasswordExcepiton("Invalid UserName or Password");
 
             var manager = await _database
-                .Supervisiors
-                .Where(pr => pr.UserID == user.Id)
+                .UserInfo
+                .Where(pr => pr.UserId == user.Id && pr.IsSupervisior)
                 .FirstOrDefaultAsync(token) ?? throw new ForbidenException("You don't have permission to that request");
 
             var baseQuery = _database
                 .Absences
                 .Include(pr => pr.AbsencesType)
                 .Include(pr => pr.User)
-                .Where(pr => pr.User.DepartmentID == manager.DepramentID);
+                .Where(pr => pr.User.DepartmentID == manager.DepartmentID);
 
             if(!baseQuery.Any()) 
             {

@@ -39,16 +39,16 @@ namespace HumanResources.Infrastructure.Repository
             }
 
             var findSuperVisior = await _dbContext
-                .Supervisiors
-                .Include(pr => pr.User)
-                .Where(pr => pr.UserID == user.Id)
+                .UserInfo
+                .Include(pr=>pr.Department)
+                .Where(pr => pr.UserId == user.Id && pr.IsSupervisior == true)
                 .FirstOrDefaultAsync(token)??
                 throw new NotFoundException("There is a problem with supervisior database, contact with admin");
 
             var findUser = await
                 _dbContext
                 .UserInfo
-                .Where(pr => pr.UserCode == hours.UserCode && pr.DepartmentID == findSuperVisior.DepramentID)
+                .Where(pr => pr.UserCode == hours.UserCode && pr.DepartmentID == findSuperVisior.DepartmentID)
                 .Select(pr=>pr.UserId)
                 .FirstOrDefaultAsync(cancellationToken: token) ??
                 throw new NotFoundException("Invalid UserCode or you don't have that user in your deparment");
@@ -99,9 +99,9 @@ namespace HumanResources.Infrastructure.Repository
             }
 
             var findSuperVisior = await _dbContext
-                .Supervisiors
-                .Include(pr => pr.User)
-                .Where(pr => pr.UserID == user.Id)
+                .UserInfo
+                .Include(pr => pr.Department)
+                .Where(pr => pr.UserId == user.Id && pr.IsSupervisior == true)
                 .FirstOrDefaultAsync(token) ??
                 throw new NotFoundException("There is a problem with supervisior database, contact with admin");
 
@@ -110,7 +110,7 @@ namespace HumanResources.Infrastructure.Repository
                 .AdditionalHours
                 .Include(pr=>pr.User)
                 .Where(pr => pr.UserCode == hours.UserCode && 
-                    pr.User.DepartmentID == findSuperVisior.DepramentID && 
+                    pr.User.DepartmentID == findSuperVisior.DepartmentID && 
                         pr.AdditionalHoursID == hours.AdditionalHoursID)
                 .FirstOrDefaultAsync(cancellationToken: token) ??
                 throw new NotFoundException("Invalid UserCode or you don't have that user in your deparment");

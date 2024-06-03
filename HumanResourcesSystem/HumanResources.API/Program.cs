@@ -14,7 +14,7 @@ builder.Services.AddControllers();
 builder.Host.UseNLog();
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<LoggerMiddleware>();
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration, builder.Environment.IsDevelopment());
 builder.Services.AddApplication();
 builder.Services.AddValidation();
 builder.Services.AddMemoryCache();
@@ -61,7 +61,6 @@ builder.Services.AddSwaggerGen(options =>
 
     options.OperationFilter<SecurityRequirementsOperationFilter>();
 });
-
 
 var app = builder.Build();
 var scope = app.Services.CreateScope();

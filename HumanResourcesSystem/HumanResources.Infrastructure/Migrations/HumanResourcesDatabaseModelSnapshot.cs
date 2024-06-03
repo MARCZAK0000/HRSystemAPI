@@ -319,21 +319,6 @@ namespace HumanResources.Infrastructure.Migrations
                     b.ToTable("AspNetRoles", (string)null);
                 });
 
-            modelBuilder.Entity("HumanResources.Domain.Entities.Supervisiors", b =>
-                {
-                    b.Property<string>("UserID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("DepramentID")
-                        .HasColumnType("int");
-
-                    b.HasKey("UserID");
-
-                    b.HasIndex("DepramentID");
-
-                    b.ToTable("Supervisiors");
-                });
-
             modelBuilder.Entity("HumanResources.Domain.Entities.User", b =>
                 {
                     b.Property<string>("Id")
@@ -422,6 +407,9 @@ namespace HumanResources.Infrastructure.Migrations
 
                     b.Property<int?>("EducationTitle")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsSupervisior")
+                        .HasColumnType("bit");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -591,8 +579,8 @@ namespace HumanResources.Infrastructure.Migrations
 
             modelBuilder.Entity("HumanResources.Domain.Entities.AdditionalHours", b =>
                 {
-                    b.HasOne("HumanResources.Domain.Entities.Supervisiors", "SuperVisior")
-                        .WithMany("SubordinateAdditionalHours")
+                    b.HasOne("HumanResources.Domain.Entities.UserInfo", "SuperVisior")
+                        .WithMany("AdditionalHoursSuperVisor")
                         .HasForeignKey("SuperVisiorID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -630,25 +618,6 @@ namespace HumanResources.Infrastructure.Migrations
                         .HasForeignKey("HumanResources.Domain.Entities.EmployeePay", "UserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("HumanResources.Domain.Entities.Supervisiors", b =>
-                {
-                    b.HasOne("HumanResources.Domain.Entities.Departments", "Departments")
-                        .WithMany("Supervisiors")
-                        .HasForeignKey("DepramentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HumanResources.Domain.Entities.UserInfo", "User")
-                        .WithOne("Supervisior")
-                        .HasForeignKey("HumanResources.Domain.Entities.Supervisiors", "UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Departments");
 
                     b.Navigation("User");
                 });
@@ -730,19 +699,12 @@ namespace HumanResources.Infrastructure.Migrations
 
             modelBuilder.Entity("HumanResources.Domain.Entities.Departments", b =>
                 {
-                    b.Navigation("Supervisiors");
-
                     b.Navigation("Users");
                 });
 
             modelBuilder.Entity("HumanResources.Domain.Entities.EmployeePay", b =>
                 {
                     b.Navigation("EmployeePayHistory");
-                });
-
-            modelBuilder.Entity("HumanResources.Domain.Entities.Supervisiors", b =>
-                {
-                    b.Navigation("SubordinateAdditionalHours");
                 });
 
             modelBuilder.Entity("HumanResources.Domain.Entities.User", b =>
@@ -757,13 +719,13 @@ namespace HumanResources.Infrastructure.Migrations
 
                     b.Navigation("AdditionalHours");
 
+                    b.Navigation("AdditionalHoursSuperVisor");
+
                     b.Navigation("Arrivals");
 
                     b.Navigation("EmployeePay");
 
                     b.Navigation("EmployeePayHistory");
-
-                    b.Navigation("Supervisior");
                 });
 #pragma warning restore 612, 618
         }

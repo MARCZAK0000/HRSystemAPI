@@ -10,6 +10,5 @@
 
         public List<UserInfo>? Users { get; set; }
 
-        public virtual List<Supervisiors>? Supervisiors { get; set; }
     }
 }

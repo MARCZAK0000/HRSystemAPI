@@ -92,19 +92,14 @@ namespace HumanResources.Infrastructure.Repository
 
             var userRole = await _userManager.GetRolesAsync(findUser.User);
 
-            if(await _dbContex.Supervisiors.AnyAsync(pr => pr.UserID == findUser.UserId, token)) 
+            if(findUser.IsSupervisior) 
             {
                 return new GetUserDto(findUser.User.Email!, findUser.User.UserName!, findUser.UserCode, userRole.ToList());
             }
-            var superVisior = new Supervisiors()
-            {
-                UserID = findUser.UserId,
-                DepramentID = findUser.DepartmentID
-            };
+            
+            findUser.IsSupervisior = true;
 
-            await _dbContex.Supervisiors.AddAsync(superVisior, token);
             await _dbContex.SaveChangesAsync(token);
-
             return new GetUserDto(findUser.User.Email!, findUser.User.UserName!, findUser.UserCode, userRole.ToList());
         }
 
@@ -207,17 +202,8 @@ namespace HumanResources.Infrastructure.Repository
                 throw new BadRequestException("User isn't in role");
             }
 
-            var findManager = await _dbContex.
-                Supervisiors
-                .Where(pr=>pr.UserID == findUser.UserId)
-                .FirstOrDefaultAsync(token)??
-                throw new NotFoundException("Not found Manager");
-
             await _userManager.RemoveFromRoleAsync(findUser.User, roleName);
-
-
-            _dbContex.Supervisiors.Remove(findManager);
-
+            findUser.IsSupervisior = false;
 
             await _dbContex.SaveChangesAsync(token);
             var userRole = await _userManager.GetRolesAsync(findUser.User);
