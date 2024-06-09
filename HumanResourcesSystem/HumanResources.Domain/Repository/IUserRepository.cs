@@ -1,5 +1,7 @@
 ﻿using HumanResources.Domain.Entities;
 using HumanResources.Domain.ModelDtos;
+using HumanResources.Domain.StorageAccountModel;
+using Microsoft.AspNetCore.Http;
 
 namespace HumanResources.Domain.Repository
 {
@@ -10,5 +12,9 @@ namespace HumanResources.Domain.Repository
         Task<bool> UpdateInformationsAboutUserAsync(UpdateAccountInformationsDto updateAccountInformationsDto, CancellationToken token);
 
         Task<bool> UpdateExperienceInformationsAboutUser(UpdateExperienceInfomrationsDto update, CancellationToken token);
+
+        Task<BlobResponse> UploadUserImageAsync(IFormFile form, CancellationToken token);
+
+        Task<BlobResponse> UpdateUserImageAsync(IFormFile form, CancellationToken token);
     }
 }

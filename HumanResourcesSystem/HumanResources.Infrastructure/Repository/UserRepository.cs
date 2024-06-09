@@ -5,7 +5,9 @@ using HumanResources.Domain.Events;
 using HumanResources.Domain.Exceptions;
 using HumanResources.Domain.ModelDtos;
 using HumanResources.Domain.Repository;
+using HumanResources.Domain.StorageAccountModel;
 using HumanResources.Infrastructure.Database;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,18 +26,21 @@ namespace HumanResources.Infrastructure.Repository
 
         private readonly CalculateFactory _calculateFactory;
 
+        private readonly IBlobClientReposiotry _blobClientReposiotry;
+
         public UserRepository(IUserContext userContext, 
             UserManager<User> userManager,
             HumanResourcesDatabase dbContext,
             CalculateDays calculateDays, 
-            CalculateFactory calculateFactory)
+            CalculateFactory calculateFactory,
+            IBlobClientReposiotry blobClientReposiotry)
         {
             _userContext = userContext;
             _userManager = userManager;
             _dbContext = dbContext; 
             _calculateDays = calculateDays;
             _calculateFactory = calculateFactory;   
-
+            _blobClientReposiotry = blobClientReposiotry;
         }
 
         public async Task<UserInfo> GetInfromationsAboutUserAsync(CancellationToken token)
@@ -134,6 +139,71 @@ namespace HumanResources.Infrastructure.Repository
             await _dbContext.SaveChangesAsync(token);
 
             return true;
+        }
+
+        public async Task<BlobResponse> UploadUserImageAsync(IFormFile form, CancellationToken token)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("ChangePassword: We cannot find user with that Email and Password");
+
+            if(Path.GetExtension(form.FileName)!=".jpg" && Path.GetExtension(form.FileName) != ".jpeg" && Path.GetExtension(form.FileName) != ".png")
+            {
+                throw new BadRequestException("Invalid image extension");
+            }
+
+            var result = await _blobClientReposiotry.UploadImage(form, user.Id, token);
+
+            if (!result.IsSuccess)
+            {
+                throw new BadRequestException(result.Message);
+            }
+
+            var path = await _dbContext.
+                UserInfo.
+                Where(pr => pr.UserId == user.Id).
+                Select(pr => pr.RelativePhotoPath).
+                FirstOrDefaultAsync(token);
+
+            path = result.FileName;
+
+            await _dbContext.SaveChangesAsync(token);
+            
+            return result;
+        }
+
+        public async Task<BlobResponse> UpdateUserImageAsync(IFormFile form, CancellationToken token)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id) ??
+                throw new InvalidEmailOrPasswordExcepiton("ChangePassword: We cannot find user with that Email and Password");
+
+            if (Path.GetExtension(form.FileName) != ".jpg" && Path.GetExtension(form.FileName) != ".jpeg" && Path.GetExtension(form.FileName) != ".png")
+            {
+                throw new BadRequestException("Invalid image extension");
+            }
+
+            var findImage = await _dbContext
+                .UserInfo
+                .Where(pr=>pr.UserId == user.Id)
+                .FirstOrDefaultAsync(token)??
+                throw new BadRequestException("There is no user");
+
+            if(findImage.RelativePhotoPath == null) 
+            {
+                throw new BadRequestException("There is no picture");
+            }
+            var result = await _blobClientReposiotry.UpdateImage(file: form, fileName: findImage.RelativePhotoPath, token: token);
+            
+            if (!result.IsSuccess) 
+            {
+                throw new BadRequestException(result.Message);
+            }
+
+            findImage.RelativePhotoPath = result.FileName;
+
+            await _dbContext.SaveChangesAsync(cancellationToken: token);
+            return result;
         }
     }
 }

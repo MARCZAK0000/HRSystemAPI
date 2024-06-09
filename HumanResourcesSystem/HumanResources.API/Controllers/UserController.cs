@@ -49,8 +49,22 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);  
         }
-         
 
+        [HttpPost("image/publish")]
+        public async Task<IActionResult> UploadUserImage(IFormFile formFile, CancellationToken token)
+        {
+            var result = await _userCommandServices.UploadUserImageAsync(formFile, token);
+
+            return Accepted(result);
+        }
+
+        [HttpPut("image/update")]
+        public async Task<IActionResult> UpdateUserImage(IFormFile formFile, CancellationToken token)
+        {
+            var result = await _userCommandServices.UpdateUserImageAsync(formFile, token);
+
+            return Accepted(result);
+        }
         
     }
 }
