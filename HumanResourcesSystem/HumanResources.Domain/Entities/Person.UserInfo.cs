@@ -17,7 +17,8 @@ namespace HumanResources.Domain.Entities
         public EducationLevel? EducationTitle { get; set; }
         public int DepartmentID { get; set; } = 9;
         public bool IsSupervisior {get; set; } = false;
-        
+        public string? RelativePhotoPath { get; set; }
+
         public User User { get; set; }
         public virtual List<Absence>? Absences { get; set; }
         public virtual Departments Department { get; set; }

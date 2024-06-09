@@ -32,7 +32,7 @@ namespace HumanResources.Infrastructure.SeederDatabase
                 var migrations = await _database.Database.GetPendingMigrationsAsync();
                 if(migrations!=null && migrations.Any()) 
                 {
-                    await _database.Database.MigrateAsync(); 
+                     _database.Database.Migrate(); 
                 }
                 if(!_database.Roles.Any()) 
                 {

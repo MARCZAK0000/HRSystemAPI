@@ -85,6 +85,44 @@ namespace HumanResources.Infrastructure.Database
                 .OnDelete(DeleteBehavior.Restrict);
 
 
+
+            builder.Entity<EmployeePayHistory>(e =>
+            {
+                e.Property(e => e.MonthPayment)
+                    .HasColumnType("decimal")
+                    .HasPrecision(4);
+
+                e.Property(e => e.MonthPaymentEuro)
+                    .HasColumnType("decimal")
+                    .HasPrecision(4);
+
+                e.Property(e => e.MonthPaymentUSD)
+                    .HasColumnType("decimal")
+                    .HasPrecision(4);
+            });
+
+            builder.Entity<EmployeePay>(e =>
+            {
+                e.Property(e => e.RatePLN)
+                    .HasColumnType("decimal")
+                    .HasPrecision(4);
+
+                e.Property(e => e.RateEURO)
+                    .HasColumnType("decimal")
+                    .HasPrecision(4);
+
+                e.Property(e => e.RateUSD)
+                    .HasColumnType("decimal")
+                    .HasPrecision(4);
+            });
+
+
+            builder.Entity<ExchangeRate>(e =>
+            {
+                e.Property(e => e.Rate)
+                    .HasColumnType("decimal")
+                    .HasPrecision(4);
+            });
             base.OnModelCreating(builder);
 
 

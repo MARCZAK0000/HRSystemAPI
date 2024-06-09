@@ -136,3 +136,8 @@ C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSyst
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\runtimes\win-x64\native\QuestPdfSkia.dll
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\obj\Debug\net7.0\HumanResources.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\Azure.Storage.Blobs.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\Azure.Storage.Common.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\Azure.Storage.Queues.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\System.ClientModel.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.Api\bin\Debug\net7.0\System.IO.Hashing.dll

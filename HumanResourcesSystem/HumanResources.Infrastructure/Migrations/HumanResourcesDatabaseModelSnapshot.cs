@@ -40,13 +40,16 @@ namespace HumanResources.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("MonthPayment")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4)
+                        .HasColumnType("decimal");
 
                     b.Property<decimal>("MonthPaymentEuro")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4)
+                        .HasColumnType("decimal");
 
                     b.Property<decimal>("MonthPaymentUSD")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4)
+                        .HasColumnType("decimal");
 
                     b.Property<string>("UserID")
                         .IsRequired()
@@ -245,13 +248,16 @@ namespace HumanResources.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal?>("RateEURO")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4)
+                        .HasColumnType("decimal");
 
                     b.Property<decimal>("RatePLN")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4)
+                        .HasColumnType("decimal");
 
                     b.Property<decimal?>("RateUSD")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4)
+                        .HasColumnType("decimal");
 
                     b.Property<string>("UserID")
                         .IsRequired()
@@ -285,7 +291,8 @@ namespace HumanResources.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Rate")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4)
+                        .HasColumnType("decimal");
 
                     b.HasKey("ID");
 
@@ -417,6 +424,9 @@ namespace HumanResources.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RelativePhotoPath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserCode")
