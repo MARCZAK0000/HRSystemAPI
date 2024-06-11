@@ -14,5 +14,7 @@ namespace HumanResources.Domain.Repository
         string ConfirmEmailBody(ConfirmEmailMessageInfoDto confirmEmail);
 
         string GenerateForgetPasswordToken(ConfirmEmailMessageInfoDto generateToken);
+
+        string GenerateRandomKey();
     }
 }

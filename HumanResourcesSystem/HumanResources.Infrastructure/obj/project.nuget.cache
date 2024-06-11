@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ECzKntlbK1LEX5SMrCF8/uR+zllaWgVYSHeQjo0HTHBiwUFUwC+NypC2Vll00DpZkucR6PgWGJkwc+lHI4/whQ==",
+  "dgSpecHash": "iOcYntc9UkucJ1rA1svzCsaHdEqsLXivkydUeG8uSTagQS45HGlUlbpU/ttqFLFkx08FC7uK88pH2Blz56JY3A==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjmar\\Desktop\\Projects\\HumanResourcesProject\\Backend\\HumanResourcesSystem\\HumanResources.Infrastructure\\HumanResources.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jjmar\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\azure.core\\1.39.0\\azure.core.1.39.0.nupkg.sha512",
+    "C:\\Users\\jjmar\\.nuget\\packages\\azure.data.tables\\12.8.3\\azure.data.tables.12.8.3.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\azure.storage.blobs\\12.20.0\\azure.storage.blobs.12.20.0.nupkg.sha512",
     "C:\\Users\\jjmar\\.nuget\\packages\\azure.storage.common\\12.19.0\\azure.storage.common.12.19.0.nupkg.sha512",

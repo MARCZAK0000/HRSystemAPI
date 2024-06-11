@@ -19,8 +19,11 @@ namespace HumanResources.Application.CQRS_Admin.Command
         public async Task<GetUserDto> AddToManagerAsync(string userCode, RolesEnum role, CancellationToken token) 
             => await _adminRepository.AddToManagerAsync(userCode, role, token);
 
-        public async Task<GetUserDto> AddToAdminAsync(string userCode, RolesEnum role, CancellationToken token) 
-            => await _adminRepository.AddToAdminAsync(userCode, role, token);
+        public async Task<bool> PublishAdminApiKeyAsync(string userCode, CancellationToken token) 
+            => await _adminRepository.PublishAdminApiKey(userCode, token);
+
+        public async Task<GetUserDto> AddToAdminAsync(string userCode, string key, CancellationToken token) 
+            => await _adminRepository.AddToAdminAsync(userCode, key, token);
 
         public async Task<GetUserDto> RemoveLeaderAsync(string userCode, RolesEnum role, CancellationToken token) 
             => await _adminRepository.RemoveLeaderAsync(userCode, role, token);

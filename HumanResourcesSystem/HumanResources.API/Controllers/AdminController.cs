@@ -40,12 +40,16 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);
         }
-
-        [HttpPost("role/admin")]
-        public async Task<IActionResult> AddToAdmin([FromBody] RoleUpdateDto updateDto, CancellationToken token)
+        [HttpPost("role/admin/publish")]
+        public async Task<IActionResult> PublishAdminKey([FromBody] RoleUpdateDto updateDto, CancellationToken token)
         {
-            var role = RolesEnum.Admin;
-            var result = await _adminCommandService.AddToAdminAsync(updateDto.UserCode, role, token);
+            var result = await _adminCommandService.PublishAdminApiKeyAsync(updateDto.UserCode, token);
+            return Ok(result);
+        }
+        [HttpPost("role/admin")]
+        public async Task<IActionResult> AddToAdmin([FromBody] AdminUdateDto updateDto, CancellationToken token)
+        {
+            var result = await _adminCommandService.AddToAdminAsync(updateDto.UserCode, updateDto.AdminKey, token);
 
             return Ok(result);
         }

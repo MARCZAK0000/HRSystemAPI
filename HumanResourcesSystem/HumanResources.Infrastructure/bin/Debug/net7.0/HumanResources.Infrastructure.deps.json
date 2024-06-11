@@ -52,6 +52,18 @@
           }
         }
       },
+      "Azure.Data.Tables/12.8.3": {
+        "dependencies": {
+          "Azure.Core": "1.39.0",
+          "System.Text.Json": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Data.Tables.dll": {
+            "assemblyVersion": "12.8.3.0",
+            "fileVersion": "12.800.324.10602"
+          }
+        }
+      },
       "Azure.Identity/1.7.0": {
         "dependencies": {
           "Azure.Core": "1.39.0",
@@ -929,6 +941,7 @@
       },
       "HumanResources.Domain/1.0.0": {
         "dependencies": {
+          "Azure.Data.Tables": "12.8.3",
           "FluentValidation": "11.9.0",
           "FluentValidation.AspNetCore": "11.3.0",
           "MailKit": "4.4.0",
@@ -961,6 +974,13 @@
       "sha512": "sha512-9vaV4ZICtVQp+2wjOKrIAjEjMzBkUohaBbKGqqcTW993MRfHA0N4L1BszQjWynS7lRvlYQLxaFK4wh9ewNm4HQ==",
       "path": "azure.core/1.39.0",
       "hashPath": "azure.core.1.39.0.nupkg.sha512"
+    },
+    "Azure.Data.Tables/12.8.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2wAUXLS1ebTnV+qm9qc1z1MZIPC3as2WJt9bEgL08oC1wlT5UhaW78PlYgTld89p/YWCawJycHtBwVx+SWIuLw==",
+      "path": "azure.data.tables/12.8.3",
+      "hashPath": "azure.data.tables.12.8.3.nupkg.sha512"
     },
     "Azure.Identity/1.7.0": {
       "type": "package",

@@ -27,6 +27,16 @@ namespace HumanResources.Infrastructure.Repository
             }
             return code;
         }
+
+
+        public string GenerateRandomKey()
+        {
+            var chars = "0123456789abcdefghijklmnoprstuvwxyz_-<>?@#$%^&*+=";
+
+            var code = new string(Enumerable.Repeat(chars, 32).Select(s => s[Random.Shared.Next(chars.Length)]).ToArray());
+
+            return code;
+        }
         public string ConfirmEmailBody(ConfirmEmailMessageInfoDto confirmEmail)
         {
 

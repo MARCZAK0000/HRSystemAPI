@@ -3,6 +3,7 @@ using HumanResources.Application.Extension;
 using HumanResources.Domain.ServiceExtension;
 using HumanResources.Infrastructure.Extension;
 using HumanResources.Infrastructure.SeederDatabase;
+using HumanResources.Infrastructure.StorageAccount;
 using Microsoft.OpenApi.Models;
 using NLog.Web;
 using Swashbuckle.AspNetCore.Filters;
@@ -66,6 +67,10 @@ var app = builder.Build();
 var scope = app.Services.CreateScope();
 var seeder = scope.ServiceProvider.GetRequiredService<Seeder>();
 await seeder.Seed();
+
+var adminTableScope = app.Services.CreateScope();
+var adminSeeder = scope.ServiceProvider.GetRequiredService<AdminTableSeeder>();
+await adminSeeder.CreateAdminContainerIfNotExistAsync();
 
 app.UseSwagger();
 app.UseSwaggerUI();

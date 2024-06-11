@@ -1,4 +1,5 @@
-﻿using Azure.Storage.Blobs;
+﻿using Azure.Data.Tables;
+using Azure.Storage.Blobs;
 using Azure.Storage.Queues;
 using HumanResources.Domain.CalculateDays;
 using HumanResources.Domain.CurrencyData;
@@ -30,12 +31,16 @@ namespace HumanResources.Infrastructure.Extension
                     new BlobClientOptions(BlobClientOptions.ServiceVersion.V2019_02_02)));
                 service.AddSingleton(new QueueServiceClient(configuration.GetConnectionString("StorageAccountEmulator"), 
                     new QueueClientOptions(QueueClientOptions.ServiceVersion.V2019_02_02)));
+                service.AddSingleton(new TableServiceClient(configuration.GetConnectionString("StorageAccountEmulator"),
+                    new TableClientOptions(TableClientOptions.ServiceVersion.V2019_02_02)));
+                
             }
             else
             {
                 service.AddDbContext<HumanResourcesDatabase>(options => options.UseSqlServer(configuration.GetConnectionString("HumanResourcesDbConnection")));
                 service.AddSingleton(new BlobServiceClient(configuration.GetConnectionString("HumanResourcesStrorageAccountConnection")));
                 service.AddSingleton(new QueueServiceClient(configuration.GetConnectionString("HumanResourcesStrorageAccountConnection")));
+                service.AddSingleton(new TableServiceClient(configuration.GetConnectionString("HumanResourcesStrorageAccountConnection")));
             }
             service.AddIdentity<User, Roles>(opt =>
             {
@@ -48,6 +53,7 @@ namespace HumanResources.Infrastructure.Extension
 
 
             service.AddScoped<Seeder>();
+            service.AddScoped<AdminTableSeeder>();
             service.AddScoped<IAccountReposiotry, AccountRepository>();
             service.AddScoped<IUserRepository, UserRepository>();
             service.AddScoped<IHelperRepository, HelperRepository>();
