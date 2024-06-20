@@ -15,5 +15,7 @@ namespace HumanResources.Domain.EmailModelDto
         public bool IsConfirmed { get; set; }
 
         public string? Message { get; set; }
+
+        public bool IsSend {  get; set; }   
     }
 }

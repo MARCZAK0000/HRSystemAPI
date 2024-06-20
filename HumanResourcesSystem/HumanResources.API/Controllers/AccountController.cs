@@ -66,13 +66,10 @@ namespace HumanResources.API.Controllers
             
             return Ok(result);
         }
-        [HttpGet("confirm")]
-        public async Task<IActionResult> ConfirmEmail([FromQuery] ConfirmEmailAsyncDto confirm)
+        [HttpPost("confirm")]
+        public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailAsyncDto confirm)
         {
-            if(confirm.Email == null || confirm.Token == null) 
-            {
-                return BadRequest();
-            }
+      
             var result = await _accountCommandService.ConfirmEmailAsync(confirm.Email, confirm.Token);
             if (!result.Result)
             {

@@ -21,6 +21,8 @@ namespace HumanResources.Domain.UserModelDto
 
         public string Phone { get; set; }
 
+        public bool IsEmailConfirmed { get; set; } 
+
         public string EducationLevelName { get; set; }
 
         public int? DaysOfAbsencesToUse { get; set; }

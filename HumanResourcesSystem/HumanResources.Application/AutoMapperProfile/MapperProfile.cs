@@ -3,6 +3,7 @@ using HumanResources.Domain.AbsenceModelDto;
 using HumanResources.Domain.DepartmentModelDto;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.UserModelDto;
+using System.Net;
 
 namespace HumanResources.Application.AutoMapperProfile
 {
@@ -16,7 +17,8 @@ namespace HumanResources.Application.AutoMapperProfile
                 .ForMember(pr => pr.Email, opt => opt.MapFrom(src => src.User.Email))
                 .ForMember(pr => pr.Phone, opt => opt.MapFrom(src => src.User.PhoneNumber))
                 .ForMember(pr => pr.UserCode, opt => opt.MapFrom(src => src.User.UserCode))
-                .ForMember(pr => pr.EducationLevelName, opt => opt.MapFrom(src => src.EducationTitle.ToString()));
+                .ForMember(pr => pr.EducationLevelName, opt => opt.MapFrom(src => src.EducationTitle.ToString()))
+                .ForMember(pr=>pr.IsEmailConfirmed, opt=>opt.MapFrom(src=>src.User.EmailConfirmed));
 
 
             CreateMap<Attendance, GetArrivalsDto>();

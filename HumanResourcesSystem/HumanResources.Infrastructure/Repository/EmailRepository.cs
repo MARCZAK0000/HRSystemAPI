@@ -35,6 +35,7 @@ namespace HumanResources.Infrastructure.Repository
             {
                 EmailFrom = sendEmail.EmailFrom,
                 Emailto = sendEmail.EmailTo,
+                IsSend = true
             };
         }
         
