@@ -32,6 +32,8 @@ namespace HumanResources.Infrastructure.Database
 
         public DbSet<AdditionalHours> AdditionalHours { get; set; }
 
+        public DbSet<Messages> Messages { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             
@@ -122,6 +124,25 @@ namespace HumanResources.Infrastructure.Database
                 e.Property(e => e.Rate)
                     .HasColumnType("decimal")
                     .HasPrecision(4);
+            });
+
+            builder.Entity<Messages>(e =>
+            {
+                e.HasKey(e => e.MessageId);
+
+                e.HasOne(e => e.UserTo)
+                .WithMany(e => e.UserToMessages)
+                .HasForeignKey(e => e.UserToID)
+                .OnDelete(DeleteBehavior.NoAction);
+
+                e.HasOne(e => e.UserFrom)
+                .WithMany(e => e.UserFromMessages)
+                .HasForeignKey(e => e.UserFromID)
+                .OnDelete(DeleteBehavior.NoAction);
+
+
+
+
             });
             base.OnModelCreating(builder);
 

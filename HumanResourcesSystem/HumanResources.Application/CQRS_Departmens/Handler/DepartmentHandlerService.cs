@@ -39,6 +39,10 @@ namespace HumanResources.Application.CQRS_Departmens.Handler
             }
             return _mapper.Map<List<DepartmentInfoDto>>(departmentInfo);
         }
-            
+
+        public async Task<DepartmentEmployee> GetUserDeparmentsEmpolyeeAsync(CancellationToken token)
+        {
+            return await _departmentRepository.GetUserDeparmentsEmpolyeeAsync(token);
+        }
     }
 }

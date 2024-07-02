@@ -299,6 +299,35 @@ namespace HumanResources.Infrastructure.Migrations
                     b.ToTable("ExchangeRates");
                 });
 
+            modelBuilder.Entity("HumanResources.Domain.Entities.Messages", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MessageId"));
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserFromID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserToID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("MessageId");
+
+                    b.HasIndex("UserFromID");
+
+                    b.HasIndex("UserToID");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("HumanResources.Domain.Entities.Roles", b =>
                 {
                     b.Property<string>("Id")
@@ -632,6 +661,25 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("HumanResources.Domain.Entities.Messages", b =>
+                {
+                    b.HasOne("HumanResources.Domain.Entities.UserInfo", "UserFrom")
+                        .WithMany("UserFromMessages")
+                        .HasForeignKey("UserFromID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("HumanResources.Domain.Entities.UserInfo", "UserTo")
+                        .WithMany("UserToMessages")
+                        .HasForeignKey("UserToID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("UserFrom");
+
+                    b.Navigation("UserTo");
+                });
+
             modelBuilder.Entity("HumanResources.Domain.Entities.UserInfo", b =>
                 {
                     b.HasOne("HumanResources.Domain.Entities.Departments", "Department")
@@ -736,6 +784,10 @@ namespace HumanResources.Infrastructure.Migrations
                     b.Navigation("EmployeePay");
 
                     b.Navigation("EmployeePayHistory");
+
+                    b.Navigation("UserFromMessages");
+
+                    b.Navigation("UserToMessages");
                 });
 #pragma warning restore 612, 618
         }

@@ -27,5 +27,7 @@ namespace HumanResources.Domain.Entities
         public virtual List<EmployeePayHistory>? EmployeePayHistory { get; set; }
         public virtual List<AdditionalHours>? AdditionalHours { get; set;}
         public virtual List<AdditionalHours>? AdditionalHoursSuperVisor { get; set;}
+        public virtual List<Messages> UserToMessages { get; set; }    
+        public virtual List<Messages> UserFromMessages { get; set; }
     }
 }

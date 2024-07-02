@@ -81,8 +81,6 @@ namespace HumanResources.Infrastructure.Repository
                 .ThenInclude(pr => pr.User)
                 .FirstOrDefaultAsync(cancellationToken: token);
                 
-
-
             return result!;
 
         }
@@ -165,6 +163,43 @@ namespace HumanResources.Infrastructure.Repository
                 .ToListAsync(cancellationToken: token);
 
             return deparments;
+        }
+
+
+        public async Task<DepartmentEmployee> GetUserDeparmentsEmpolyeeAsync(CancellationToken token)
+        {
+            var currentUser = _userContext.GetCurrentUser();
+            var user = await _userManager.FindByIdAsync(currentUser.Id);
+
+            var userDeparmentID = await _database
+                .UserInfo
+                .Where(pr => pr.UserId == user!.Id)
+                .Select(pr => pr.DepartmentID)
+                .FirstOrDefaultAsync(cancellationToken: token);
+
+            var findUsers = await _database
+                .Departments
+                .Where(pr => pr.Id == userDeparmentID)
+                .Include(pr=>pr.Users)
+                .Select(pr=> new DepartmentEmployee()
+                {
+                    DepartmentID = pr.Id,
+                    EmployeeInfo = pr.Users!
+                    .Where(p=>p.UserId != user!.Id)
+                    .Select(p=> new DepartmentEmployeeInfo
+                    {
+                        LastName = p.LastName,
+                        Name = p.Name,
+                        UserCode = p.UserCode,
+                        UserID = p.UserId
+
+                    }).ToList(),
+                })
+                .FirstOrDefaultAsync(token)??
+                    throw new NotFoundException("We didn't find users with current deparment ID");
+
+
+            return findUsers;
         }
     }
 }

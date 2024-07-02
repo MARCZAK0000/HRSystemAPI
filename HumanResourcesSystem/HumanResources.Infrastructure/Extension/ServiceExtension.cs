@@ -69,7 +69,7 @@ namespace HumanResources.Infrastructure.Extension
             service.AddScoped<IEmployeePayRepository, EmployeePayRepository>();
             service.AddScoped<IAdditionalHoursReposiotry, AdditionalHoursReposiotry>();
             service.AddScoped<IBlobClientReposiotry, BlobClientReposiotry>();
-
+            service.AddScoped<IMessengerRespsitory, MessengerRepository>();
             var exchangeRateAPI = new ExchangeRateAPIAuthenticationSettings();
             configuration.GetSection("ExchangeRate_API").Bind(exchangeRateAPI);
             service.AddSingleton(exchangeRateAPI);

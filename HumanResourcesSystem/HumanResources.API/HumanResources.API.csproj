@@ -22,6 +22,6 @@
     <ProjectReference Include="..\HumanResources.Infrastructure\HumanResources.Infrastructure.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <InternalsVisibleTo Include="HumarnResource.IntegrationTest"/>
+    <InternalsVisibleTo Include="HumarnResource.IntegrationTest" />
   </ItemGroup>
 </Project>

@@ -40,6 +40,13 @@ namespace HumanResources.API.Controllers
 
             return Ok(result);
         }
+        [HttpGet("colleagues")]
+        public async Task<IActionResult> GetUserDeparmentsEmployee(CancellationToken token)
+        {
+            var result = await _departmentHandlerService.GetUserDeparmentsEmpolyeeAsync(token);
+
+            return Ok(result);
+        }
         [HttpPost("add")]
         public async Task<IActionResult> AddDeparment([FromBody] DepartmentUpdateDto departmentAdd, CancellationToken token)
         {
@@ -48,7 +55,7 @@ namespace HumanResources.API.Controllers
             return Ok(result);
         }
 
-        [HttpPut("update/{deparmentId}")]
+        [HttpPut("update/{departmentId}")]
         public async Task<IActionResult> UpdateDeparment([FromBody] DepartmentUpdateDto update, [FromRoute] int deparmentId, CancellationToken token)
         {
             var result = await _departmentCommandSerivce.UpdateDepartmentAsync(update, deparmentId, token);

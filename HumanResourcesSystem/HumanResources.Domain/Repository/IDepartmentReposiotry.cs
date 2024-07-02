@@ -20,5 +20,7 @@ namespace HumanResources.Domain.Repository
         Task<DepartmentResponse> UpdateDepartmentAsync(DepartmentUpdateDto changeDepartment, int depratmentID, CancellationToken token);
 
         Task<List<Departments>> GetAllDeparmentsAsync(CancellationToken token);
+
+        Task<DepartmentEmployee> GetUserDeparmentsEmpolyeeAsync(CancellationToken token);
     }
 }

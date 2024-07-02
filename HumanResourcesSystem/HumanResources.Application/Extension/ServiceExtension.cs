@@ -18,6 +18,8 @@ using HumanResources.Application.CQRS_Financial.CQRS_ExchangeRate.Command;
 using HumanResources.Application.CQRS_Financial.CQRS_ExchangeRate.Handler;
 using HumanResources.Application.CQRS_Financial.CQRS_Pays.Command;
 using HumanResources.Application.CQRS_Financial.CQRS_Pays.Handler;
+using HumanResources.Application.CQRS_Messenger.Command;
+using HumanResources.Application.CQRS_Messenger.Handler;
 using HumanResources.Application.CQRS_User.Command;
 using HumanResources.Application.CQRS_User.Handler;
 using HumanResources.Application.EmailService;
@@ -80,6 +82,10 @@ namespace HumanResources.Application.Extension
             //Service for AdditionalHours
             service.AddScoped<IAdditionalHoursCommandServices,  AdditionalHoursCommandServices>();
             service.AddScoped<IAdditionalHoursHandlerServices,  AdditionalHoursHandlerServices>();
+
+            //Service for Messenger
+            service.AddScoped<IMessengerCommandService, MessengerCommandService>();
+            service.AddScoped<IMessengerHandlerService, MessengerHandlerService>();
             //AutoMapper
             service.AddAutoMapper(typeof(MapperProfile));
 

@@ -1,3 +1,4 @@
+using HumanResources.API.ChatHub;
 using HumanResources.API.Middleware;
 using HumanResources.Application.Extension;
 using HumanResources.Domain.ServiceExtension;
@@ -13,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.  //Add to Avoid problem with Identity  and ISystemClock
 builder.Services.AddControllers();
 builder.Host.UseNLog();
+builder.Services.AddSignalR();
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<LoggerMiddleware>();
 builder.Services.AddInfrastructure(builder.Configuration, builder.Environment.IsDevelopment());
@@ -79,9 +81,8 @@ app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseMiddleware<LoggerMiddleware>();
-
 app.UseAuthorization(); //Add to Avoid problem with Identity  
 app.UseAuthentication();
 app.MapControllers();
-
+app.MapHub<Chat>("/chat");
 app.Run();

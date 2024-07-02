@@ -137,7 +137,7 @@ namespace HumanResources.Infrastructure.Repository
             var year = monthDto.Year;
             var month = Convert.ToInt32(monthDto.Month);
 
-
+            
             var baseQuery = _dbContext.Arrivals
                 .Where(pr => pr.UserId == user.Id
                     && pr.CreateDay.Year == year

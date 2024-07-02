@@ -135,3 +135,7 @@ C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSyst
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.DomainTests\obj\Debug\net7.0\HumanResources.DomainTests.pdb
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.DomainTests\obj\Debug\net7.0\HumanResources.DomainTests.genruntimeconfig.cache
 C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.DomainTests\obj\Debug\net7.0\ref\HumanResources.DomainTests.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.DomainTests\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.DomainTests\bin\Debug\net7.0\Azure.Data.Tables.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.DomainTests\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jjmar\Desktop\Projects\HumanResourcesProject\Backend\HumanResourcesSystem\HumanResources.DomainTests\bin\Debug\net7.0\System.Memory.Data.dll

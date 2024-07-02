@@ -3,6 +3,7 @@ using HumanResources.Domain.AbsenceModelDto;
 using HumanResources.Domain.DepartmentModelDto;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.UserModelDto;
+using Microsoft.AspNetCore.Routing.Constraints;
 using System.Net;
 
 namespace HumanResources.Application.AutoMapperProfile
@@ -18,7 +19,7 @@ namespace HumanResources.Application.AutoMapperProfile
                 .ForMember(pr => pr.Phone, opt => opt.MapFrom(src => src.User.PhoneNumber))
                 .ForMember(pr => pr.UserCode, opt => opt.MapFrom(src => src.User.UserCode))
                 .ForMember(pr => pr.EducationLevelName, opt => opt.MapFrom(src => src.EducationTitle.ToString()))
-                .ForMember(pr=>pr.IsEmailConfirmed, opt=>opt.MapFrom(src=>src.User.EmailConfirmed));
+                .ForMember(pr => pr.IsEmailConfirmed, opt => opt.MapFrom(src => src.User.EmailConfirmed));
 
 
             CreateMap<Attendance, GetArrivalsDto>();
@@ -37,11 +38,18 @@ namespace HumanResources.Application.AutoMapperProfile
 
 
             CreateMap<Departments, DepartmentInfoDto>()
-                .ForMember(pr=>pr.DeparmentID, opt=>opt.MapFrom(src=>src.Id));
+                .ForMember(pr => pr.DeparmentID, opt => opt.MapFrom(src => src.Id));
 
             CreateMap<UserInfo, DepartmentUserInfoDto>()
                 .ForMember(pr => pr.Email, opt => opt.MapFrom(src => src.User.Email))
                 .ForMember(pr => pr.Phone, opt => opt.MapFrom(src => src.User.PhoneNumber));
+
+
+            //CreateMap<Departments, DeparmentEmployee>()
+            //    .ForMember(pr => pr.DeparmentID, opt => opt.MapFrom(src => src.Id));
+                
+            //CreateMap<UserInfo, DeparmentEmployeeInfo>();
+                
 
         }
     }

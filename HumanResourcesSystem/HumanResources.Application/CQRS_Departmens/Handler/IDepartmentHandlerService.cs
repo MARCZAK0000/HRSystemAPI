@@ -1,4 +1,5 @@
 ﻿using HumanResources.Domain.DepartmentModelDto;
+using HumanResources.Domain.Entities;
 
 namespace HumanResources.Application.CQRS_Departmens.Handler
 {
@@ -8,5 +9,6 @@ namespace HumanResources.Application.CQRS_Departmens.Handler
 
         Task<List<DepartmentInfoDto>> GetAllDepartmenst(CancellationToken token);
 
+        Task<DepartmentEmployee> GetUserDeparmentsEmpolyeeAsync(CancellationToken token);
     }
 }
